@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 interface TimeLeft {
   days: number;
@@ -11,7 +12,7 @@ interface TimeLeft {
 
 export const Timer = () => {
   const calculateTimeLeft = (): TimeLeft => {
-    const eventDate: Date = new Date("2024-10-04T16:30:00"); // Replace with your event date
+    const eventDate: Date = new Date("2025-01-18T09:30:00"); // Replace with your event date
     const now: Date = new Date();
     const difference: number = eventDate.getTime() - now.getTime(); // Use getTime() to get the timestamp in milliseconds
 
@@ -56,7 +57,12 @@ export const Timer = () => {
         THE MUCH AWAITED EVENT WILL START IN
       </p>
 
-      <div className="flex flex-wrap justify-center space-x-2 sm:space-x-4 text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold">
+      <motion.div
+        initial={{ opacity: 0, transform: "scale(0.7)" }}
+        whileInView={{ opacity: 1, transform: "scale(1)" }}
+        transition={{ ease: "easeInOut", duration: 0.8 }}
+        className="flex flex-wrap justify-center space-x-2 sm:space-x-4 text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold"
+      >
         <div className="flex flex-col items-center">
           <span>{timeLeft.days || "0"}</span>
           <span className="text-xs sm:text-sm md:text-base mt-1 sm:mt-2">
@@ -84,11 +90,11 @@ export const Timer = () => {
             Seconds
           </span>
         </div>
-      </div>
+      </motion.div>
 
       <div className="mt-8 text-center">
         {/*<p className="uppercase text-xs sm:text-sm md:text-base">Venue:</p>*/}
-        <p className="text-sm sm:text-base bg-gradient-to-r from-[#efb98f] via-[#ef9a06] to-[#f1871d] bg-clip-text text-transparent md:text-lg lg:text-xl">
+        <p className="text-sm sm:text-base text-red-700 bg-clip-text text-transparent md:text-lg lg:text-xl">
           Fostering collaboration - innovation - diverse activities
         </p>
       </div>

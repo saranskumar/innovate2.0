@@ -44,7 +44,10 @@ const Day2 = () => {
 
   return (
     <div>
-      <div>
+      <h2 className="text-red-700 font-extrabold">
+        To Be Updated Soon – Stay Tuned!
+      </h2>
+      {/* <div>
         <ol className="relative border-s border-gray-700">
           {item.map((list, index) => (
             <li className="mb-10 ms-6" key={index}>
@@ -61,9 +64,7 @@ const Day2 = () => {
               </span>
               <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
                 {list.event}
-                {/* <span className="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ms-3">
-                  Latest
-                </span> */}
+                
               </h3>
               <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
                 {list.time}
@@ -74,7 +75,7 @@ const Day2 = () => {
             </li>
           ))}
         </ol>
-      </div>
+      </div> */}
     </div>
   );
 };

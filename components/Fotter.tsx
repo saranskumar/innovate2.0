@@ -1,100 +1,167 @@
 import React from "react";
 import Image from "next/image";
-import logo from "../assets/images/logo.png";
-import { FaLinkedin, FaGithub, FaEnvelope, FaInstagram } from "react-icons/fa";
+
+import { FaLinkedin, FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
 
 export const Fotter = () => {
   return (
-    <footer className="rounded-lg shadow  m-4 bg-transparent">
-      <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-        <div className="sm:flex sm:items-center sm:justify-between">
+    <footer
+      style={{
+        color: "white",
+        fontFamily: "'Roboto', sans-serif",
+        padding: "30px 20px",
+        textAlign: "center",
+      }}
+    >
+      {/* Contact Section */}
+      <div style={{ marginBottom: "30px" }}>
+        <h3
+          style={{
+            fontSize: "1.5rem",
+            fontWeight: "bold",
+            marginBottom: "10px",
+          }}
+        >
+          Contact Us
+        </h3>
+        <p style={{ fontSize: "1rem", marginBottom: "5px" }}>
+          For Queries:{" "}
           <a
-            href="#"
-            className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
+            href="mailto:innovate@inapp.com"
+            style={{ color: "#ff4a4a", textDecoration: "none" }}
           >
-            <Image
-              src={logo}
-              alt=""
-              loading="lazy"
-              width="45"
-              height="45"
-              decoding="async"
-              data-nimg="1"
-              className=" object-contain rounded-md"
-            />
-
-            <button className="text-2xl font-semibold leading-6 bg-gradient-to-r from-[#efb98f] via-[#ef9a06] to-[#f1871d] bg-clip-text text-transparent">
-              Dhyuthi 5.0
-            </button>
+            innovate@inapp.com
           </a>
-          <div className="mt-16 text-left">
-            <h3 className="text-lg font-semibold text-white">
-              Connect with us
-            </h3>
-            <div className="mt-4 flex justify-left space-x-6">
+        </p>
+        <p style={{ fontSize: "1rem" }}>Phone: +91 XXXXX XXXXX</p>
+      </div>
+
+      <hr style={{ borderColor: "#444", margin: "20px 0" }} />
+
+      {/* Follow Us Section */}
+      <div style={{ marginBottom: "30px" }}>
+        <h3
+          style={{
+            fontSize: "1.5rem",
+            fontWeight: "bold",
+            marginBottom: "10px",
+          }}
+        >
+          Follow Us
+        </h3>
+        <p style={{ fontSize: "1rem", marginBottom: "20px" }}>
+          Stay updated and inspired:
+        </p>
+
+        {/* Social Media Links */}
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            gap: "40px",
+          }}
+        >
+          {/* IEEE Kerala YP */}
+          <div style={{ textAlign: "center" }}>
+            <p style={{ fontWeight: "bold", marginBottom: "10px" }}>
+              IEEE Kerala YP
+            </p>
+            <div
+              style={{
+                display: "flex",
+                gap: "15px",
+                justifyContent: "center",
+              }}
+            >
               <a
-                href="https://ieeesctsb.org/"
-                className="text-white hover:text-gray-300"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "white", fontSize: "1.5rem" }}
               >
-                IEEE SCTSB
+                <FaLinkedin />
               </a>
               <a
-                href="https://www.instagram.com/ieeesctsb/"
-                className="text-white hover:text-gray-300"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "white", fontSize: "1.5rem" }}
               >
-                <FaInstagram size={24} />
+                <FaTwitter />
               </a>
               <a
-                href="https://in.linkedin.com/company/ieeesctsb"
-                className="text-white hover:text-gray-300"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "white", fontSize: "1.5rem" }}
               >
-                <FaLinkedin size={24} />
+                <FaFacebook />
               </a>
               <a
-                href="mailto:ieeectsctsb@gmail.com"
-                className="text-white hover:text-gray-300"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "white", fontSize: "1.5rem" }}
               >
-                <FaEnvelope size={24} />
-              </a>
-              <a
-                href="https://github.com/amithbiju/dhyuthi_5.0"
-                className="text-white hover:text-gray-300"
-              >
-                <FaGithub size={24} />
+                <FaInstagram />
               </a>
             </div>
           </div>
-          {/* <ul className="flex flex-wrap items-center mb-6 text-sm font-medium sm:mb-0text-gray-400">
-            <li>
-              <a href="#" className="hover:underline me-4 md:me-6">
-                About
+
+          {/* InApp */}
+          <div style={{ textAlign: "center" }}>
+            <p style={{ fontWeight: "bold", marginBottom: "10px" }}>InApp</p>
+            <div
+              style={{
+                display: "flex",
+                gap: "15px",
+                justifyContent: "center",
+              }}
+            >
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "white", fontSize: "1.5rem" }}
+              >
+                <FaLinkedin />
               </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline me-4 md:me-6">
-                Privacy Policy
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "white", fontSize: "1.5rem" }}
+              >
+                <FaTwitter />
               </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline me-4 md:me-6">
-                Licensing
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "white", fontSize: "1.5rem" }}
+              >
+                <FaFacebook />
               </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Contact
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "white", fontSize: "1.5rem" }}
+              >
+                <FaInstagram />
               </a>
-            </li>
-          </ul> */}
+            </div>
+          </div>
         </div>
-        <hr className="my-6 sm:mx-auto border-gray-700 lg:my-8" />
-        <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
-          © 2024{" "}
-          <a href="https://flowbite.com/" className="hover:underline">
-            Dhyuthi 5.0
-          </a>
-          . All Rights Reserved.
-        </span>
+      </div>
+
+      <hr style={{ borderColor: "#444", margin: "20px 0" }} />
+
+      {/* Footer Bottom */}
+      <div>
+        <p style={{ fontSize: "0.9rem", color: "#777" }}>
+          InApp 2024 © All rights reserved.
+        </p>
       </div>
     </footer>
   );

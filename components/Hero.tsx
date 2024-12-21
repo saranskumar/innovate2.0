@@ -14,6 +14,7 @@ import innovate from "../assets/images/Innovate_2.png";
 const Hero = () => {
   return (
     <motion.div
+      id="page0"
       className="bg-black h-screen flex flex-col justify-center items-center bg-cover bg-no-repeat bg-fixed w-screen rounded-b-[35px] mt-1"
       style={{
         backgroundImage:
@@ -59,7 +60,7 @@ const Hero = () => {
           transition={{ ease: "easeIn", duration: 1.2 }}
           className="text-center text-white text-sm font-extrabold md:text-lg mt-3 "
         >
-          Empowering the Future Engineering Solutions for a Smarter, Sustainable
+          Empowering the Future Engineering Solutions for a Smarter Sustainable
           Tomorrow
         </motion.p>
 
@@ -68,21 +69,28 @@ const Hero = () => {
           initial={{ opacity: 0, filter: "blur(4px)" }}
           whileInView={{ opacity: 1, filter: "blur(0)" }}
           transition={{ ease: "easeIn", duration: 1.5 }}
-          className="flex justify-center gap-2 md:gap-4 mt-4 px-4"
+          className="flex flex-wrap justify-center gap-4 md:gap-6 mt-4 px-4"
         >
-          <Image src={yp} alt="yp" height={80} className="object-contain" />
-          <Image
-            src={sct}
-            alt="SCT Emblem"
-            height={80}
-            className="object-contain"
-          />
-          <Image
-            src={ieee}
-            alt="IEEE Logo"
-            height={60}
-            className="object-contain"
-          />
+          {/* Individual Logos */}
+          <div className="w-[60px] h-[40px] sm:w-[80px] sm:h-[50px] md:w-[140px] md:h-[100px]">
+            <Image src={yp} alt="yp" className="w-full h-full object-contain" />
+          </div>
+
+          <div className="w-[60px] h-[40px] sm:w-[80px] sm:h-[50px] md:w-[140px] md:h-[100px]">
+            <Image
+              src={sct}
+              alt="SCT Emblem"
+              className="w-full h-full object-contain"
+            />
+          </div>
+
+          <div className="w-[60px] h-[40px] sm:w-[80px] sm:h-[50px] md:w-[140px] md:h-[100px]">
+            <Image
+              src={ieee}
+              alt="IEEE Logo"
+              className="w-full h-full object-contain"
+            />
+          </div>
         </motion.div>
 
         {/* Event Details */}

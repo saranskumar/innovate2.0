@@ -49,3 +49,24 @@ body {
   src: local("TheGoodMonolith"),
     url("../app/fonts/Mona-Sans-BoldWide.ttf") format("truetype");
 }
+
+.buttonMain {
+  height: 50px;
+  width: 300px;
+  border-radius: 0px;
+  background-color: white;
+  border: 1px solid;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: #202124;
+  border-color: white;
+  color: black;
+  clip-path: polygon(
+    12px 0px,
+    100% 0px,
+    100% 72%,
+    calc(100% - 12px) 100%,
+    0px 100%,
+    0px 12px
+  );
+}

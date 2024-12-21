@@ -1,15 +1,20 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Image from "next/image";
 import { Dialog, DialogPanel, PopoverGroup } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-scroll";
+import innovate from "../assets/logo/innovate_logo.png";
 
 export const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <header className="  backdrop-blur-xl fixed w-full z-50">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2 lg:px-8 sm:py-0">
         <div className="flex lg:flex-1">
           <span className="sr-only">Your Company</span>
           <Link
@@ -20,9 +25,13 @@ export const Navbar = () => {
             offset={0}
             duration={500}
           >
-            <button className="text-2xl font-semibold leading-6 bg-gradient-to-r from-[#efb98f] via-[#ef9a06] to-[#f1871d] bg-clip-text text-transparent">
-              Dhyuthi 5.0
-            </button>
+            <div className="w-[80px] h-[60px] sm:w-[80px] sm:h-[50px] md:w-[140px] md:h-[100px]">
+              <Image
+                src={innovate}
+                alt="SCT Emblem"
+                className="w-full h-full object-contain"
+              />
+            </div>
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -48,30 +57,7 @@ export const Navbar = () => {
               About
             </button>
           </Link>
-          <Link
-            activeClass="active"
-            to="page2"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-          >
-            <button className="text-sm font-semibold leading-6 text-gray-100">
-              Tracks
-            </button>
-          </Link>
-          {/* <Link
-            activeClass="active"
-            to="page3"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-          >
-            <button className="text-sm font-semibold leading-6 text-gray-100">
-              Events
-            </button>
-          </Link> */}
+
           <Link
             activeClass="active"
             to="page4"
@@ -84,30 +70,7 @@ export const Navbar = () => {
               Schedule
             </button>
           </Link>
-          <Link
-            activeClass="active"
-            to="page8"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-          >
-            <button className="text-sm font-semibold leading-6 text-gray-100">
-              Gallery
-            </button>
-          </Link>
-          <Link
-            activeClass="active"
-            to="page6"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-          >
-            <button className="text-sm font-semibold leading-6 text-gray-100">
-              FAQs
-            </button>
-          </Link>
+
           <Link
             activeClass="active"
             to="page5"
@@ -181,21 +144,7 @@ export const Navbar = () => {
                     About
                   </button>
                 </Link>
-                <Link
-                  activeClass="active"
-                  to="page2"
-                  spy={true}
-                  smooth={true}
-                  offset={0}
-                  duration={500}
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                  }}
-                >
-                  <button className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-700">
-                    Tracks
-                  </button>
-                </Link>
+
                 {/* <Link
                   activeClass="active"
                   to="page3"
@@ -226,36 +175,7 @@ export const Navbar = () => {
                     Schedule
                   </button>
                 </Link>
-                <Link
-                  activeClass="active"
-                  to="page8"
-                  spy={true}
-                  smooth={true}
-                  offset={0}
-                  duration={500}
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                  }}
-                >
-                  <button className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-700">
-                    Gallery
-                  </button>
-                </Link>
-                <Link
-                  activeClass="active"
-                  to="page6"
-                  spy={true}
-                  smooth={true}
-                  offset={0}
-                  duration={500}
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                  }}
-                >
-                  <button className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-700">
-                    FAQs
-                  </button>
-                </Link>
+
                 <Link
                   activeClass="active"
                   to="page5"

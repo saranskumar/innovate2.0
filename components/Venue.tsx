@@ -1,8 +1,15 @@
+"use client";
 import React from "react";
-
+import { motion } from "framer-motion";
 const Venue = () => {
   return (
-    <div id="page5" className="w-full flex justify-center items-center ">
+    <motion.div
+      initial={{ opacity: 0, filter: "blur(4px)" }}
+      whileInView={{ opacity: 1, filter: "blur(0)" }}
+      transition={{ ease: "easeIn", duration: 1.5 }}
+      id="page5"
+      className="w-full flex justify-center items-center "
+    >
       <div className="md:w-[80%] m-3 mt-8">
         <h2 className=" font-palanquin text-4xl mb-10 font-bold ">Venue</h2>
         <div className="">
@@ -17,44 +24,9 @@ const Venue = () => {
             className="w-full rounded-md mb-5"
             // referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
-
-          <div className="backdrop-blur-sm text-white p-6 rounded-lg">
-            <div className="mb-6">
-              <h2 className="flex items-center text-lg font-bold">
-                <span className="text-orange-500 mr-2">📍</span>
-                Address
-              </h2>
-              <p>
-                NH 66, CTO Colony, Pappanamcode, Thiruvananthapuram, Kerala
-                695018
-              </p>
-            </div>
-            <div className="mb-6">
-              <h2 className="flex items-center text-lg font-bold">
-                <span className="text-orange-500 mr-2">✉️</span>
-                Email
-              </h2>
-              <a
-                href="mailto:ieeectsctsb@gmail.com"
-                className="text-white hover:underline"
-              >
-                ieeectsctsb@gmail.com
-              </a>
-            </div>
-            <div>
-              <h2 className="flex items-center text-lg font-bold">
-                <span className="text-orange-500 mr-2">📞</span>
-                Call
-              </h2>
-              <p className="pt-2">Nandagopan G</p>
-              <a href="tel:+917306702435"> +91 7306702435</a>
-              <p className="pt-2">Geethu S Santhosh</p>
-              <a href="tel:+918075298464"> +91 8075298464</a>
-            </div>
-          </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
