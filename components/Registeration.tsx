@@ -15,8 +15,8 @@ const Registeration = () => {
         transition={{ ease: "easeIn", duration: 1.9 }}
         className="text-lg sm:text-xl md:text-2xl font-bold  font-[Enhanced_LED_Board-7] text-center bg-gradient-to-r from-white via-red-500 to-red-700 bg-clip-text text-transparent mb-6"
       >
-        Join Kerala's brightest minds to build technology-driven solutions for
-        real-world challenges!
+        Join Kerala&apos;s brightest minds to build technology-driven solutions
+        for real-world challenges!
       </motion.h1>
 
       <motion.div
