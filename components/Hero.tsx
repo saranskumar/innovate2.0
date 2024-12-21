@@ -14,34 +14,31 @@ import innovate from "../assets/images/Innovate_2.png";
 const Hero = () => {
   return (
     <motion.div
-      className={styles.largeViewer}
-      initial={{
-        opacity: 0,
-        filter: "blur(2px)",
-        transform: "scaleY(0.7)",
+      className="bg-black h-screen flex flex-col justify-center items-center bg-cover bg-no-repeat bg-fixed w-screen rounded-b-[35px] mt-1"
+      style={{
+        backgroundImage:
+          "url('https://www.gstatic.com/earth/social/00_generic_facebook-001.jpg')",
+        WebkitMaskImage:
+          "radial-gradient(89% 181% at 56% 20%, #000 16%, transparent 115%)",
       }}
-      whileInView={{
-        opacity: 1,
-        filter: "blur(0)",
-        transform: "scaleY(1)",
-      }}
+      initial={{ opacity: 0, filter: "blur(2px)", scaleY: 0.7 }}
+      whileInView={{ opacity: 1, filter: "blur(0)", scaleY: 1 }}
       transition={{ ease: "easeInOut", duration: 0.5 }}
     >
-      <div style={{ margin: 5 }}>
+      <div className="m-2 pt-5">
         {/* InApp Logo */}
         <motion.div
           initial={{ opacity: 0, filter: "blur(4px)" }}
           whileInView={{ opacity: 1, filter: "blur(0)" }}
           transition={{ ease: "easeIn", duration: 0.9 }}
-          style={{ textAlign: "center", marginBottom: "10px" }}
+          className="text-center mb-2"
         >
           <Image
             src={inapp}
             alt="inapp logo"
-            //={styles.logo}
-            //style={{ height: "10px", width: "auto" }}
             height={91}
             width={492}
+            className="mx-auto w-[200px] md:w-[492px]"
           />
         </motion.div>
 
@@ -50,8 +47,7 @@ const Hero = () => {
           initial={{ opacity: 0, filter: "blur(4px)" }}
           whileInView={{ opacity: 1, filter: "blur(0)" }}
           transition={{ ease: "easeIn", duration: 1.9 }}
-          className={styles.mainTitle}
-          style={{ textAlign: "center" }}
+          className="text-center text-[40px] md:text-[170px] font-extrabold font-[Enhanced_LED_Board-7] text-white break-words shadow-lg tracking-wider"
         >
           INNOVATE
         </motion.h1>
@@ -61,10 +57,10 @@ const Hero = () => {
           initial={{ opacity: 0, filter: "blur(4px)" }}
           whileInView={{ opacity: 1, filter: "blur(0)" }}
           transition={{ ease: "easeIn", duration: 1.2 }}
-          style={{ textAlign: "center", margin: "10px 0" }}
+          className="text-center text-white text-sm font-extrabold md:text-lg mt-3 "
         >
-          Empowering the Future: Engineering Solutions for a Smarter,
-          Sustainable Tomorrow
+          Empowering the Future Engineering Solutions for a Smarter, Sustainable
+          Tomorrow
         </motion.p>
 
         {/* Logos Section */}
@@ -72,52 +68,34 @@ const Hero = () => {
           initial={{ opacity: 0, filter: "blur(4px)" }}
           whileInView={{ opacity: 1, filter: "blur(0)" }}
           transition={{ ease: "easeIn", duration: 1.5 }}
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            gap: "10px",
-            margin: "10px 0",
-
-            paddingLeft: 120,
-            paddingRight: 120,
-          }}
+          className="flex justify-center gap-2 md:gap-4 mt-4 px-4"
         >
-          <Image
-            src={yp}
-            alt="yp"
-            //className={styles.logo}
-            //style={{ height: "10px", width: "auto" }}
-            height={100}
-            width={200}
-          />
+          <Image src={yp} alt="yp" height={80} className="object-contain" />
           <Image
             src={sct}
             alt="SCT Emblem"
-            //className={styles.logo}
-            height={100}
-            width={250}
+            height={80}
+            className="object-contain"
           />
           <Image
             src={ieee}
             alt="IEEE Logo"
-            //={styles.logo}
-            //style={{ height: "10px", width: "auto" }}
-            height={15}
-            width={150}
+            height={60}
+            className="object-contain"
           />
         </motion.div>
 
         {/* Event Details */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, filter: "blur(4px)" }}
           whileInView={{ opacity: 1, filter: "blur(0)" }}
           transition={{ ease: "easeIn", duration: 1.7 }}
-          style={{ textAlign: "center", marginTop: "10px" }}
+          className="text-center text-white mt-4 text-sm md:text-lg"
         >
           <p>Date: January 18-19, 2025</p>
           <p>Venue: SCT College of Engineering, Trivandrum</p>
           <p>Supported by: IEEE Kerala Young Professionals</p>
-        </motion.div>
+        </motion.div> */}
       </div>
     </motion.div>
   );
