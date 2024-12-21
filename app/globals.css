@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+  color: var(
+    --foreground,
+    #e0e0e0
+  ); /* Light foreground text for dark background */
+  background: conic-gradient(
+        from 90deg at 1px 1px,
+        #00000000 90deg,
+        rgba(249, 234, 234, 0.1) 0 /* Lighter grid pattern for dark theme */
+      )
+      0 0/70px 70px,
+    #000000; /* Dark background color */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@font-face {
+  font-family: "Enhanced LED Board-7";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Enhanced LED Board-7"),
+    url("../app/fonts/Mona-Sans-BoldWide.ttf") format("truetype");
+}
+@font-face {
+  font-family: "TheGoodMonolith";
+  font-style: normal;
+  font-weight: 500;
+  src: local("TheGoodMonolith"),
+    url("../app/fonts/Mona-Sans-BoldWide.ttf") format("truetype");
+}
