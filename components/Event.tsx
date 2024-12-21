@@ -3,7 +3,6 @@ import Day1 from "@/components/util/Day1";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Day2 from "./util/Day2";
-import Day3 from "./util/Day3";
 
 const Event = () => {
   const [activeTab, setActiveTab] = useState("day1"); // Default to "profile"

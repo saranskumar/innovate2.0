@@ -2,14 +2,12 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import styles from "../styles/Home.module.css";
 
 //logo imports
 import sct from "../assets/logo/sct_logo.png";
 import ieee from "../assets/logo/ieee_logo.png";
 import yp from "../assets/logo/yp_logo.png";
 import inapp from "../assets/logo/inapp_logo.png";
-import innovate from "../assets/images/Innovate_2.png";
 
 const Hero = () => {
   return (
