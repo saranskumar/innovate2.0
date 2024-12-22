@@ -5,6 +5,7 @@ const Content = () => {
   return (
     <>
       <motion.div
+        id="page1"
         initial={{ opacity: 0, transform: "translate(-100px)" }}
         whileInView={{ opacity: 1, transform: "translate(0px)" }}
         transition={{ ease: "easeOut", duration: 0.8 }}

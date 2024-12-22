@@ -13,7 +13,7 @@ const Registeration = () => {
         initial={{ opacity: 0, filter: "blur(4px)" }}
         whileInView={{ opacity: 1, filter: "blur(0)" }}
         transition={{ ease: "easeIn", duration: 1.9 }}
-        className="text-lg sm:text-xl md:text-2xl font-bold  font-[Enhanced_LED_Board-7] text-center bg-gradient-to-r from-white via-red-500 to-red-700 bg-clip-text text-transparent mb-6"
+        className="text-lg sm:text-xl md:text-2xl font-bold  font-[Enhanced_LED_Board-7] text-center  text-red-700 mb-6"
       >
         Join Kerala&apos;s brightest minds to build technology-driven solutions
         for real-world challenges!
@@ -31,7 +31,9 @@ const Registeration = () => {
       >
         <button
           onClick={() => {
-            window.open("https://bit.ly/StartupXreg");
+            window.open(
+              "https://www.yepdesk.com/embed/buy-tickets/6762fb8ec9e77c0001b73214/private/up2bepoeag"
+            );
           }}
           className="buttonMain"
         >

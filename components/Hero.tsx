@@ -67,14 +67,14 @@ const Hero = () => {
           initial={{ opacity: 0, filter: "blur(4px)" }}
           whileInView={{ opacity: 1, filter: "blur(0)" }}
           transition={{ ease: "easeIn", duration: 1.5 }}
-          className="flex flex-wrap justify-center gap-4 md:gap-6 mt-4 px-4"
+          className="flex flex-wrap justify-center gap-4 md:gap-10 lg:gap-20 mt-4 px-4"
         >
           {/* Individual Logos */}
-          <div className="w-[60px] h-[40px] sm:w-[80px] sm:h-[50px] md:w-[140px] md:h-[100px]">
+          <div className="w-[60px] h-[40px] sm:w-[80px] sm:h-[50px] md:w-[170px] md:h-[130px]">
             <Image src={yp} alt="yp" className="w-full h-full object-contain" />
           </div>
 
-          <div className="w-[60px] h-[40px] sm:w-[80px] sm:h-[50px] md:w-[140px] md:h-[100px]">
+          <div className="w-[60px] h-[40px] sm:w-[80px] sm:h-[50px] md:w-[170px] md:h-[130px]">
             <Image
               src={sct}
               alt="SCT Emblem"
@@ -82,7 +82,7 @@ const Hero = () => {
             />
           </div>
 
-          <div className="w-[60px] h-[40px] sm:w-[80px] sm:h-[50px] md:w-[140px] md:h-[100px]">
+          <div className="w-[60px] h-[40px] sm:w-[80px] sm:h-[50px] md:w-[170px] md:h-[130px]">
             <Image
               src={ieee}
               alt="IEEE Logo"

@@ -7,10 +7,7 @@ import { motion } from "framer-motion";
 const About = () => {
   return (
     <section className="padding pt-20 pb-20">
-      <section
-        id="page1"
-        className="flex justify-between items-center max-lg:flex-col gap-10 w-full max-container text-white"
-      >
+      <section className="flex justify-between items-center max-lg:flex-col gap-10 w-full max-container text-white">
         <motion.div
           initial={{ opacity: 0, transform: "translate(-100px)" }}
           whileInView={{ opacity: 1, transform: "translate(0px)" }}

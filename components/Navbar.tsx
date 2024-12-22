@@ -25,10 +25,10 @@ export const Navbar = () => {
             offset={0}
             duration={500}
           >
-            <div className="w-[80px] h-[60px] sm:w-[80px] sm:h-[50px] md:w-[140px] md:h-[100px]">
+            <div className="w-[100px] h-[80px] sm:w-[80px] sm:h-[50px] md:w-[140px] md:h-[100px]">
               <Image
                 src={innovate}
-                alt="SCT Emblem"
+                alt="innovate Emblem"
                 className="w-full h-full object-contain"
               />
             </div>
@@ -53,7 +53,7 @@ export const Navbar = () => {
             offset={0}
             duration={500}
           >
-            <button className="text-sm font-semibold leading-6 text-gray-100">
+            <button className="text-lg font-semibold leading-6 text-gray-100">
               About
             </button>
           </Link>
@@ -66,7 +66,7 @@ export const Navbar = () => {
             offset={0}
             duration={500}
           >
-            <button className="text-sm font-semibold leading-6 text-gray-100">
+            <button className="text-lg font-semibold leading-6 text-gray-100">
               Schedule
             </button>
           </Link>
@@ -79,18 +79,22 @@ export const Navbar = () => {
             offset={0}
             duration={500}
           >
-            <button className="text-sm font-semibold leading-6 text-gray-100">
+            <button className="text-lg font-semibold leading-6 text-gray-100">
               Contact
             </button>
           </Link>
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a
-            href="/track"
-            className="text-sm font-semibold leading-6 text-gray-100"
+          <button
+            onClick={() => {
+              window.open(
+                "https://www.yepdesk.com/embed/buy-tickets/6762fb8ec9e77c0001b73214/private/up2bepoeag"
+              );
+            }}
+            className="text-lg font-semibold leading-6 text-gray-100"
           >
             Register Now<span aria-hidden="true">&rarr;</span>
-          </a>
+          </button>
         </div>
       </nav>
       <Dialog
@@ -193,12 +197,16 @@ export const Navbar = () => {
                 </Link>
               </div>
               <div className="py-6">
-                <a
-                  href="/track"
+                <button
+                  onClick={() => {
+                    window.open(
+                      "https://www.yepdesk.com/embed/buy-tickets/6762fb8ec9e77c0001b73214/private/up2bepoeag"
+                    );
+                  }}
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-700"
                 >
                   Register Now
-                </a>
+                </button>
               </div>
             </div>
           </div>
