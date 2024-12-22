@@ -27,7 +27,7 @@ const Hero = () => {
         className="absolute inset-0 w-full h-full object-cover z-[-1]"
       >
         <source
-          src="https://videos.pexels.com/video-files/9665239/9665239-uhd_2732_1440_25fps.mp4"
+          src="https://videos.pexels.com/video-files/2611250/2611250-uhd_2560_1440_30fps.mp4"
           type="video/mp4"
         />
         Your browser does not support the video tag.
