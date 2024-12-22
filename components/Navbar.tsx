@@ -9,11 +9,35 @@ import innovate from "../assets/logo/innovate_logo.png";
 
 export const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const [scrolled, setScrolled] = useState(false);
+  const [scrollY, setScrollY] = useState(0); // Track scroll position
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY); // Update scroll position
+      if (window.scrollY > 600) {
+        setScrolled(true); // Activate blur effect
+      } else {
+        setScrolled(false); // Remove blur effect
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <header className="  backdrop-blur-xl fixed w-full z-50">
+    <header
+      className={`fixed w-full z-50 ${
+        scrolled ? "backdrop-blur-xl bg-opacity-70" : "bg-transparent"
+      } transition duration-300`}
+    >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2 lg:px-8 sm:py-0">
         <div className="flex lg:flex-1">
           <span className="sr-only">Your Company</span>

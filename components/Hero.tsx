@@ -13,17 +13,25 @@ const Hero = () => {
   return (
     <motion.div
       id="page0"
-      className="bg-black h-screen flex flex-col justify-center items-center bg-cover bg-no-repeat bg-fixed w-screen rounded-b-[35px] mt-1"
-      style={{
-        backgroundImage:
-          "url('https://www.gstatic.com/earth/social/00_generic_facebook-001.jpg')",
-        WebkitMaskImage:
-          "radial-gradient(89% 181% at 56% 20%, #000 16%, transparent 115%)",
-      }}
+      className="bg-black h-screen flex flex-col justify-center items-center bg-cover bg-no-repeat bg-fixed w-screen rounded-b-[35px] mt-1 overflow-hidden"
       initial={{ opacity: 0, filter: "blur(2px)", scaleY: 0.7 }}
       whileInView={{ opacity: 1, filter: "blur(0)", scaleY: 1 }}
       transition={{ ease: "easeInOut", duration: 0.5 }}
     >
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-[-1]"
+      >
+        <source
+          src="https://videos.pexels.com/video-files/9665239/9665239-uhd_2732_1440_25fps.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
       <div className="m-2 pt-5">
         {/* InApp Logo */}
         <motion.div
@@ -67,14 +75,14 @@ const Hero = () => {
           initial={{ opacity: 0, filter: "blur(4px)" }}
           whileInView={{ opacity: 1, filter: "blur(0)" }}
           transition={{ ease: "easeIn", duration: 1.5 }}
-          className="flex flex-wrap justify-center gap-4 md:gap-10 lg:gap-20 mt-4 px-4"
+          className="flex flex-wrap justify-center gap-4 md:gap-10 lg:gap-20 mt-4   px-4"
         >
           {/* Individual Logos */}
-          <div className="w-[60px] h-[40px] sm:w-[80px] sm:h-[50px] md:w-[170px] md:h-[130px]">
+          <div className="w-[60px] h-[40px] sm:w-[80px] sm:h-[50px] md:w-[190px] md:h-[160px]">
             <Image src={yp} alt="yp" className="w-full h-full object-contain" />
           </div>
 
-          <div className="w-[60px] h-[40px] sm:w-[80px] sm:h-[50px] md:w-[170px] md:h-[130px]">
+          <div className="w-[60px] h-[40px] sm:w-[80px] sm:h-[50px] md:w-[190px] md:h-[160px]">
             <Image
               src={sct}
               alt="SCT Emblem"
@@ -82,7 +90,7 @@ const Hero = () => {
             />
           </div>
 
-          <div className="w-[60px] h-[40px] sm:w-[80px] sm:h-[50px] md:w-[170px] md:h-[130px]">
+          <div className="w-[60px] h-[40px] sm:w-[80px] sm:h-[50px] md:w-[190px] md:h-[160px]">
             <Image
               src={ieee}
               alt="IEEE Logo"
