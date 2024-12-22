@@ -11,12 +11,12 @@ export const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const [scrolled, setScrolled] = useState(false);
-  const [scrollY, setScrollY] = useState(0); // Track scroll position
+  //const [scrollY, setScrollY] = useState(0); // Track scroll position
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrollY(window.scrollY); // Update scroll position
-      if (window.scrollY > 600) {
+      //setScrollY(window.scrollY); // Update scroll position
+      if (window.scrollY > 400) {
         setScrolled(true); // Activate blur effect
       } else {
         setScrolled(false); // Remove blur effect
