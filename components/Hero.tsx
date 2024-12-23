@@ -38,14 +38,14 @@ const Hero = () => {
           initial={{ opacity: 0, filter: "blur(4px)" }}
           whileInView={{ opacity: 1, filter: "blur(0)" }}
           transition={{ ease: "easeIn", duration: 0.9 }}
-          className="text-center mb-2 pt-12"
+          className="text-center mb-0 pt-12"
         >
           <Image
             src={inapp}
             alt="inapp logo"
             height={91}
             width={492}
-            className="mx-auto w-[200px]  lg:w-[492px]"
+            className="mx-auto w-[200px]  lg:w-[490px]"
           />
         </motion.div>
 
@@ -54,9 +54,9 @@ const Hero = () => {
           initial={{ opacity: 0, filter: "blur(4px)" }}
           whileInView={{ opacity: 1, filter: "blur(0)" }}
           transition={{ ease: "easeIn", duration: 1.9 }}
-          className="text-center text-[40px] lg:text-[170px] font-extrabold font-[Enhanced_LED_Board-7] text-white break-words shadow-lg tracking-wider"
+          className="text-center text-[40px] lg:text-[150px] font-aestetico text-white break-words shadow-lg tracking-wider"
         >
-          INNOVATE
+          innovate
         </motion.h1>
 
         {/* Subtitle */}

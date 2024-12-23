@@ -50,6 +50,13 @@ body {
     url("../app/fonts/Mona-Sans-BoldWide.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Aestetico";
+  src: local("Aestetico"), url("../app/fonts/Aestetico.otf") format("truetype");
+  font-weight: 700; /* Adjust as needed */
+  font-style: normal; /* Adjust as needed */
+}
+
 .buttonMain {
   height: 50px;
   width: 300px;

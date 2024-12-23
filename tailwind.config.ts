@@ -12,6 +12,9 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        aestetico: ["Aestetico", "sans-serif"], // Add your custom font here
+      },
     },
   },
   plugins: [],
