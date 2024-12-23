@@ -158,6 +158,157 @@ const Content = () => {
         </div>
       </motion.div>
       {/* ------------------------------------------------------ */}
+      <motion.div
+        id="page1"
+        initial={{ opacity: 0, transform: "translate(-100px)" }}
+        whileInView={{ opacity: 1, transform: "translate(0px)" }}
+        transition={{ ease: "easeOut", duration: 0.8 }}
+        className="bg-transparent text-white font-roboto p-8 sm:p-12 text-center leading-6"
+      >
+        {/* About the Event Section */}
+        <div
+          className="bg-[#1a1a1a] p-10 sm:p-12 lg:p-16 xl:p-20 rounded-lg mx-auto mb-8 max-w-full text-left"
+          style={{
+            clipPath:
+              "polygon(0px 0px, 100% 0px, 100% 90%, calc(100% - 58px) 100%, 0px 100%, 0px 39px)",
+          }}
+        >
+          <h2 className="text-3xl sm:text-4xl font-bold font-[Enhanced_LED_Board-7] mb-5 text-red-500">
+            Rules and Regulations
+          </h2>
+
+          {/* Registration and Participation Section */}
+          <h2 className="text-xl sm:text-2xl mb-5">
+            Registration and Participation
+          </h2>
+          <ul className="list-disc pl-6 text-lg sm:text-xl text-gray-300 mb-5">
+            <li>
+              A refundable reservation commitment of ₹500 is collected during
+              registration to ensure participation and avoid no-shows. The
+              amount will be refunded at the venue upon attendance.
+            </li>
+            <li>
+              Buying a ticket does not guarantee participation. All
+              registrations will undergo scrutiny, and confirmations will be
+              sent from the Innovate official email handle on or before 10th
+              January 2025.
+            </li>
+            <li>
+              If your registration is not selected, the amount paid during
+              registration will be refunded within 7 business days.
+            </li>
+            <li>
+              The decision of the organizing team regarding registration and
+              participation is final and binding.
+            </li>
+          </ul>
+
+          {/* Eligibility Section */}
+          <h2 className="text-xl sm:text-2xl mb-5">Eligibility</h2>
+          <ul className="list-disc pl-6 text-lg sm:text-xl text-gray-300 mb-5">
+            <li>
+              The hackathon is open exclusively to college students. All
+              participants must be enrolled in a recognized academic institution
+              at the time of registration.
+            </li>
+            <li>
+              Each team must consist of a minimum of one and a maximum of five
+              members.
+            </li>
+            <li>
+              Teams are required to bring at least one laptop to participate
+              effectively.
+            </li>
+            <li>
+              All participants must present a valid college ID card for
+              verification upon entering the premises.
+            </li>
+          </ul>
+
+          {/* Event Rules and Logistics Section */}
+          <h2 className="text-xl sm:text-2xl mb-5">
+            Event Rules and Logistics
+          </h2>
+          <ul className="list-disc pl-6 text-lg sm:text-xl text-gray-300 mb-5">
+            <li>
+              The domains and problem statements will be revealed only at the
+              start of the event to ensure a fair and exciting competition.
+            </li>
+            <li>
+              While the problem statements will not be disclosed in advance,
+              they will be aligned with the hackathon’s theme and cover a broad
+              spectrum to provide participants with an idea of what to expect.
+            </li>
+            <li>
+              Participants must strictly adhere to the schedule and guidelines
+              provided by the organizing team. Any deviations may result in
+              disqualification.
+            </li>
+          </ul>
+
+          {/* On-Campus Regulations Section */}
+          <h2 className="text-xl sm:text-2xl mb-5">On-Campus Regulations</h2>
+          <ul className="list-disc pl-6 text-lg sm:text-xl text-gray-300 mb-5">
+            <li>
+              Participants are not permitted to bring vehicles inside the
+              campus. Safeguarding of vehicles parked outside the campus is not
+              the responsibility of the organizers or college authorities.
+            </li>
+            <li>
+              A cloakroom will be provided inside the venue for personal
+              belongings. However, the organizers are not responsible for lost
+              or stolen items, including wallets, jewelry, or other valuables.
+            </li>
+            <li>
+              Participants must remain within the college premises during the
+              event. Leaving the campus without valid consent from the event
+              coordinators is prohibited.
+            </li>
+          </ul>
+
+          {/* Code of Conduct Section */}
+          <h2 className="text-xl sm:text-2xl mb-5">Code of Conduct</h2>
+          <ul className="list-disc pl-6 text-lg sm:text-xl text-gray-300 mb-5">
+            <li>
+              Participants must conduct themselves with professionalism and
+              respect toward fellow participants, mentors, and event staff.
+            </li>
+            <li>
+              Any act of misconduct, harassment, or breach of rules will result
+              in immediate disqualification, removal from the event, and legal
+              actions if applicable.
+            </li>
+          </ul>
+
+          {/* Intellectual Property Section */}
+          <h2 className="text-xl sm:text-2xl mb-5">Intellectual Property</h2>
+          <ul className="list-disc pl-6 text-lg sm:text-xl text-gray-300 mb-5">
+            <li>
+              The intellectual property rights of the solutions developed during
+              the hackathon remain with the respective teams. However, by
+              participating, you agree to allow the organizers to showcase your
+              work for marketing or promotional purposes.
+            </li>
+          </ul>
+
+          {/* Liability and Responsibility Section */}
+          <h2 className="text-xl sm:text-2xl mb-5">
+            Liability and Responsibility
+          </h2>
+          <ul className="list-disc pl-6 text-lg sm:text-xl text-gray-300">
+            <li>
+              The organizers will not be held liable for any injury, loss, or
+              damage incurred during the event. Participants are responsible for
+              their own safety and belongings.
+            </li>
+            <li>
+              The event venue complies with standard safety measures, but
+              participants must adhere to the instructions provided for their
+              safety.
+            </li>
+          </ul>
+        </div>
+      </motion.div>
     </>
   );
 };
