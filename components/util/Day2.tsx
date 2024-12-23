@@ -1,47 +1,6 @@
 import React from "react";
 
 const Day2 = () => {
-  // const item = [
-  //   {
-  //     id: 1,
-  //     time: "8:30 am - 9:15 am",
-  //     event: "Registration",
-  //     description: "Attendees will check in and register for the workshop.",
-  //   },
-  //   {
-  //     id: 2,
-  //     time: "9:30 am - 12:30 pm",
-  //     event: "Workshop Session 1",
-  //     description:
-  //       "The first session of the workshop, covering initial topics.",
-  //   },
-  //   {
-  //     id: 3,
-  //     time: "12:30 pm - 1:30 pm",
-  //     event: "Lunch",
-  //     description: "Lunch break for all attendees.",
-  //   },
-  //   {
-  //     id: 4,
-  //     time: "1:30 pm - 3:30 pm",
-  //     event: "Workshop Session 2",
-  //     description:
-  //       "The second session of the workshop, covering advanced topics.",
-  //   },
-  //   {
-  //     id: 5,
-  //     time: "3:30 pm - 4:30 pm",
-  //     event: "Game",
-  //     description: "Fun and engaging activities for attendees.",
-  //   },
-  //   {
-  //     id: 6,
-  //     time: "4:30 pm - 7:30 pm",
-  //     event: "Culturals and Dinner",
-  //     description: "Cultural performances followed by dinner.",
-  //   },
-  // ];
-
   return (
     <div>
       <h2 className="text-red-700 font-extrabold">
