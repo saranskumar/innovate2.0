@@ -38,7 +38,7 @@ const Hero = () => {
           initial={{ opacity: 0, filter: "blur(4px)" }}
           whileInView={{ opacity: 1, filter: "blur(0)" }}
           transition={{ ease: "easeIn", duration: 0.9 }}
-          className="text-center mb-2"
+          className="text-center mb-2 pt-12"
         >
           <Image
             src={inapp}
