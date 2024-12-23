@@ -22,7 +22,9 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ title, content }) => {
         onClick={() => setIsOpen(!isOpen)}
       >
         <span>{title}</span>
-        <span>{isOpen ? "-" : "+"}</span>
+        <span className="transition-max-height duration-500 ease-in-out overflow-hidden">
+          {isOpen ? "-" : "+"}
+        </span>
       </div>
       <div
         className={`transition-max-height duration-500 ease-in-out overflow-hidden ${

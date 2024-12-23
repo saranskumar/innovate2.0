@@ -20,7 +20,7 @@ const Registeration = () => {
       </motion.h1>
 
       <motion.div
-        className="flex flex-col items-center justify-center p-4 m-4 rounded-xl bg-[#202124] scale-75 hover:scale-100 transition-transform duration-200"
+        className="flex flex-col items-center justify-center p-4 m-4 rounded-xl bg-red-700 scale-75 hover:scale-100 transition-transform duration-200"
         initial={{ opacity: 0, transform: "scale(0.7)" }}
         whileInView={{ opacity: 1, transform: "scale(1)" }}
         transition={{ ease: "easeIn", duration: 0.2 }}

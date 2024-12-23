@@ -33,8 +33,9 @@ export const Fotter = () => {
             innovate@inapp.com
           </a>
         </p>
-        <p style={{ fontSize: "1rem" }}>Aravind P U: +91-8606164747</p>
-        <p style={{ fontSize: "1rem" }}>Govind S Nath: +91-8547393808</p>
+        <p style={{ fontSize: "1rem" }}>
+          Contact No: +91-8606164747 , +91-8547393808
+        </p>
       </div>
 
       <hr style={{ borderColor: "#444", margin: "20px 0" }} />
@@ -91,7 +92,7 @@ export const Fotter = () => {
                 <TbWorld />
               </a>
               <a
-                href="https://www.facebook.com/share/1EL9r2rMgv/"
+                href="https://www.facebook.com/ypieeekerala"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: "white", fontSize: "1.5rem" }}
@@ -99,7 +100,7 @@ export const Fotter = () => {
                 <FaFacebook />
               </a>
               <a
-                href="https://www.instagram.com/ieeekeralayp?igsh=MWozdWJraHluc3N1Zw=="
+                href="https://www.instagram.com/ieeekeralayp/"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: "white", fontSize: "1.5rem" }}
