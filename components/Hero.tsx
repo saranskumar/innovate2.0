@@ -66,8 +66,8 @@ const Hero = () => {
           transition={{ ease: "easeIn", duration: 1.2 }}
           className="text-center text-white text-sm font-extrabold md:text-lg mt-3 "
         >
-          Empowering the Future : Engineering Solutions for a Smarter
-          Sustainable Tomorrow
+          Empowering the Future: Engineering Solutions for a Smarter Sustainable
+          Tomorrow
         </motion.p>
 
         {/* Logos Section */}

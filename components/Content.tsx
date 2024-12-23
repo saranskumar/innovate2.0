@@ -61,35 +61,34 @@ const Content = () => {
           {/* Content Section */}
           <div className="max-w-full sm:max-w-3xl lg:max-w-4xl  space-y-6 text-left leading-8">
             <p className="text-lg sm:text-xl font-medium text-gray-300">
-              Innovate with Purpose:{" "}
               <span className="font-semibold text-gray-200">
-                Build solutions that matter.
+                Innovate with Purpose:{" "}
               </span>
+              Build solutions that matter.
             </p>
             <p className="text-lg sm:text-xl font-medium text-gray-300">
-              Learn from Experts:{" "}
               <span className="font-semibold text-gray-200">
-                Get mentorship and feedback from industry professionals.
+                Learn from Experts:{" "}
               </span>
+              Get mentorship and feedback from industry professionals.
             </p>
             <p className="text-lg sm:text-xl font-medium text-gray-300">
-              Showcase Your Talent:{" "}
               <span className="font-semibold text-gray-200">
-                Present your projects to industry leaders.
+                Showcase Your Talent:{" "}
               </span>
+              Present your projects to industry leaders.
             </p>
             <p className="text-lg sm:text-xl font-medium text-gray-300">
-              Placement Opportunities:{" "}
               <span className="font-semibold text-gray-200">
-                Impress top tech professionals and open doors to career
-                prospects.
+                Placement Opportunities:{" "}
               </span>
+              Impress top tech professionals and open doors to career prospects.
             </p>
             <p className="text-lg sm:text-xl font-medium text-gray-300">
-              Win Awards & Recognition:{" "}
               <span className="font-semibold text-gray-200">
-                Take home prizes and future opportunities.
+                Win Awards & Recognition:{" "}
               </span>
+              Take home prizes and future opportunities.
             </p>
           </div>
         </div>
