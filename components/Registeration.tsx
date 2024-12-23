@@ -31,9 +31,7 @@ const Registeration = () => {
       >
         <button
           onClick={() => {
-            window.open(
-              "https://www.yepdesk.com/embed/buy-tickets/6762fb8ec9e77c0001b73214/private/up2bepoeag"
-            );
+            window.open("https://www.yepdesk.com/innovate2025");
           }}
           className="buttonMain"
         >

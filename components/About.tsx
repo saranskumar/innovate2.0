@@ -69,20 +69,6 @@ const About = () => {
             <span className="text-white">IEEE Kerala Young Professionals</span>
           </motion.p>
         </motion.div>
-
-        {/* <div className="flex m-5 flex-1 flex-col">
-          <h2 className="font-palanquin text-4xl mb-10 font-bold lg:max-w-lg lg:text-start ">
-            About Dhyuthi 2024
-          </h2>
-          <p className="mt-4 lg:max-w-lg font-montserrat text-slate-gray text-lg leading-7 text-justify text-[#bbbcbc]">
-            {about_event}
-          </p>
-          <div className="flex-1 flex justify-center items-center ">
-            <h2 className="font-palanquin text-4xl mb-10 font-bold bg-gradient-to-r from-[#efb98f] via-[#ef9a06] to-[#f1871d] bg-clip-text text-transparent lg:max-w-lg">
-              October 04 | 05 | 06
-            </h2>
-          </div>
-        </div> */}
       </section>
     </section>
   );

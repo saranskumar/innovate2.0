@@ -1,6 +1,7 @@
 import React from "react";
 
 import { FaLinkedin, FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
+import { TbWorld } from "react-icons/tb";
 
 export const Fotter = () => {
   return (
@@ -32,7 +33,8 @@ export const Fotter = () => {
             innovate@inapp.com
           </a>
         </p>
-        <p style={{ fontSize: "1rem" }}>Phone: +91 XXXXX XXXXX</p>
+        <p style={{ fontSize: "1rem" }}>Aravind P U: +91-8606164747</p>
+        <p style={{ fontSize: "1rem" }}>Govind S Nath: +91-8547393808</p>
       </div>
 
       <hr style={{ borderColor: "#444", margin: "20px 0" }} />
@@ -73,7 +75,7 @@ export const Fotter = () => {
               }}
             >
               <a
-                href="#"
+                href="https://www.linkedin.com/company/ieee-kerala-young-professionals/"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: "white", fontSize: "1.5rem" }}
@@ -81,15 +83,15 @@ export const Fotter = () => {
                 <FaLinkedin />
               </a>
               <a
-                href="#"
+                href="https://yp.ieeekerala.org/"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: "white", fontSize: "1.5rem" }}
               >
-                <FaTwitter />
+                <TbWorld />
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/share/1EL9r2rMgv/"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: "white", fontSize: "1.5rem" }}
@@ -97,7 +99,7 @@ export const Fotter = () => {
                 <FaFacebook />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/ieeekeralayp?igsh=MWozdWJraHluc3N1Zw=="
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: "white", fontSize: "1.5rem" }}
@@ -118,7 +120,7 @@ export const Fotter = () => {
               }}
             >
               <a
-                href="#"
+                href="https://www.linkedin.com/company/inapp/"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: "white", fontSize: "1.5rem" }}
@@ -126,7 +128,7 @@ export const Fotter = () => {
                 <FaLinkedin />
               </a>
               <a
-                href="#"
+                href="https://x.com/inapp"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: "white", fontSize: "1.5rem" }}
@@ -134,7 +136,7 @@ export const Fotter = () => {
                 <FaTwitter />
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/InApp"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: "white", fontSize: "1.5rem" }}
@@ -142,7 +144,7 @@ export const Fotter = () => {
                 <FaFacebook />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/inapp.inc/"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: "white", fontSize: "1.5rem" }}

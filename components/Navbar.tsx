@@ -111,9 +111,7 @@ export const Navbar = () => {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <button
             onClick={() => {
-              window.open(
-                "https://www.yepdesk.com/embed/buy-tickets/6762fb8ec9e77c0001b73214/private/up2bepoeag"
-              );
+              window.open("https://www.yepdesk.com/innovate2025");
             }}
             className="text-lg font-semibold leading-6 text-gray-100"
           >
@@ -140,11 +138,7 @@ export const Navbar = () => {
               onClick={() => {
                 setMobileMenuOpen(false);
               }}
-            >
-              {/* <button className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-700">
-                Dhyuthi 5.0
-              </button> */}
-            </Link>
+            ></Link>
             <button
               type="button"
               onClick={() => setMobileMenuOpen(false)}
@@ -173,21 +167,6 @@ export const Navbar = () => {
                   </button>
                 </Link>
 
-                {/* <Link
-                  activeClass="active"
-                  to="page3"
-                  spy={true}
-                  smooth={true}
-                  offset={0}
-                  duration={500}
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                  }}
-                >
-                  <button className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-700">
-                    Events
-                  </button>
-                </Link> */}
                 <Link
                   activeClass="active"
                   to="page4"
@@ -223,9 +202,7 @@ export const Navbar = () => {
               <div className="py-6">
                 <button
                   onClick={() => {
-                    window.open(
-                      "https://www.yepdesk.com/embed/buy-tickets/6762fb8ec9e77c0001b73214/private/up2bepoeag"
-                    );
+                    window.open("https://www.yepdesk.com/innovate2025");
                   }}
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-700"
                 >
