@@ -126,7 +126,7 @@ const Content = () => {
               SCT College of Engineering
             </span>
             , ensuring professional mentorship, vibrant networking, and a
-            dynamic platform for innovation.
+            dynamic platform for innovation .
           </p>
         </div>
       </motion.div>
