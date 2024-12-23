@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title:
     "Join Innovate 2025, a hackathon solving real-world challenges in AI, IoT, Blockchain, and Sustainability.",
   description:
-    "Join Innovate 2025 Hackathon on January 18-19, 2025, in Trivandrum. Solve real-world challenges in AI, IoT, ESG, and more. Register today!",
+    "Join Innovate 2025 Hackathon on January 18-19, 2025, in Trivandrum. Solve real-world challenges in AI, IoT, ESG, and more. Register today!``",
 };
 
 export default function RootLayout({

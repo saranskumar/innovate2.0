@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 interface AccordionItemProps {
   title: string;
@@ -102,7 +103,12 @@ const Faqs = () => {
 
   return (
     <div id="page6" className="w-full flex justify-center items-center ">
-      <div className="md:w-[80%] m-3 mt-16 justify-center items-center">
+      <motion.div
+        initial={{ opacity: 0, transform: "translate(-200px)" }}
+        whileInView={{ opacity: 1, transform: "translate(0px)" }}
+        transition={{ ease: "easeOut", duration: 0.8 }}
+        className="md:w-[80%] m-3 mt-16 justify-center items-center"
+      >
         <h2 className=" font-palanquin text-4xl mb-10 font-bold ">FAQs</h2>
 
         {items.map((item, index) => (
@@ -112,7 +118,7 @@ const Faqs = () => {
             content={item.content}
           />
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };
