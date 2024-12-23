@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 const Registeration = () => {
   return (
     <div className="flex flex-col justify-center items-center pt-10">
-      <h1 className="text-4xl text-center sm:text-5xl md:text-6xl font-extrabold font-[Enhanced_LED_Board-7] text-white break-words mb-4">
+      <h2 className="text-4xl text-center sm:text-5xl md:text-6xl font-extrabold font-[Enhanced_LED_Board-7] text-white break-words mb-4">
         Innovate. Collaborate. Create.
-      </h1>
+      </h2>
 
-      <motion.h1
+      <motion.h2
         initial={{ opacity: 0, filter: "blur(4px)" }}
         whileInView={{ opacity: 1, filter: "blur(0)" }}
         transition={{ ease: "easeIn", duration: 1.9 }}
@@ -17,7 +17,7 @@ const Registeration = () => {
       >
         Join Kerala&apos;s brightest minds to build technology-driven solutions
         for real-world challenges!
-      </motion.h1>
+      </motion.h2>
 
       <motion.div
         className="flex flex-col items-center justify-center p-4 m-4 rounded-xl bg-red-700 scale-75 hover:scale-100 transition-transform duration-200"

@@ -32,7 +32,7 @@ const Hero = () => {
         />
         Your browser does not support the video tag.
       </video>
-      <div className="m-2 pt-5">
+      <div className="m-2 pt-28">
         {/* InApp Logo */}
         <motion.div
           initial={{ opacity: 0, filter: "blur(4px)" }}
@@ -45,7 +45,7 @@ const Hero = () => {
             alt="inapp logo"
             height={91}
             width={492}
-            className="mx-auto w-[200px] md:w-[492px]"
+            className="mx-auto w-[200px]  lg:w-[492px]"
           />
         </motion.div>
 
@@ -54,7 +54,7 @@ const Hero = () => {
           initial={{ opacity: 0, filter: "blur(4px)" }}
           whileInView={{ opacity: 1, filter: "blur(0)" }}
           transition={{ ease: "easeIn", duration: 1.9 }}
-          className="text-center text-[40px] md:text-[170px] font-extrabold font-[Enhanced_LED_Board-7] text-white break-words shadow-lg tracking-wider"
+          className="text-center text-[40px] lg:text-[170px] font-extrabold font-[Enhanced_LED_Board-7] text-white break-words shadow-lg tracking-wider"
         >
           INNOVATE
         </motion.h1>
@@ -66,8 +66,8 @@ const Hero = () => {
           transition={{ ease: "easeIn", duration: 1.2 }}
           className="text-center text-white text-sm font-extrabold md:text-lg mt-3 "
         >
-          Empowering the Future Engineering Solutions for a Smarter Sustainable
-          Tomorrow
+          Empowering the Future : Engineering Solutions for a Smarter
+          Sustainable Tomorrow
         </motion.p>
 
         {/* Logos Section */}

@@ -32,9 +32,9 @@ const About = () => {
           transition={{ ease: "easeInOut", duration: 0.8 }}
         >
           <div className="md:flex items-center justify-center gap-3 my-4">
-            <h1 className="text-4xl text-center  md:text-5xl font-bold font-[TheGoodMonolith] bg-gradient-to-b from-white via-red-500 to-red-700 bg-clip-text text-transparent mb-4">
+            <h2 className="text-4xl text-center  md:text-5xl font-bold font-[TheGoodMonolith] bg-gradient-to-b from-white via-red-500 to-red-700 bg-clip-text text-transparent mb-4">
               This Jan
-            </h1>
+            </h2>
           </div>
           <div className="md:flex items-center justify-center gap-3 my-4">
             <div className="ml-2">
