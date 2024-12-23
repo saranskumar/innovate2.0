@@ -58,7 +58,7 @@ export const Navbar = () => {
             </div>
           </Link>
         </div>
-        <div className="flex lg:hidden">
+        <div className="flex xl:hidden">
           <button
             type="button"
             onClick={() => setMobileMenuOpen(true)}
@@ -68,7 +68,7 @@ export const Navbar = () => {
             <Bars3Icon aria-hidden="true" className="h-6 w-6" />
           </button>
         </div>
-        <PopoverGroup className="hidden lg:flex lg:gap-x-12">
+        <PopoverGroup className="hidden xl:flex xl:gap-x-12">
           <Link
             activeClass="active"
             to="page1"
@@ -108,7 +108,7 @@ export const Navbar = () => {
             </button>
           </Link>
         </PopoverGroup>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+        <div className="hidden xl:flex xl:flex-1 xl:justify-end">
           <button
             onClick={() => {
               window.open("https://www.yepdesk.com/innovate2025");
@@ -122,7 +122,7 @@ export const Navbar = () => {
       <Dialog
         open={mobileMenuOpen}
         onClose={setMobileMenuOpen}
-        className="lg:hidden"
+        className="xl:hidden"
       >
         <div className="fixed inset-0 z-10" />
         <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
