@@ -34,7 +34,7 @@ export const Fotter = () => {
           </a>
         </p>
         <p style={{ fontSize: "1rem" }}>
-          Contact No: +91 86061 64747, +91 85473 93808
+          Contact No: +91 85473 93808, +91 86061 64747
         </p>
       </div>
 
