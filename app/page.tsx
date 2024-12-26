@@ -6,6 +6,7 @@ import Venue from "@/components/Venue";
 import Registeration from "@/components/Registeration";
 import Content from "@/components/Content";
 import Faqs from "@/components/Faqs";
+import Price from "@/components/Price";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <About />
       <Registeration />
       <Timer />
+      <Price />
       <Content />
       <Faqs />
       <Event />
