@@ -31,13 +31,21 @@ const Registeration = () => {
       >
         <button
           onClick={() => {
-            window.open("https://www.yepdesk.com/innovate2025");
+            // window.open("https://www.yepdesk.com/innovate2025");
           }}
           className="buttonMain"
         >
-          Register Now
+          Registration is now closed
         </button>
       </motion.div>
+      <motion.h2
+        initial={{ opacity: 0, filter: "blur(4px)" }}
+        whileInView={{ opacity: 1, filter: "blur(0)" }}
+        transition={{ ease: "easeIn", duration: 1.0 }}
+        className="text-lg sm:text-xl md:text-2xl font-bold  font-[Enhanced_LED_Board-7] text-center  text-white mb-6"
+      >
+        Thank you to everyone who registered! See you soon.
+      </motion.h2>
     </div>
   );
 };
