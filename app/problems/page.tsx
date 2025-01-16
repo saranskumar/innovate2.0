@@ -10,6 +10,26 @@ const page = () => {
       subTitle: "Lorem Ipsum is not simply random text",
       content:
         "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
+      points: [
+        {
+          id: 1,
+          title: "Where can I get some?",
+          content:
+            "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going",
+        },
+        {
+          id: 2,
+          title: "Where can I get some?",
+          content:
+            "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going",
+        },
+        {
+          id: 3,
+          title: "Where can I get some?",
+          content:
+            "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going",
+        },
+      ],
     },
     {
       id: 2,
@@ -17,6 +37,26 @@ const page = () => {
       subTitle: "Lorem Ipsum is not simply random text",
       content:
         "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
+      points: [
+        {
+          id: 1,
+          title: "Where can I get some?",
+          content:
+            "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going",
+        },
+        {
+          id: 2,
+          title: "Where can I get some?",
+          content:
+            "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going",
+        },
+        {
+          id: 3,
+          title: "Where can I get some?",
+          content:
+            "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going",
+        },
+      ],
     },
     {
       id: 3,
@@ -24,20 +64,26 @@ const page = () => {
       subTitle: "Lorem Ipsum is not simply random text",
       content:
         "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
-    },
-    {
-      id: 4,
-      title: "Problem Statment - 4",
-      subTitle: "Lorem Ipsum is not simply random text",
-      content:
-        "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
-    },
-    {
-      id: 5,
-      title: "Problem Statment - 5",
-      subTitle: "Lorem Ipsum is not simply random text",
-      content:
-        "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
+      points: [
+        {
+          id: 1,
+          title: "Where can I get some?",
+          content:
+            "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going",
+        },
+        {
+          id: 2,
+          title: "Where can I get some?",
+          content:
+            "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going",
+        },
+        {
+          id: 3,
+          title: "Where can I get some?",
+          content:
+            "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going",
+        },
+      ],
     },
   ];
   return (
@@ -68,6 +114,17 @@ const page = () => {
             <p className="text-lg sm:text-xl text-gray-300 mb-5">
               {list.content}
             </p>
+            {list.points.map((point, i) => (
+              <ul
+                key={i}
+                className="list-disc pl-6 text-lg sm:text-xl text-white"
+              >
+                <li>{point.title}</li>
+                <p className="text-base sm:text-lg text-gray-300 mb-5">
+                  {point.content}
+                </p>
+              </ul>
+            ))}
           </div>
         </motion.div>
       ))}
