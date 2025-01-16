@@ -1,25 +1,49 @@
 import React from "react";
 
 const Day1 = () => {
-  // const item = [
-  //   {
-  //     id: 1,
-  //     time: "9.00 pm - 10.00 pm",
-  //     event: "Inaugural Ceremony",
-  //     description: "Attendees will check in and register for the Hackathon.",
-  //   },
-  // ];
+  const item = [
+    {
+      id: 1,
+      time: "08:00 AM",
+      event: "Registration & Participant Check-In",
+      description: "",
+    },
+    {
+      id: 2,
+      time: "08:30 AM",
+      event: "Inauguration Ceremony",
+      description: "",
+    },
+    {
+      id: 3,
+      time: "09:00 AM",
+      event: "Problem Statement Reveal & Hackathon Start",
+      description: "",
+    },
+    {
+      id: 4,
+      time: "02:00 PM",
+      event: "Evaluation 1: Progress Check and Initial Feedback",
+      description: "",
+    },
+    {
+      id: 5,
+      time: "09:00 PM",
+      event: "Evaluation 2: Midpoint Progress Review",
+      description: "",
+    },
+  ];
 
   return (
     <div>
-      <h2 className="text-red-700 font-extrabold">
+      {/* <h2 className="text-red-700 font-extrabold">
         To Be Updated Soon – Stay Tuned!
-      </h2>
-      {/* <div>
+      </h2> */}
+      <div>
         <ol className="relative border-s border-gray-700">
           {item.map((list, index) => (
             <li className="mb-10 ms-6" key={index}>
-              <span className="absolute flex items-center justify-center w-6 h-6  rounded-full -start-3 ring-8 ring-gray-900 bg-[#ef9a06]">
+              <span className="absolute flex items-center justify-center w-6 h-6  rounded-full -start-3 ring-8 ring-gray-900 bg-[#eb2929]">
                 <svg
                   className="w-2.5 h-2.5 text-[#ffffff]"
                   aria-hidden="true"
@@ -32,7 +56,6 @@ const Day1 = () => {
               </span>
               <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
                 {list.event}
-                
               </h3>
               <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
                 {list.time}
@@ -43,7 +66,7 @@ const Day1 = () => {
             </li>
           ))}
         </ol>
-      </div> */}
+      </div>
     </div>
   );
 };
