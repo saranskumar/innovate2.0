@@ -31,11 +31,11 @@ const Registeration = () => {
       >
         <button
           onClick={() => {
-            // window.open("https://www.yepdesk.com/innovate2025");
+            window.open("/problems");
           }}
           className="buttonMain"
         >
-          Registration is now closed
+          Problem Statments
         </button>
       </motion.div>
       <motion.h2

@@ -109,14 +109,14 @@ export const Navbar = () => {
           </Link>
         </PopoverGroup>
         <div className="hidden xl:flex xl:flex-1 xl:justify-end">
-          {/* <button
+          <button
             onClick={() => {
-              window.open("https://www.yepdesk.com/innovate2025");
+              window.open("/problems");
             }}
             className="text-lg font-semibold leading-6 text-gray-100"
           >
-            Register Now<span aria-hidden="true">&rarr;</span>
-          </button> */}
+            Problem Statements<span aria-hidden="true">&rarr;</span>
+          </button>
         </div>
       </nav>
       <Dialog
@@ -200,14 +200,14 @@ export const Navbar = () => {
                 </Link>
               </div>
               <div className="py-6">
-                {/* <button
+                <button
                   onClick={() => {
-                    window.open("https://www.yepdesk.com/innovate2025");
+                    window.open("/problems");
                   }}
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-700"
                 >
-                  Register Now
-                </button> */}
+                  Problem Statements
+                </button>
               </div>
             </div>
           </div>

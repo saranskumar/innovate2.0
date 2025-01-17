@@ -12,7 +12,7 @@ interface TimeLeft {
 
 export const Timer = () => {
   const calculateTimeLeft = (): TimeLeft => {
-    const eventDate: Date = new Date("2025-01-18T09:30:00"); // Replace with your event date
+    const eventDate: Date = new Date("2025-01-19T12:00:00"); // Replace with your event date
     const now: Date = new Date();
     const difference: number = eventDate.getTime() - now.getTime(); // Use getTime() to get the timestamp in milliseconds
 
@@ -54,7 +54,7 @@ export const Timer = () => {
   return (
     <div className="my-20 flex flex-col items-center justify-center  text-white font-mono p-4">
       <p className="text-base sm:text-lg mb-4 italic text-center">
-        THE MUCH AWAITED EVENT WILL START IN
+        THE HACKATHON ENDS IN
       </p>
 
       <motion.div
