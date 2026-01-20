@@ -15,7 +15,7 @@ const Registeration = () => {
         transition={{ ease: "easeOut", duration: 0.6 }}
         className="text-lg sm:text-xl md:text-2xl font-medium text-center text-text-primary mb-8 max-w-3xl"
       >
-        Join Kerala's brightest minds to build technology-driven solutions
+        Join Kerala&apos;s brightest minds to build technology-driven solutions
         for real-world challenges!
       </motion.h2>
 

@@ -12,7 +12,7 @@ const About = () => {
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ ease: "easeOut", duration: 0.6 }}
+          transition={{ ease: "easeOut", duration: 0.8 }}
           className="flex-1 flex justify-center items-center"
         >
           <div className="paper-card rotate-slight-1 p-4 max-w-md">
@@ -32,7 +32,7 @@ const About = () => {
           className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left"
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ ease: "easeOut", duration: 0.6 }}
+          transition={{ ease: "easeOut", duration: 0.8 }}
         >
           <div className="paper-note rotate-slight-2 max-w-lg p-8">
             {/* "This Jan" heading with handwritten font */}

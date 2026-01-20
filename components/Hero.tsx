@@ -16,14 +16,14 @@ const Hero = () => {
       className="min-h-screen flex flex-col justify-center items-center bg-paper w-screen overflow-hidden py-20 px-4"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ ease: "easeOut", duration: 0.6 }}
+      transition={{ ease: "easeOut", duration: 0.8 }}
     >
       <div className="max-w-6xl mx-auto text-center">
         {/* InApp Logo */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ ease: "easeOut", duration: 0.5, delay: 0.1 }}
+          transition={{ ease: "easeOut", duration: 0.7, delay: 0.2 }}
           className="mb-6"
         >
           <Image
@@ -40,7 +40,7 @@ const Hero = () => {
         <motion.h1
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ ease: "easeOut", duration: 0.6, delay: 0.2 }}
+          transition={{ ease: "easeOut", duration: 0.8, delay: 0.3 }}
           className="text-7xl sm:text-8xl lg:text-[140px] font-handwritten text-sketch font-bold mb-6 leading-none"
           style={{ letterSpacing: '0.02em' }}
         >
@@ -51,7 +51,7 @@ const Hero = () => {
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ ease: "easeOut", duration: 0.6, delay: 0.3 }}
+          transition={{ ease: "easeOut", duration: 0.8, delay: 0.4 }}
           className="text-base sm:text-lg md:text-xl text-text-primary max-w-3xl mx-auto mb-12 px-4 font-medium"
         >
           <span className="highlight-yellow">

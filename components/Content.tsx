@@ -211,7 +211,7 @@ const Content = () => {
               </li>
               <li>
                 While the problem statements will not be disclosed in advance,
-                they will be aligned with the hackathon's theme and cover a broad
+                they will be aligned with the hackathon&apos;s theme and cover a broad
                 spectrum to provide participants with an idea of what to expect.
               </li>
               <li>
