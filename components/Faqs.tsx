@@ -7,32 +7,30 @@ interface AccordionItemProps {
   title: string;
   content: string;
 }
+
 const AccordionItem: React.FC<AccordionItemProps> = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div
-      className="bg-[#1a1a1a] text-white rounded-lg shadow-md my-4"
-      style={{
-        clipPath:
-          "polygon(0px 0px, 100% 0px, 100% 90%, calc(100% - 58px) 100%, 0px 100%, 0px 39px)",
-      }}
-    >
+    <div className="paper-card mb-4 overflow-hidden">
       <div
-        className="cursor-pointer flex justify-between items-center p-4 font-bold"
+        className="cursor-pointer flex justify-between items-center p-5 font-medium text-text-primary hover:bg-paper-dark transition-colors"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span>{title}</span>
-        <span className="transition-max-height duration-500 ease-in-out overflow-hidden">
-          {isOpen ? "-" : "+"}
+        <span className={isOpen ? "highlight-yellow-soft font-semibold" : ""}>
+          {title}
+        </span>
+        <span className="text-2xl font-bold ml-4 transition-transform duration-300" style={{ transform: isOpen ? 'rotate(45deg)' : 'rotate(0deg)' }}>
+          +
         </span>
       </div>
       <div
-        className={`transition-max-height duration-500 ease-in-out overflow-hidden ${
-          isOpen ? "max-h-screen" : "max-h-0"
-        }`}
+        className={`transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          }`}
       >
-        <div className="p-4 border-t border-gray-500">{content}</div>
+        <div className="p-5 pt-0 text-text-secondary border-t-2 border-dashed border-sketch-border mt-2">
+          {content}
+        </div>
       </div>
     </div>
   );
@@ -102,14 +100,16 @@ const Faqs = () => {
   ];
 
   return (
-    <div id="page6" className="w-full flex justify-center items-center ">
+    <div id="page6" className="bg-paper py-16 px-4">
       <motion.div
-        initial={{ opacity: 0, transform: "translate(-200px)" }}
-        whileInView={{ opacity: 1, transform: "translate(0px)" }}
-        transition={{ ease: "easeOut", duration: 0.8 }}
-        className="md:w-[80%] m-3 mt-16 justify-center items-center"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ ease: "easeOut", duration: 0.6 }}
+        className="max-w-4xl mx-auto"
       >
-        <h2 className=" font-palanquin text-4xl mb-10 font-bold ">FAQs</h2>
+        <h2 className="text-5xl sm:text-6xl font-handwritten font-bold text-sketch mb-10 text-center">
+          FAQs
+        </h2>
 
         {items.map((item, index) => (
           <AccordionItem

@@ -3,71 +3,83 @@ import React from "react";
 import Image from "next/image";
 import innovate from "../assets/images/Innovate_2.png";
 import { motion } from "framer-motion";
-//hidden md:block
+
 const About = () => {
   return (
-    <section className="padding pt-20 pb-20">
-      <section className="flex justify-between items-center max-lg:flex-col gap-10 w-full max-container text-white">
+    <section className="py-16 md:py-24 px-4 bg-paper">
+      <section className="flex justify-between items-center max-lg:flex-col gap-12 max-w-6xl mx-auto">
+        {/* Image Card */}
         <motion.div
-          initial={{ opacity: 0, transform: "translate(-100px)" }}
-          whileInView={{ opacity: 1, transform: "translate(0px)" }}
-          transition={{ ease: "easeOut", duration: 0.8 }}
-          className="flex-1 flex justify-center items-center "
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ ease: "easeOut", duration: 0.6 }}
+          className="flex-1 flex justify-center items-center"
         >
-          <Image
-            src={innovate}
-            alt=""
-            loading="lazy"
-            width="350"
-            height="280"
-            decoding="async"
-            data-nimg="1"
-            className=" object-contain rounded-md"
-          />
+          <div className="paper-card rotate-slight-1 p-4 max-w-md">
+            <Image
+              src={innovate}
+              alt="Innovate Hackathon"
+              loading="lazy"
+              width="350"
+              height="280"
+              className="object-contain rounded-md w-full"
+            />
+          </div>
         </motion.div>
+
+        {/* Content Card */}
         <motion.div
-          className="flex m-5 flex-1 flex-col mt-2 mask-radial-faded"
-          initial={{ opacity: 0, transform: "scale(0.7)" }}
-          whileInView={{ opacity: 1, transform: "scale(1)" }}
-          transition={{ ease: "easeInOut", duration: 0.8 }}
+          className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left"
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ ease: "easeOut", duration: 0.6 }}
         >
-          <div className="md:flex items-center justify-center gap-3 my-4">
-            <h2 className="text-4xl text-center  md:text-5xl font-bold font-[TheGoodMonolith] bg-gradient-to-b from-white via-red-500 to-red-700 bg-clip-text text-transparent mb-4">
+          <div className="paper-note rotate-slight-2 max-w-lg p-8">
+            {/* "This Jan" heading with handwritten font */}
+            <h2 className="text-4xl md:text-5xl font-handwritten font-bold text-sketch mb-4">
               This Jan
             </h2>
-          </div>
-          <div className="md:flex items-center justify-center gap-3 my-4">
-            <div className="ml-2">
-              <h2 className="text-3xl md:text-4xl animate-pulse font-bold  font-[Enhanced_LED_Board-7] text-center">
-                18 - 19
+
+            {/* Dates with yellow highlight */}
+            <div className="mb-6">
+              <h2 className="text-5xl md:text-6xl font-handwritten font-bold text-sketch highlight-yellow inline-block">
+                Feb 21
               </h2>
             </div>
+
+            {/* Tagline */}
+            <motion.p
+              className="text-lg md:text-xl font-medium text-text-secondary mb-6"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              From idea to reality
+            </motion.p>
+
+            {/* Location */}
+            <motion.p
+              className="text-lg md:text-xl font-semibold text-text-primary mb-3"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              SCT College of Engineering, Trivandrum
+            </motion.p>
+
+            {/* Supported by */}
+            <motion.p
+              className="text-base md:text-lg text-text-secondary"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
+              Supported by{" "}
+              <span className="text-text-primary font-semibold highlight-yellow-soft">
+                IEEE Kerala Young Professionals
+              </span>
+            </motion.p>
           </div>
-          <motion.p
-            className="text-lg md:text-xl font-semibold text-gray-400 text-center"
-            initial={{ opacity: 0, transform: "scale(0.3)" }}
-            whileInView={{ opacity: 1, transform: "scale(1)" }}
-            transition={{ ease: "easeInOut", duration: 0.8 }}
-          >
-            From idea to reality
-          </motion.p>
-          <motion.p
-            className="text-lg pt-6 md:text-xl font-semibold text-white text-center"
-            initial={{ opacity: 0, transform: "scale(0.3)" }}
-            whileInView={{ opacity: 1, transform: "scale(1)" }}
-            transition={{ ease: "easeInOut", duration: 0.8 }}
-          >
-            SCT College of Engineering, Trivandrum
-          </motion.p>
-          <motion.p
-            className="text-lg pt-2 md:text-xl font-semibold text-gray-400 text-center"
-            initial={{ opacity: 0, transform: "scale(0.3)" }}
-            whileInView={{ opacity: 1, transform: "scale(1)" }}
-            transition={{ ease: "easeInOut", duration: 0.8 }}
-          >
-            Supported by{" "}
-            <span className="text-white">IEEE Kerala Young Professionals</span>
-          </motion.p>
         </motion.div>
       </section>
     </section>

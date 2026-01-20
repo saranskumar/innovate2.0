@@ -12,9 +12,9 @@ interface TimeLeft {
 
 export const Timer = () => {
   const calculateTimeLeft = (): TimeLeft => {
-    const eventDate: Date = new Date("2025-01-19T12:00:00"); // Replace with your event date
+    const eventDate: Date = new Date("2026-02-21T12:00:00");
     const now: Date = new Date();
-    const difference: number = eventDate.getTime() - now.getTime(); // Use getTime() to get the timestamp in milliseconds
+    const difference: number = eventDate.getTime() - now.getTime();
 
     let timeLeft: TimeLeft = {
       days: 0,
@@ -47,55 +47,67 @@ export const Timer = () => {
   }, []);
 
   if (!timeLeft) {
-    // Render nothing until the client has mounted
     return null;
   }
 
   return (
-    <div className="my-20 flex flex-col items-center justify-center  text-white font-mono p-4">
-      <p className="text-base sm:text-lg mb-4 italic text-center">
+    <div className="py-16 px-4 bg-paper flex flex-col items-center justify-center">
+      <p className="text-xl sm:text-2xl font-handwritten-alt text-text-primary mb-8 text-center">
         THE HACKATHON ENDS IN
       </p>
 
       <motion.div
-        initial={{ opacity: 0, transform: "scale(0.7)" }}
-        whileInView={{ opacity: 1, transform: "scale(1)" }}
-        transition={{ ease: "easeInOut", duration: 0.8 }}
-        className="flex flex-wrap justify-center space-x-2 sm:space-x-4 text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold"
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ ease: "easeOut", duration: 0.6 }}
+        className="flex flex-wrap justify-center gap-4 sm:gap-6"
       >
-        <div className="flex flex-col items-center">
-          <span>{timeLeft.days || "0"}</span>
-          <span className="text-xs sm:text-sm md:text-base mt-1 sm:mt-2">
+        {/* Days */}
+        <div className="paper-note rotate-slight-1 flex flex-col items-center p-4 sm:p-6 min-w-[80px] sm:min-w-[100px]">
+          <span className="text-5xl sm:text-6xl md:text-7xl font-handwritten font-bold text-sketch">
+            {timeLeft.days || "0"}
+          </span>
+          <span className="text-sm sm:text-base mt-2 text-text-secondary font-medium">
             Days
           </span>
         </div>
-        <span className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl">-</span>
-        <div className="flex flex-col items-center">
-          <span>{timeLeft.hours || "0"}</span>
-          <span className="text-xs sm:text-sm md:text-base mt-1 sm:mt-2">
+
+        {/* Hours */}
+        <div className="paper-note rotate-slight-2 flex flex-col items-center p-4 sm:p-6 min-w-[80px] sm:min-w-[100px]">
+          <span className="text-5xl sm:text-6xl md:text-7xl font-handwritten font-bold text-sketch">
+            {timeLeft.hours || "0"}
+          </span>
+          <span className="text-sm sm:text-base mt-2 text-text-secondary font-medium">
             Hours
           </span>
         </div>
-        <span className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl">-</span>
-        <div className="flex flex-col items-center">
-          <span>{timeLeft.minutes || "0"}</span>
-          <span className="text-xs sm:text-sm md:text-base mt-1 sm:mt-2">
+
+        {/* Minutes */}
+        <div className="paper-note rotate-slight-3 flex flex-col items-center p-4 sm:p-6 min-w-[80px] sm:min-w-[100px]">
+          <span className="text-5xl sm:text-6xl md:text-7xl font-handwritten font-bold text-sketch">
+            {timeLeft.minutes || "0"}
+          </span>
+          <span className="text-sm sm:text-base mt-2 text-text-secondary font-medium">
             Minutes
           </span>
         </div>
-        <span className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl">-</span>
-        <div className="flex flex-col items-center">
-          <span>{timeLeft.seconds || "0"}</span>
-          <span className="text-xs sm:text-sm md:text-base mt-1 sm:mt-2">
+
+        {/* Seconds */}
+        <div className="paper-note rotate-slight-4 flex flex-col items-center p-4 sm:p-6 min-w-[80px] sm:min-w-[100px]">
+          <span className="text-5xl sm:text-6xl md:text-7xl font-handwritten font-bold text-sketch">
+            {timeLeft.seconds || "0"}
+          </span>
+          <span className="text-sm sm:text-base mt-2 text-text-secondary font-medium">
             Seconds
           </span>
         </div>
       </motion.div>
 
-      <div className="mt-8 text-center">
-        {/*<p className="uppercase text-xs sm:text-sm md:text-base">Venue:</p>*/}
-        <p className="text-sm sm:text-base text-red-700 bg-clip-text text-transparent md:text-lg lg:text-xl">
-          Fostering collaboration - innovation - diverse activities
+      <div className="mt-10 text-center">
+        <p className="text-base sm:text-lg text-text-primary font-medium">
+          <span className="highlight-yellow">
+            Fostering collaboration - innovation - diverse activities
+          </span>
         </p>
       </div>
     </div>

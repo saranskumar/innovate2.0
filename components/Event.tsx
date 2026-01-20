@@ -5,61 +5,62 @@ import { motion } from "framer-motion";
 import Day2 from "./util/Day2";
 
 const Event = () => {
-  const [activeTab, setActiveTab] = useState("day1"); // Default to "profile"
+  const [activeTab, setActiveTab] = useState("day1");
 
-  // Function to handle tab change
   const handleTabChange = (tab: string) => {
     setActiveTab(tab);
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0, filter: "blur(4px)" }}
-      whileInView={{ opacity: 1, filter: "blur(0)" }}
-      transition={{ ease: "easeIn", duration: 1.5 }}
-    >
-      <h2
-        id="page4"
-        className="md:flex m-10 md:ml-48 font-palanquin text-4xl mb-10 font-bold lg:max-w-lg lg:text-start "
+    <div className="bg-paper py-16 px-4">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ ease: "easeOut", duration: 0.6 }}
+        className="max-w-6xl mx-auto"
       >
-        Schedule
-      </h2>
-      <div className="md:flex m-10 md:ml-48">
-        {/* Sidebar Navigation */}
-        <ul className="flex-column space-y space-y-4 text-sm font-medium text-gray-500 dark:text-gray-400 md:me-4 mb-4 md:mb-0">
-          <li>
-            <button
-              onClick={() => handleTabChange("day1")}
-              className={`inline-flex items-center px-4 py-3 w-full rounded-lg ${
-                activeTab === "day1"
-                  ? "text-white bg-gradient-to-r from-[#ff5151] via-[#e12204] to-[#e53600] "
-                  : "bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100"
-              }`}
-            >
-              DAY 1
-            </button>
-          </li>
-          <li>
-            <button
-              onClick={() => handleTabChange("day2")}
-              className={`inline-flex items-center px-4 py-3 w-full rounded-lg ${
-                activeTab === "day2"
-                  ? "text-white bg-gradient-to-r from-[#ff5151] via-[#e12204] to-[#e53600]"
-                  : "bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100"
-              }`}
-            >
-              DAY 2
-            </button>
-          </li>
-        </ul>
+        <h2
+          id="page4"
+          className="text-5xl sm:text-6xl font-handwritten font-bold text-sketch mb-10 text-center"
+        >
+          Schedule
+        </h2>
 
-        {/* Main content */}
-        <div className="pl-12 bg-transparent text-medium text-gray-500  rounded-lg w-full">
-          {activeTab === "day1" && <Day1 />}
-          {activeTab === "day2" && <Day2 />}
+        <div className="md:flex gap-6">
+          {/* Sidebar Navigation */}
+          <ul className="flex md:flex-col space-x-4 md:space-x-0 md:space-y-4 mb-6 md:mb-0">
+            <li className="flex-1 md:flex-none">
+              <button
+                onClick={() => handleTabChange("day1")}
+                className={`w-full px-6 py-3 rounded-lg font-semibold transition-all ${activeTab === "day1"
+                    ? "button-sticky"
+                    : "paper-note text-text-primary hover:shadow-paper-hover"
+                  }`}
+              >
+                DAY 1
+              </button>
+            </li>
+            <li className="flex-1 md:flex-none">
+              <button
+                onClick={() => handleTabChange("day2")}
+                className={`w-full px-6 py-3 rounded-lg font-semibold transition-all ${activeTab === "day2"
+                    ? "button-sticky"
+                    : "paper-note text-text-primary hover:shadow-paper-hover"
+                  }`}
+              >
+                DAY 2
+              </button>
+            </li>
+          </ul>
+
+          {/* Main content */}
+          <div className="flex-1 bg-transparent text-text-primary rounded-lg w-full">
+            {activeTab === "day1" && <Day1 />}
+            {activeTab === "day2" && <Day2 />}
+          </div>
         </div>
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 };
 

@@ -13,103 +13,100 @@ const Hero = () => {
   return (
     <motion.div
       id="page0"
-      className="bg-black h-screen flex flex-col justify-center items-center bg-cover bg-no-repeat bg-fixed w-screen rounded-b-[35px] mt-1 overflow-hidden"
-      initial={{ opacity: 0, filter: "blur(2px)", scaleY: 0.7 }}
-      whileInView={{ opacity: 1, filter: "blur(0)", scaleY: 1 }}
-      transition={{ ease: "easeInOut", duration: 0.5 }}
+      className="min-h-screen flex flex-col justify-center items-center bg-paper w-screen overflow-hidden py-20 px-4"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ ease: "easeOut", duration: 0.6 }}
     >
-      {/* Background Video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover z-[-1]"
-      >
-        <source
-          src="https://videos.pexels.com/video-files/2611250/2611250-uhd_2560_1440_30fps.mp4"
-          type="video/mp4"
-        />
-        Your browser does not support the video tag.
-      </video>
-      <div className="m-2 pt-28">
+      <div className="max-w-6xl mx-auto text-center">
         {/* InApp Logo */}
         <motion.div
-          initial={{ opacity: 0, filter: "blur(4px)" }}
-          whileInView={{ opacity: 1, filter: "blur(0)" }}
-          transition={{ ease: "easeIn", duration: 0.9 }}
-          className="text-center mb-0 pt-12"
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ ease: "easeOut", duration: 0.5, delay: 0.1 }}
+          className="mb-6"
         >
           <Image
             src={inapp}
             alt="inapp logo"
             height={91}
             width={492}
-            className="mx-auto w-[200px]  lg:w-[490px]"
+            className="mx-auto w-[180px] lg:w-[380px] opacity-90"
+            style={{ filter: 'invert(1) brightness(0.2)' }}
           />
         </motion.div>
 
-        {/* Main Title */}
+        {/* Main Title - Hand-drawn style */}
         <motion.h1
-          initial={{ opacity: 0, filter: "blur(4px)" }}
-          whileInView={{ opacity: 1, filter: "blur(0)" }}
-          transition={{ ease: "easeIn", duration: 1.9 }}
-          className="text-center text-[40px] lg:text-[150px] font-aestetico text-white break-words shadow-lg tracking-wider"
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ ease: "easeOut", duration: 0.6, delay: 0.2 }}
+          className="text-7xl sm:text-8xl lg:text-[140px] font-handwritten text-sketch font-bold mb-6 leading-none"
+          style={{ letterSpacing: '0.02em' }}
         >
           innovate
         </motion.h1>
 
-        {/* Subtitle */}
+        {/* Subtitle with yellow highlight */}
         <motion.p
-          initial={{ opacity: 0, filter: "blur(4px)" }}
-          whileInView={{ opacity: 1, filter: "blur(0)" }}
-          transition={{ ease: "easeIn", duration: 1.2 }}
-          className="text-center text-white text-sm font-extrabold md:text-lg mt-3 "
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ ease: "easeOut", duration: 0.6, delay: 0.3 }}
+          className="text-base sm:text-lg md:text-xl text-text-primary max-w-3xl mx-auto mb-12 px-4 font-medium"
         >
-          Empowering the Future: Engineering Solutions for a Smarter Sustainable
-          Tomorrow
+          <span className="highlight-yellow">
+            Empowering the Future: Engineering Solutions
+          </span>{" "}
+          for a Smarter Sustainable Tomorrow
         </motion.p>
 
-        {/* Logos Section */}
+        {/* Logos Section - Paper note cards */}
         <motion.div
-          initial={{ opacity: 0, filter: "blur(4px)" }}
-          whileInView={{ opacity: 1, filter: "blur(0)" }}
-          transition={{ ease: "easeIn", duration: 1.5 }}
-          className="flex flex-wrap justify-center gap-4 md:gap-10 lg:gap-20 mt-4   px-4"
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ ease: "easeOut", duration: 0.6, delay: 0.4 }}
+          className="flex flex-wrap justify-center gap-6 md:gap-10 lg:gap-16 mb-8 px-4"
         >
-          {/* Individual Logos */}
-          <div className="w-[60px] h-[40px] sm:w-[80px] sm:h-[50px] md:w-[190px] md:h-[160px]">
-            <Image src={yp} alt="yp" className="w-full h-full object-contain" />
-          </div>
-
-          <div className="w-[60px] h-[40px] sm:w-[80px] sm:h-[50px] md:w-[190px] md:h-[160px]">
+          {/* YP Logo Card */}
+          <div className="paper-note rotate-slight-1 w-[80px] h-[60px] sm:w-[120px] sm:h-[90px] md:w-[160px] md:h-[130px] flex items-center justify-center hover:shadow-paper-hover transition-all">
             <Image
-              src={sct}
-              alt="SCT Emblem"
-              className="w-full h-full object-contain"
+              src={yp}
+              alt="IEEE Young Professionals"
+              className="w-full h-full object-contain p-2"
+              style={{ filter: 'invert(1) brightness(0.2)' }}
             />
           </div>
 
-          <div className="w-[60px] h-[40px] sm:w-[80px] sm:h-[50px] md:w-[190px] md:h-[160px]">
+          {/* SCT Logo Card */}
+          <div className="paper-note rotate-slight-2 w-[80px] h-[60px] sm:w-[120px] sm:h-[90px] md:w-[160px] md:h-[130px] flex items-center justify-center hover:shadow-paper-hover transition-all">
+            <Image
+              src={sct}
+              alt="SCT College of Engineering"
+              className="w-full h-full object-contain p-2"
+              style={{ filter: 'invert(1) brightness(0.2)' }}
+            />
+          </div>
+
+          {/* IEEE Logo Card */}
+          <div className="paper-note rotate-slight-3 w-[80px] h-[60px] sm:w-[120px] sm:h-[90px] md:w-[160px] md:h-[130px] flex items-center justify-center hover:shadow-paper-hover transition-all">
             <Image
               src={ieee}
               alt="IEEE Logo"
-              className="w-full h-full object-contain"
+              className="w-full h-full object-contain p-2"
+              style={{ filter: 'invert(1) brightness(0.2)' }}
             />
           </div>
         </motion.div>
 
-        {/* Event Details */}
-        {/* <motion.div
-          initial={{ opacity: 0, filter: "blur(4px)" }}
-          whileInView={{ opacity: 1, filter: "blur(0)" }}
-          transition={{ ease: "easeIn", duration: 1.7 }}
-          className="text-center text-white mt-4 text-sm md:text-lg"
+        {/* Decorative hand-drawn arrow pointing down (optional) */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ ease: "easeOut", duration: 0.6, delay: 0.6 }}
+          className="text-text-secondary text-4xl mt-4"
         >
-          <p>Date: January 18-19, 2025</p>
-          <p>Venue: SCT College of Engineering, Trivandrum</p>
-          <p>Supported by: IEEE Kerala Young Professionals</p>
-        </motion.div> */}
+          ↓
+        </motion.div>
       </div>
     </motion.div>
   );
