@@ -1,227 +1,158 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
-import { Dialog, DialogPanel, PopoverGroup } from "@headlessui/react";
+import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-scroll";
-import innovate from "../assets/logo/innovate_logo.png";
 
 export const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("page0");
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  const navItems = [
+    { name: "Home", to: "page0" },
+    { name: "About", to: "page1" },
+    { name: "Schedule", to: "page4" },
+    { name: "Contact", to: "page5" },
+  ];
 
   return (
     <header
       className={`fixed w-full z-50 transition-all duration-300 ${scrolled
-        ? "bg-paper/95 backdrop-blur-sm shadow-md border-b-2 border-sketch/10"
-        : "bg-transparent"
+        ? "bg-paper/98 backdrop-blur-sm shadow-[0_2px_8px_rgba(0,0,0,0.06)] border-b border-sketch/5"
+        : "bg-paper/80"
         }`}
     >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2 lg:px-8 sm:py-0">
-        <div className="flex lg:flex-1">
-          <span className="sr-only">Innovate</span>
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+        {/* Logo - Handwritten Style */}
+        <div className="flex">
           <Link
-            activeClass="active"
             to="page0"
             spy={true}
             smooth={true}
             offset={0}
             duration={500}
-            className="cursor-pointer"
+            className="cursor-pointer group"
           >
-            <div className="w-[100px] h-[80px] sm:w-[80px] sm:h-[50px] md:w-[140px] md:h-[100px]">
-              <Image
-                src={innovate}
-                alt="Innovate Logo"
-                className="w-full h-full object-contain"
-                style={{ filter: 'invert(1) brightness(0.2)' }}
-              />
-            </div>
+            <h1 className="text-2xl md:text-3xl font-handwritten font-bold text-sketch tracking-tight relative">
+              Innovate
+              <span className="absolute -bottom-1 left-0 w-0 h-1 bg-highlight-yellow/40 transition-all duration-300 group-hover:w-full -rotate-1"></span>
+            </h1>
           </Link>
         </div>
 
-        <div className="flex xl:hidden">
+        {/* Desktop Navigation */}
+        <div className="hidden lg:flex lg:items-center lg:gap-x-1">
+          {navItems.map((item) => (
+            <Link
+              key={item.to}
+              activeClass="nav-active"
+              to={item.to}
+              spy={true}
+              smooth={true}
+              offset={-80}
+              duration={500}
+              onSetActive={() => setActiveSection(item.to)}
+              className="cursor-pointer"
+            >
+              <button
+                className={`nav-item-hover relative px-4 py-2 text-sm font-medium transition-all duration-200 ${activeSection === item.to ? "nav-item-active text-sketch" : "text-text-primary"
+                  }`}
+              >
+                {item.name}
+              </button>
+            </Link>
+          ))}
+        </div>
+
+        {/* CTA Button - Sticky Note Style */}
+        <div className="hidden lg:flex">
           <button
-            type="button"
-            onClick={() => setMobileMenuOpen(true)}
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-text-primary"
+            onClick={() => window.open("/problems")}
+            className="relative group"
           >
-            <span className="sr-only">Open main menu</span>
-            <Bars3Icon aria-hidden="true" className="h-6 w-6" />
+            <span className="relative inline-block px-5 py-2.5 text-sm font-semibold text-sketch bg-highlight-yellow border-2 border-sketch/20 rounded-md rotate-1 transition-all duration-200 group-hover:rotate-0 group-hover:shadow-[2px_2px_0_rgba(26,26,26,0.2)] group-active:shadow-none group-active:translate-x-[1px] group-active:translate-y-[1px]">
+              Problem Statements →
+            </span>
           </button>
         </div>
 
-        <PopoverGroup className="hidden xl:flex xl:gap-x-8">
-          <Link
-            activeClass="active"
-            to="page1"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-            className="cursor-pointer"
-          >
-            <button className="text-base font-medium text-text-primary hover:text-sketch transition-colors relative group">
-              About
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-highlight transition-all group-hover:w-full"></span>
-            </button>
-          </Link>
-
-          <Link
-            activeClass="active"
-            to="page4"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-            className="cursor-pointer"
-          >
-            <button className="text-base font-medium text-text-primary hover:text-sketch transition-colors relative group">
-              Schedule
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-highlight transition-all group-hover:w-full"></span>
-            </button>
-          </Link>
-
-          <Link
-            activeClass="active"
-            to="page5"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-            className="cursor-pointer"
-          >
-            <button className="text-base font-medium text-text-primary hover:text-sketch transition-colors relative group">
-              Contact
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-highlight transition-all group-hover:w-full"></span>
-            </button>
-          </Link>
-        </PopoverGroup>
-
-        <div className="hidden xl:flex xl:flex-1 xl:justify-end">
+        {/* Mobile Menu Button */}
+        <div className="flex lg:hidden">
           <button
-            onClick={() => {
-              window.open("/problems");
-            }}
-            className="text-base font-semibold text-text-primary hover:text-sketch transition-colors"
+            type="button"
+            onClick={() => setMobileMenuOpen(true)}
+            className="inline-flex items-center justify-center rounded-md p-2 text-text-primary hover:bg-paper-dark transition-colors"
           >
-            Problem Statements <span aria-hidden="true">→</span>
+            <span className="sr-only">Open menu</span>
+            <Bars3Icon className="h-6 w-6" />
           </button>
         </div>
       </nav>
 
+      {/* Mobile Menu Dialog */}
       <Dialog
         open={mobileMenuOpen}
         onClose={setMobileMenuOpen}
-        className="xl:hidden"
+        className="lg:hidden"
       >
-        <div className="fixed inset-0 z-10 bg-sketch/50 backdrop-blur-sm" />
-        <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-paper px-6 py-6 sm:max-w-sm border-l-2 border-sketch/20">
+        <div className="fixed inset-0 z-50 bg-sketch/40 backdrop-blur-sm" />
+        <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full max-w-sm bg-paper px-6 py-6 shadow-xl border-l border-sketch/10">
+          {/* Mobile Header */}
           <div className="flex items-center justify-between">
-            <span className="sr-only">Innovate</span>
-            <Link
-              activeClass="active"
-              to="page0"
-              spy={true}
-              smooth={true}
-              offset={0}
-              duration={500}
-              onClick={() => {
-                setMobileMenuOpen(false);
-              }}
-              className="cursor-pointer"
-            ></Link>
+            <h2 className="text-xl font-handwritten font-bold text-sketch">
+              Innovate
+            </h2>
             <button
               type="button"
               onClick={() => setMobileMenuOpen(false)}
-              className="-m-2.5 rounded-md p-2.5 text-text-primary"
+              className="rounded-md p-2 text-text-primary hover:bg-paper-dark transition-colors"
             >
               <span className="sr-only">Close menu</span>
-              <XMarkIcon aria-hidden="true" className="h-6 w-6" />
+              <XMarkIcon className="h-6 w-6" />
             </button>
           </div>
-          <div className="mt-6 flow-root">
-            <div className="-my-6 divide-y-2 divide-dashed divide-sketch-border">
-              <div className="space-y-2 py-6 pt-11">
-                <Link
-                  activeClass="active"
-                  to="page1"
-                  spy={true}
-                  smooth={true}
-                  offset={0}
-                  duration={500}
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                  }}
-                  className="cursor-pointer"
-                >
-                  <button className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-text-primary hover:bg-paper-dark">
-                    About
-                  </button>
-                </Link>
 
+          {/* Mobile Navigation */}
+          <div className="mt-8 flow-root">
+            <div className="space-y-2">
+              {navItems.map((item) => (
                 <Link
-                  activeClass="active"
-                  to="page4"
+                  key={item.to}
+                  to={item.to}
                   spy={true}
                   smooth={true}
-                  offset={0}
+                  offset={-80}
                   duration={500}
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                  }}
+                  onClick={() => setMobileMenuOpen(false)}
                   className="cursor-pointer"
                 >
-                  <button className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-text-primary hover:bg-paper-dark">
-                    Schedule
+                  <button className="block w-full text-left px-4 py-3 text-base font-medium text-text-primary hover:bg-highlight-yellow/20 rounded-lg transition-colors">
+                    {item.name}
                   </button>
                 </Link>
+              ))}
 
-                <Link
-                  activeClass="active"
-                  to="page5"
-                  spy={true}
-                  smooth={true}
-                  offset={0}
-                  duration={500}
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                  }}
-                  className="cursor-pointer"
-                >
-                  <button className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-text-primary hover:bg-paper-dark">
-                    Contact
-                  </button>
-                </Link>
-              </div>
-              <div className="py-6">
+              {/* Mobile CTA */}
+              <div className="pt-4">
                 <button
                   onClick={() => {
                     window.open("/problems");
+                    setMobileMenuOpen(false);
                   }}
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold text-text-primary hover:bg-paper-dark"
+                  className="block w-full px-4 py-3 text-center text-base font-semibold text-sketch bg-highlight-yellow border-2 border-sketch/20 rounded-lg hover:shadow-md transition-all"
                 >
-                  Problem Statements
+                  Problem Statements →
                 </button>
               </div>
             </div>

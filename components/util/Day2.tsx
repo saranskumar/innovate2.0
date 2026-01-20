@@ -1,71 +1,108 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Day2 = () => {
-  const item = [
+  const schedule = [
     {
-      id: 6,
+      id: 1,
       time: "08:00 AM",
-      event: "Evaluation 3: Final Progress Evaluation",
-      description: "",
+      event: "Evaluation 3",
+      description: "Final progress evaluation before presentations",
+      rotation: "rotate-slight-1",
     },
     {
-      id: 7,
+      id: 2,
       time: "12:00 PM",
       event: "Announcement of Finalists",
-      description: "",
+      description: "Top teams selected for final presentations",
+      rotation: "-rotate-slight-1",
     },
     {
-      id: 8,
+      id: 3,
       time: "03:00 PM",
-      event: "Final Presentations & Evaluations",
-      description: "",
+      event: "Final Presentations",
+      description: "Teams present solutions to judges",
+      rotation: "rotate-slight-2",
     },
     {
-      id: 9,
+      id: 4,
       time: "05:00 PM",
-      event: "Closing Ceremony & Prize Distribution",
-      description: "",
+      event: "Closing Ceremony",
+      description: "Prize distribution and awards",
+      rotation: "-rotate-slight-2",
     },
     {
-      id: 10,
+      id: 5,
       time: "06:00 PM",
       event: "Event Wrap-Up",
-      description: "",
+      description: "Thank you and networking",
+      rotation: "rotate-slight-3",
     },
   ];
+
   return (
-    <div>
-      {/* <h2 className="text-red-700 font-extrabold">
-        To Be Updated Soon – Stay Tuned!
-      </h2> */}
-      <div>
-        <ol className="relative border-s border-gray-700">
-          {item.map((list, index) => (
-            <li className="mb-10 ms-6" key={index}>
-              <span className="absolute flex items-center justify-center w-6 h-6  rounded-full -start-3 ring-8 ring-gray-900 bg-[#eb2929]">
-                <svg
-                  className="w-2.5 h-2.5 text-[#ffffff]"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
-                </svg>
-              </span>
-              <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
-                {list.event}
+    <div className="relative py-4">
+      {/* Hand-drawn vertical connecting line */}
+      <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-transparent via-sketch/20 to-transparent hidden sm:block"></div>
+
+      <div className="space-y-6">
+        {schedule.map((item, index) => (
+          <motion.div
+            key={item.id}
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ ease: "easeOut", duration: 0.5, delay: index * 0.1 }}
+            className="relative"
+          >
+            {/* Timeline Dot Marker */}
+            <div className="absolute left-0 sm:left-5 top-6 w-3 h-3 rounded-full bg-sketch border-2 border-paper z-10"></div>
+
+            {/* Schedule Note Card */}
+            <div
+              className={`ml-0 sm:ml-20 paper-note ${item.rotation} hover:shadow-lg transition-all duration-300 group cursor-default`}
+            >
+              {/* Yellow Highlighted Time */}
+              <div className="mb-3">
+                <span className="inline-block text-lg sm:text-xl font-bold text-sketch">
+                  <span className="highlight-yellow">{item.time}</span>
+                </span>
+              </div>
+
+              {/* Event Title - Handwritten */}
+              <h3 className="text-xl sm:text-2xl font-handwritten font-bold text-sketch mb-2 leading-tight">
+                {item.event}
               </h3>
-              <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-                {list.time}
-              </time>
-              <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-                {list.description}
-              </p>
-            </li>
-          ))}
-        </ol>
+
+              {/* Description - Clean Sans-Serif */}
+              {item.description && (
+                <p className="text-sm sm:text-base text-text-secondary leading-relaxed">
+                  {item.description}
+                </p>
+              )}
+
+              {/* Hand-drawn underline accent */}
+              <div className="mt-3 w-16 h-0.5 bg-sketch/20 rounded"></div>
+            </div>
+
+            {/* Dashed connector to next item */}
+            {index < schedule.length - 1 && (
+              <div className="hidden sm:block absolute left-9 top-16 w-0.5 h-6 border-l-2 border-dashed border-sketch/15"></div>
+            )}
+          </motion.div>
+        ))}
       </div>
+
+      {/* End of Event Marker */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ ease: "easeOut", duration: 0.6, delay: 0.5 }}
+        className="mt-8 text-center"
+      >
+        <span className="inline-block px-4 py-2 text-sm font-medium text-text-secondary border-2 border-dashed border-sketch/20 rounded-lg">
+          Thank you for participating! 🙌
+        </span>
+      </motion.div>
     </div>
   );
 };

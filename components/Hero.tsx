@@ -13,7 +13,7 @@ const Hero = () => {
   return (
     <motion.div
       id="page0"
-      className="min-h-screen flex flex-col justify-center items-center bg-paper w-screen overflow-hidden py-20 px-4"
+      className="min-h-screen flex flex-col justify-center items-center bg-paper w-full overflow-hidden py-20 px-4"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ ease: "easeOut", duration: 0.8 }}
@@ -73,7 +73,6 @@ const Hero = () => {
               src={yp}
               alt="IEEE Young Professionals"
               className="w-full h-full object-contain p-2"
-              style={{ filter: 'invert(1) brightness(0.2)' }}
             />
           </div>
 
@@ -93,7 +92,6 @@ const Hero = () => {
               src={ieee}
               alt="IEEE Logo"
               className="w-full h-full object-contain p-2"
-              style={{ filter: 'invert(1) brightness(0.2)' }}
             />
           </div>
         </motion.div>
