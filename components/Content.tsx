@@ -23,7 +23,7 @@ const Content = () => {
             </span>
           </h3>
           <p className="text-lg sm:text-xl text-text-secondary mb-6 leading-relaxed">
-            As part of InApp's Silver Jubilee celebrations, Innovate is a
+            As part of InApp&apos;s Silver Jubilee celebrations, Innovate is a
             two-day hackathon designed for students across Kerala. Compete in
             teams to build impactful solutions that address real-world
             challenges, paving the way for a smart, sustainable tomorrow.

@@ -122,7 +122,7 @@ const page = () => {
 
               {/* Points */}
               <div className="space-y-4">
-                {problem.points.map((point, i) => (
+                {problem.points.map((point) => (
                   <div key={point.id} className="border-l-4 border-highlight pl-4">
                     <h4 className="text-lg sm:text-xl font-semibold text-text-primary mb-2">
                       → {point.title}
