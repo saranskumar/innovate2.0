@@ -68,7 +68,7 @@ const Hero = () => {
           className="flex flex-wrap justify-center gap-6 md:gap-10 lg:gap-16 mb-8 px-4"
         >
           {/* YP Logo Card */}
-          <div className="paper-note rotate-slight-1 w-[80px] h-[60px] sm:w-[120px] sm:h-[90px] md:w-[160px] md:h-[130px] flex items-center justify-center hover:shadow-paper-hover transition-all">
+          <div className="paper-note rotate-slight-1 w-[120px] h-[95px] sm:w-[150px] sm:h-[115px] md:w-[180px] md:h-[145px] flex items-center justify-center hover:shadow-paper-hover transition-all">
             <Image
               src={yp}
               alt="IEEE Young Professionals"
@@ -77,7 +77,7 @@ const Hero = () => {
           </div>
 
           {/* SCT Logo Card */}
-          <div className="paper-note rotate-slight-2 w-[80px] h-[60px] sm:w-[120px] sm:h-[90px] md:w-[160px] md:h-[130px] flex items-center justify-center hover:shadow-paper-hover transition-all">
+          <div className="paper-note rotate-slight-2 w-[120px] h-[95px] sm:w-[150px] sm:h-[115px] md:w-[180px] md:h-[145px] flex items-center justify-center hover:shadow-paper-hover transition-all">
             <Image
               src={sct}
               alt="SCT College of Engineering"
@@ -87,7 +87,7 @@ const Hero = () => {
           </div>
 
           {/* IEEE Logo Card */}
-          <div className="paper-note rotate-slight-3 w-[80px] h-[60px] sm:w-[120px] sm:h-[90px] md:w-[160px] md:h-[130px] flex items-center justify-center hover:shadow-paper-hover transition-all">
+          <div className="paper-note rotate-slight-3 w-[120px] h-[95px] sm:w-[150px] sm:h-[115px] md:w-[180px] md:h-[145px] flex items-center justify-center hover:shadow-paper-hover transition-all">
             <Image
               src={ieee}
               alt="IEEE Logo"
