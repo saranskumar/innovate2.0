@@ -52,7 +52,7 @@ export const Navbar = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex lg:items-center lg:gap-x-1">
+        <div className="hidden lg:flex lg:items-center lg:gap-x-1 pt-1">
           {navItems.map((item) => (
             <Link
               key={item.to}
@@ -76,7 +76,7 @@ export const Navbar = () => {
         </div>
 
         {/* CTA Button - Sticky Note Style */}
-        <div className="hidden lg:flex">
+        <div className="hidden lg:flex pt-1">
           <button
             onClick={() => window.open("/problems")}
             className="relative group"

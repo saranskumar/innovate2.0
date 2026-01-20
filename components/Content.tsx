@@ -8,9 +8,9 @@ const Content = () => {
       {/* About the Event Section */}
       <motion.div
         id="page1"
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ ease: "easeOut", duration: 0.6 }}
+        transition={{ ease: "easeInOut", duration: 1, delay: 0.1 }}
         className="max-w-5xl mx-auto mb-12"
       >
         <div className="paper-card rotate-slight-1 p-8 sm:p-12 lg:p-16">
@@ -39,9 +39,9 @@ const Content = () => {
 
       {/* Why Participate Section */}
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ ease: "easeOut", duration: 0.6 }}
+        transition={{ ease: "easeInOut", duration: 1, delay: 0.2 }}
         className="max-w-5xl mx-auto mb-12"
       >
         <div className="paper-card rotate-slight-2 p-8 sm:p-12 lg:p-16">
@@ -86,9 +86,9 @@ const Content = () => {
 
       {/* Collaborators Section */}
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ ease: "easeOut", duration: 0.6 }}
+        transition={{ ease: "easeInOut", duration: 1, delay: 0.1 }}
         className="max-w-5xl mx-auto mb-12"
       >
         <div className="paper-card rotate-slight-3 p-8 sm:p-12 lg:p-16">
@@ -114,9 +114,9 @@ const Content = () => {
 
       {/* About InApp Section */}
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ ease: "easeOut", duration: 0.6 }}
+        transition={{ ease: "easeInOut", duration: 1, delay: 0.2 }}
         className="max-w-5xl mx-auto mb-12"
       >
         <div className="paper-card rotate-slight-4 p-8 sm:p-12 lg:p-16">
@@ -135,9 +135,9 @@ const Content = () => {
 
       {/* Rules and Regulations Section */}
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ ease: "easeOut", duration: 0.6 }}
+        transition={{ ease: "easeInOut", duration: 1, delay: 0.1 }}
         className="max-w-5xl mx-auto mb-12"
       >
         <div className="paper-card rotate-slight-1 p-8 sm:p-12 lg:p-16">

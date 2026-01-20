@@ -12,7 +12,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="paper-card mb-4 overflow-hidden">
+    <div className="paper-card sketchy-lift mb-4 overflow-hidden">
       <div
         className="cursor-pointer flex justify-between items-center p-5 font-medium text-text-primary hover:bg-paper-dark transition-colors"
         onClick={() => setIsOpen(!isOpen)}

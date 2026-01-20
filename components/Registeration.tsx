@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import { ScribbleArrow } from "@/components/util/Scribbles";
 
 const Registeration = () => {
   return (
@@ -23,7 +24,7 @@ const Registeration = () => {
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ ease: "easeOut", duration: 0.5 }}
-        className="mb-6"
+        className="mb-6 flex flex-col sm:flex-row gap-4"
       >
         <button
           onClick={() => {
@@ -33,15 +34,27 @@ const Registeration = () => {
         >
           Problem Statements
         </button>
+
+        <div className="relative">
+          <button
+            onClick={() => {
+              window.open("/tickets", "_self");
+            }}
+            className="buttonMain font-semibold bg-paper-dark border-sketch"
+          >
+            Get Your Ticket →
+          </button>
+          <ScribbleArrow className="absolute -bottom-8 -right-6 sm:-right-16 sm:bottom-2 rotate-[130deg] sm:rotate-0" delay={0.5} />
+        </div>
       </motion.div>
 
       <motion.h2
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ ease: "easeOut", duration: 0.6 }}
-        className="text-base sm:text-lg md:text-xl font-handwritten-alt text-center text-text-primary mt-4"
+        className="text-base sm:text-lg md:text-xl font-handwritten text-center text-text-primary mt-4"
       >
-        Thank you to everyone who registered! See you soon.
+        <span className="highlight-yellow-soft font-semibold">Registration Opens Soon!</span> Stay tuned for updates.
       </motion.h2>
     </div>
   );

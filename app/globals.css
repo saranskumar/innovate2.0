@@ -221,6 +221,181 @@ body::before {
     color: var(--sketch-black);
     font-weight: bold;
   }
+
+  /* Comic-Inspired Editorial Details */
+
+  /* Sketchy borders - imperfect hand-drawn feel */
+  .sketchy-border {
+    position: relative;
+    border: 2px solid var(--sketch-black);
+    border-radius: 8px;
+  }
+
+  .sketchy-border::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border: 2px solid var(--sketch-black);
+    border-radius: 8px;
+    opacity: 0.3;
+    transform: rotate(-0.5deg);
+    pointer-events: none;
+  }
+
+  /* Hand-drawn underline - wavy imperfect line */
+  .hand-underline {
+    position: relative;
+    display: inline-block;
+  }
+
+  .hand-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='2' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,1 Q5,0.5 10,1 T20,1 T30,1 T40,1 T50,1 T60,1 T70,1 T80,1 T90,1 T100,1' stroke='%231A1A1A' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    background-size: 20px 2px;
+  }
+
+  /* Ink stroke hover effect */
+  .ink-stroke-hover {
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  .ink-stroke-hover::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--sketch-black);
+    transition: width 0.3s ease;
+    transform-origin: left;
+  }
+
+  .ink-stroke-hover:hover::before {
+    width: 100%;
+  }
+
+  /* Scribble circle accent */
+  .scribble-circle {
+    position: relative;
+  }
+
+  .scribble-circle::after {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    border: 2px solid var(--highlight-yellow);
+    border-radius: 50%;
+    opacity: 0.4;
+    transform: rotate(3deg);
+    pointer-events: none;
+  }
+
+  /* Hand-drawn arrow */
+  .hand-arrow::after {
+    content: '→';
+    display: inline-block;
+    margin-left: 0.5rem;
+    transform: rotate(-2deg);
+    font-weight: bold;
+  }
+
+  /* Imperfect highlight - more organic yellow marker */
+  .highlight-organic {
+    background: linear-gradient(178deg,
+        transparent 38%,
+        var(--highlight-yellow) 38%,
+        var(--highlight-yellow) 96%,
+        transparent 96%);
+    padding: 0 0.3em;
+    display: inline;
+    transform: rotate(-0.5deg);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+
+  /* Subtle draw-in animation */
+  @keyframes drawIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px) rotate(-1deg);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0) rotate(0deg);
+    }
+  }
+
+  .draw-in {
+    animation: drawIn 0.4s ease-out;
+  }
+
+  /* Marker stroke animation */
+  @keyframes markerStroke {
+    from {
+      width: 0%;
+      opacity: 0.8;
+    }
+
+    to {
+      width: 100%;
+      opacity: 1;
+    }
+  }
+
+  .marker-stroke {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .marker-stroke::before {
+    content: '';
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+    height: 60%;
+    width: 0%;
+    background: var(--highlight-yellow);
+    z-index: -1;
+    transform: rotate(-1deg);
+  }
+
+  .marker-stroke:hover::before {
+    animation: markerStroke 0.3s ease-out forwards;
+  }
+
+  /* Doodle dot accent */
+  .doodle-dot::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 6px;
+    height: 6px;
+    background: var(--highlight-yellow);
+    border-radius: 50%;
+    opacity: 0.8;
+  }
+
+  /* Sketchy hover lift */
+  .sketchy-lift {
+    transition: all 0.2s ease;
+  }
+
+  .sketchy-lift:hover {
+    transform: translateY(-3px) rotate(-0.5deg);
+    box-shadow:
+      3px 3px 0 rgba(0, 0, 0, 0.05),
+      6px 6px 0 rgba(0, 0, 0, 0.03);
+  }
 }
 
 /* Updated button styles */
@@ -240,10 +415,11 @@ body::before {
   height: auto;
   width: auto;
   min-width: 250px;
+  position: relative;
 }
 
 .buttonMain:hover {
-  transform: translate(-2px, -2px);
+  transform: translate(-2px, -2px) rotate(-0.5deg);
   box-shadow: 5px 5px 0 var(--sketch-black);
 }
 

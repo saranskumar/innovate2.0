@@ -59,7 +59,7 @@ const Day2 = () => {
 
             {/* Schedule Note Card */}
             <div
-              className={`ml-0 sm:ml-20 paper-note ${item.rotation} hover:shadow-lg transition-all duration-300 group cursor-default`}
+              className={`ml-0 sm:ml-20 paper-note sketchy-lift ${item.rotation} hover:shadow-lg transition-all duration-300 group cursor-default`}
             >
               {/* Yellow Highlighted Time */}
               <div className="mb-3">

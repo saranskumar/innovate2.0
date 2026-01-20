@@ -53,7 +53,7 @@ export const Timer = () => {
   return (
     <div className="py-16 px-4 bg-paper flex flex-col items-center justify-center">
       <p className="text-xl sm:text-2xl font-handwritten-alt text-text-primary mb-8 text-center">
-        THE HACKATHON ENDS IN
+        THE HACKATHON StARTS IN
       </p>
 
       <motion.div
