@@ -24,7 +24,7 @@ export default function TicketsPage() {
                             <span className="highlight-organic">Opens Soon!</span>
                         </h2>
                         <p className="text-lg sm:text-xl text-text-secondary leading-relaxed">
-                            We're preparing an amazing hackathon experience for you.
+                            We&apos;re preparing an amazing hackathon experience for you.
                             Registration will open shortly. Stay tuned for updates!
                         </p>
                     </div>
