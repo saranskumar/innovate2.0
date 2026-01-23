@@ -16,10 +16,12 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Join Innovate 2025, a hackathon solving real-world challenges.",
+  title: "Join Innovate 2.0 2025, a hackathon solving real-world challenges.",
   description:
     "Join Innovate 2025 Hackathon on January 18-19, 2025, in Trivandrum. Solve real-world challenges. Register today!",
 };
+
+import Aurora from "@/components/Aurora";
 
 export default function RootLayout({
   children,
@@ -29,8 +31,34 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative min-h-screen`}
       >
+        {/* Global Fixed Aurora Background - Professional Brick Red → White */}
+        <div className="fixed inset-0 z-[-1] pointer-events-none">
+          {/* Aurora Canvas - Hidden on Mobile */}
+          <div className="hidden md:block w-full h-full">
+            <Aurora
+              colorStops={["#FF0000", "#FF4444", "#FF8888", "#FFCCCC"]}
+              blend={0.25}
+              amplitude={0.35}
+              speed={0.3}
+            />
+          </div>
+
+          {/* Mobile Static Fallback */}
+          <div className="block md:hidden w-full h-full bg-gradient-to-b from-neutral-50 to-neutral-0" />
+
+          {/* White Overlay Layer (85% - Non-Negotiable) */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background: 'rgba(255, 255, 255, 0.65)',
+              backdropFilter: 'saturate(1.2)',
+              WebkitBackdropFilter: 'saturate(1.2)'
+            }}
+          />
+        </div>
+
         <Navbar />
         {children}
         <Fotter />

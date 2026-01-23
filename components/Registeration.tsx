@@ -5,9 +5,9 @@ import { ScribbleArrow } from "@/components/util/Scribbles";
 
 const Registeration = () => {
   return (
-    <div className="flex flex-col justify-center items-center py-16 px-4 bg-paper">
-      <h2 className="text-4xl sm:text-5xl md:text-6xl font-handwritten font-bold text-sketch text-center mb-6 max-w-4xl">
-        <span className="highlight-yellow">Innovate. Collaborate. Create.</span>
+    <div className="flex flex-col justify-center items-center py-16 px-4">
+      <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-text-primary text-center mb-6 max-w-4xl">
+        <span className="font-bold text-primary">Innovate 2.0. Collaborate. Create.</span>
       </h2>
 
       <motion.h2
@@ -44,7 +44,7 @@ const Registeration = () => {
           >
             Get Your Ticket →
           </button>
-          <ScribbleArrow className="absolute -bottom-8 -right-6 sm:-right-16 sm:bottom-2 rotate-[130deg] sm:rotate-0" delay={0.5} />
+          <ScribbleArrow className="hidden" delay={0.5} />
         </div>
       </motion.div>
 
@@ -52,9 +52,9 @@ const Registeration = () => {
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ ease: "easeOut", duration: 0.6 }}
-        className="text-base sm:text-lg md:text-xl font-handwritten text-center text-text-primary mt-4"
+        className="text-base sm:text-lg md:text-xl font-medium text-center text-text-primary mt-4"
       >
-        <span className="highlight-yellow-soft font-semibold">Registration Opens Soon!</span> Stay tuned for updates.
+        <span className="font-semibold text-primary">Registration Opens Soon!</span> Stay tuned for updates.
       </motion.h2>
     </div>
   );

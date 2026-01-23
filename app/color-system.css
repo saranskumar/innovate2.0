@@ -1,0 +1,48 @@
+/* 
+ * IEEE × inApp Hackathon Website
+ * Color System - CSS Custom Properties
+ * 
+ * This file contains complex values that cannot be tokenized in Tailwind,
+ * such as gradients and special surface effects.
+ */
+
+/* ============================================
+ * Brand Gradient
+ * ============================================
+ * USAGE RULES:
+ * ✅ Hero background
+ * ✅ Highlight banner (1 max per page)
+ * ✅ Section divider background
+ * 
+ * ❌ Behind paragraphs
+ * ❌ Forms
+ * ❌ Cards with dense content
+ * ❌ Footer
+ * 
+ * Rule of thumb: If text needs more than 2 lines, remove the gradient.
+ */
+
+/* ============================================
+ * Utility Classes
+ * ============================================
+ */
+
+/* Brand Gradient Background */
+.bg-brand-gradient {
+    background: linear-gradient(135deg, #E53935 0%, #F4511E 50%, #FF7043 100%);
+}
+
+/* Glass Surface Effect */
+.glass-surface {
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Focus Ring (for accessibility) */
+.focus-ring:focus,
+.focus-ring:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(229, 57, 53, 0.2);
+}

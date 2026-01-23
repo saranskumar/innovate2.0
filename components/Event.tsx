@@ -12,7 +12,7 @@ const Event = () => {
   };
 
   return (
-    <div className="bg-paper py-16 px-4">
+    <div className="py-16 px-4">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -21,7 +21,7 @@ const Event = () => {
       >
         <h2
           id="page4"
-          className="text-5xl sm:text-6xl font-handwritten font-bold text-sketch mb-10 text-center"
+          className="text-5xl sm:text-6xl font-bold text-text-primary mb-10 text-center"
         >
           Schedule
         </h2>
@@ -33,8 +33,8 @@ const Event = () => {
               <button
                 onClick={() => handleTabChange("day1")}
                 className={`w-full px-6 py-3 rounded-lg font-semibold transition-all ${activeTab === "day1"
-                    ? "button-sticky"
-                    : "paper-note text-text-primary hover:shadow-paper-hover"
+                  ? "button-sticky"
+                  : "card text-text-primary hover:shadow-md"
                   }`}
               >
                 DAY 1
@@ -44,8 +44,8 @@ const Event = () => {
               <button
                 onClick={() => handleTabChange("day2")}
                 className={`w-full px-6 py-3 rounded-lg font-semibold transition-all ${activeTab === "day2"
-                    ? "button-sticky"
-                    : "paper-note text-text-primary hover:shadow-paper-hover"
+                  ? "button-sticky"
+                  : "card text-text-primary hover:shadow-md"
                   }`}
               >
                 DAY 2

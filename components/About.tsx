@@ -3,11 +3,11 @@ import React from "react";
 import Image from "next/image";
 import innovate from "../assets/images/Innovate_2.png";
 import { motion } from "framer-motion";
-import { ScribbleUnderline } from "@/components/util/Scribbles";
+
 
 const About = () => {
   return (
-    <section className="py-16 md:py-24 px-4 bg-paper">
+    <section className="py-16 md:py-24 px-4">
       <section className="flex justify-between items-center max-lg:flex-col gap-12 max-w-6xl mx-auto">
         {/* Image Card */}
         <motion.div
@@ -16,10 +16,10 @@ const About = () => {
           transition={{ ease: "easeOut", duration: 0.8 }}
           className="flex-1 flex justify-center items-center"
         >
-          <div className="paper-card rotate-slight-1 sketchy-lift p-4 max-w-md">
+          <div className="card p-6 max-w-md">
             <Image
               src={innovate}
-              alt="Innovate Hackathon"
+              alt="Innovate 2.0 Hackathon"
               loading="lazy"
               width="350"
               height="280"
@@ -35,21 +35,20 @@ const About = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ ease: "easeOut", duration: 0.8 }}
         >
-          <div className="paper-note rotate-slight-2 max-w-lg p-8">
+          <div className="card p-8 max-w-lg">
             {/* "This Jan" heading with handwritten font */}
-            <h2 className="text-4xl md:text-5xl font-handwritten font-bold text-sketch mb-4 relative inline-block">
+            <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-4">
               This
-              <ScribbleUnderline className="absolute bottom-0 left-0 w-full" delay={0.5} />
             </h2>
 
             <div className="mb-6">
-              <h2 className="text-5xl md:text-6xl font-handwritten font-bold text-sketch highlight-organic inline-block hand-arrow">
-                Feb 21
+              <h2 className="text-5xl md:text-6xl font-bold text-primary inline-block">
+                Feb 21 →
               </h2>
             </div>
 
             <motion.p
-              className="text-lg md:text-xl font-medium text-text-secondary mb-6 hand-underline"
+              className="text-lg md:text-xl font-medium text-text-secondary mb-6"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -75,7 +74,7 @@ const About = () => {
               transition={{ duration: 0.5, delay: 0.4 }}
             >
               Supported by{" "}
-              <span className="text-text-primary font-semibold highlight-yellow-soft">
+              <span className="text-text-primary font-semibold ">
                 IEEE Kerala Young Professionals
               </span>
             </motion.p>

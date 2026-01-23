@@ -51,9 +51,9 @@ export const Timer = () => {
   }
 
   return (
-    <div className="py-16 px-4 bg-paper flex flex-col items-center justify-center">
-      <p className="text-xl sm:text-2xl font-handwritten-alt text-text-primary mb-8 text-center">
-        THE HACKATHON StARTS IN
+    <div className="py-16 px-4 flex flex-col items-center justify-center">
+      <p className="text-xl sm:text-2xl font-semibold text-text-primary mb-8 text-center uppercase tracking-wide">
+        THE HACKATHON STARTS IN
       </p>
 
       <motion.div
@@ -63,41 +63,41 @@ export const Timer = () => {
         className="flex flex-wrap justify-center gap-4 sm:gap-6"
       >
         {/* Days */}
-        <div className="paper-note rotate-slight-1 flex flex-col items-center p-4 sm:p-6 min-w-[80px] sm:min-w-[100px]">
-          <span className="text-5xl sm:text-6xl md:text-7xl font-handwritten font-bold text-sketch">
+        <div className="card-bordered flex flex-col items-center p-4 sm:p-6 min-w-[80px] sm:min-w-[100px]">
+          <span className="text-5xl sm:text-6xl md:text-7xl font-bold text-primary">
             {timeLeft.days || "0"}
           </span>
-          <span className="text-sm sm:text-base mt-2 text-text-secondary font-medium">
+          <span className="text-sm sm:text-base mt-2 text-text-secondary font-medium uppercase tracking-wide">
             Days
           </span>
         </div>
 
         {/* Hours */}
-        <div className="paper-note rotate-slight-2 flex flex-col items-center p-4 sm:p-6 min-w-[80px] sm:min-w-[100px]">
-          <span className="text-5xl sm:text-6xl md:text-7xl font-handwritten font-bold text-sketch">
+        <div className="card-bordered flex flex-col items-center p-4 sm:p-6 min-w-[80px] sm:min-w-[100px]">
+          <span className="text-5xl sm:text-6xl md:text-7xl font-bold text-primary">
             {timeLeft.hours || "0"}
           </span>
-          <span className="text-sm sm:text-base mt-2 text-text-secondary font-medium">
+          <span className="text-sm sm:text-base mt-2 text-text-secondary font-medium uppercase tracking-wide">
             Hours
           </span>
         </div>
 
         {/* Minutes */}
-        <div className="paper-note rotate-slight-3 flex flex-col items-center p-4 sm:p-6 min-w-[80px] sm:min-w-[100px]">
-          <span className="text-5xl sm:text-6xl md:text-7xl font-handwritten font-bold text-sketch">
+        <div className="card-bordered flex flex-col items-center p-4 sm:p-6 min-w-[80px] sm:min-w-[100px]">
+          <span className="text-5xl sm:text-6xl md:text-7xl font-bold text-primary">
             {timeLeft.minutes || "0"}
           </span>
-          <span className="text-sm sm:text-base mt-2 text-text-secondary font-medium">
+          <span className="text-sm sm:text-base mt-2 text-text-secondary font-medium uppercase tracking-wide">
             Minutes
           </span>
         </div>
 
         {/* Seconds */}
-        <div className="paper-note rotate-slight-4 flex flex-col items-center p-4 sm:p-6 min-w-[80px] sm:min-w-[100px]">
-          <span className="text-5xl sm:text-6xl md:text-7xl font-handwritten font-bold text-sketch">
+        <div className="card-bordered flex flex-col items-center p-4 sm:p-6 min-w-[80px] sm:min-w-[100px]">
+          <span className="text-5xl sm:text-6xl md:text-7xl font-bold text-primary">
             {timeLeft.seconds || "0"}
           </span>
-          <span className="text-sm sm:text-base mt-2 text-text-secondary font-medium">
+          <span className="text-sm sm:text-base mt-2 text-text-secondary font-medium uppercase tracking-wide">
             Seconds
           </span>
         </div>
@@ -105,7 +105,7 @@ export const Timer = () => {
 
       <div className="mt-10 text-center">
         <p className="text-base sm:text-lg text-text-primary font-medium">
-          <span className="highlight-yellow">
+          <span className="font-semibold text-primary">
             Fostering collaboration - innovation - diverse activities
           </span>
         </p>

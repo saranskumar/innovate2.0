@@ -9,46 +9,87 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        paper: {
-          DEFAULT: '#FAF8F3',
-          dark: '#F5F2ED',
-          darker: '#EBE7DF',
+        // ============================================
+        // IEEE × inApp - Brand Core Colors
+        // ============================================
+        brand: {
+          red: {
+            500: '#E53935', // Primary actions, CTAs, active states
+            600: '#D32F2F', // Hover/active states
+          },
+          orange: {
+            500: '#F4511E', // Supporting accent (gradients only)
+          },
         },
-        highlight: {
-          DEFAULT: '#FFE066',
-          soft: '#FFF4CC',
+
+        // ============================================
+        // Neutral System (Carries 80% of UI)
+        // ============================================
+        neutral: {
+          0: '#FFFFFF',    // Main page background
+          50: '#F9FAFB',   // Alternate sections, visual rhythm
+          100: '#F3F4F6',  // Cards, FAQ panels, schedule blocks
         },
-        sketch: {
-          DEFAULT: '#1A1A1A',
-          gray: '#888888',
-          border: '#D4CFC4',
-        },
+
+        // ============================================
+        // Text Hierarchy
+        // ============================================
         text: {
-          primary: '#2B2B2B',
-          secondary: '#5A5A5A',
-          light: '#888888',
+          primary: '#111827',   // Headings H1-H4
+          secondary: '#374151', // Body paragraphs
+          muted: '#6B7280',     // Dates, locations, helper text
+        },
+
+        // ============================================
+        // Borders & Interactive States
+        // ============================================
+        border: {
+          default: '#E5E7EB',  // Cards, inputs, dividers
+          active: '#E53935',   // Focus states, active inputs
+        },
+
+        // ============================================
+        // Links
+        // ============================================
+        link: {
+          default: '#E53935',
+          hover: '#D32F2F',
+        },
+
+        // ============================================
+        // Status & Feedback (Functional Only)
+        // ============================================
+        success: '#16A34A',
+        warning: '#F59E0B',
+        error: '#DC2626',
+
+        // ============================================
+        // Glass Surface
+        // ============================================
+        glass: {
+          bg: 'rgba(255, 255, 255, 0.75)',
+          border: 'rgba(255, 255, 255, 0.4)',
         },
       },
       fontFamily: {
-        handwritten: ['Caveat', 'cursive'],
-        'handwritten-alt': ['Patrick Hand', 'cursive'],
-        body: ['Inter', 'DM Sans', 'sans-serif'],
-        sans: ['Inter', 'DM Sans', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'Source Sans 3', 'DM Sans', 'Roboto', 'system-ui', 'sans-serif'],
+        body: ['Inter', 'Source Sans 3', 'DM Sans', 'sans-serif'],
       },
       borderRadius: {
-        'sketch': '12px',
+        'card': '8px',
       },
       boxShadow: {
-        'paper': '0 2px 4px rgba(0, 0, 0, 0.06), 0 4px 8px rgba(0, 0, 0, 0.04)',
-        'paper-hover': '0 4px 8px rgba(0, 0, 0, 0.08), 0 8px 16px rgba(0, 0, 0, 0.06)',
-        'sketch': '3px 3px 0 #1A1A1A',
-        'sketch-hover': '5px 5px 0 #1A1A1A',
+        'sm': '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+        'DEFAULT': '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1)',
+        'md': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)',
+        'lg': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1)',
+        'card': '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1)',
+        'card-hover': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)',
       },
-      rotate: {
-        'slight-1': '-0.5deg',
-        'slight-2': '0.5deg',
-        'slight-3': '-0.8deg',
-        'slight-4': '0.8deg',
+      transitionDuration: {
+        '150': '150ms',
+        '200': '200ms',
+        '250': '250ms',
       },
     },
   },

@@ -90,9 +90,9 @@ const page = () => {
   const rotations = ["rotate-slight-1", "rotate-slight-2", "rotate-slight-3"];
 
   return (
-    <div className="bg-paper min-h-screen py-20 px-4">
+    <div className="bg-white min-h-screen py-20 px-4">
       <div className="max-w-5xl mx-auto">
-        <h1 className="text-5xl sm:text-6xl md:text-7xl font-handwritten font-bold text-sketch mb-12 text-center pt-8">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-text-primary mb-12 text-center pt-8">
           Problem Statements
         </h1>
 
@@ -104,15 +104,15 @@ const page = () => {
             transition={{ ease: "easeOut", duration: 0.6, delay: index * 0.1 }}
             className="mb-12"
           >
-            <div className={`paper-card ${rotations[index % rotations.length]} p-8 sm:p-10 lg:p-12`}>
+            <div className="card p-8 sm:p-10 lg:p-12">
               {/* Problem Title */}
-              <h2 className="text-3xl sm:text-4xl font-handwritten font-bold text-sketch mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-text-primary mb-4">
                 {problem.title}
               </h2>
 
               {/* Subtitle with yellow highlight */}
               <h3 className="text-xl sm:text-2xl font-semibold text-text-primary mb-6">
-                <span className="highlight-yellow-soft">{problem.subTitle}</span>
+                <span className="font-semibold text-primary">{problem.subTitle}</span>
               </h3>
 
               {/* Content */}
@@ -123,7 +123,7 @@ const page = () => {
               {/* Points */}
               <div className="space-y-4">
                 {problem.points.map((point) => (
-                  <div key={point.id} className="border-l-4 border-highlight pl-4">
+                  <div key={point.id} className="border-l-4 border-primary pl-4">
                     <h4 className="text-lg sm:text-xl font-semibold text-text-primary mb-2">
                       → {point.title}
                     </h4>

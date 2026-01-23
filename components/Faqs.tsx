@@ -12,12 +12,12 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="paper-card sketchy-lift mb-4 overflow-hidden">
+    <div className="card mb-4 overflow-hidden">
       <div
         className="cursor-pointer flex justify-between items-center p-5 font-medium text-text-primary hover:bg-paper-dark transition-colors"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className={isOpen ? "highlight-yellow-soft font-semibold" : ""}>
+        <span className={isOpen ? "font-semibold text-primary" : ""}>
           {title}
         </span>
         <span className="text-2xl font-bold ml-4 transition-transform duration-300" style={{ transform: isOpen ? 'rotate(45deg)' : 'rotate(0deg)' }}>
@@ -39,7 +39,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ title, content }) => {
 const Faqs = () => {
   const items = [
     {
-      title: "Who can participate in the Innovate Hackathon?",
+      title: "Who can participate in the Innovate 2.0 Hackathon?",
       content:
         "The hackathon is open exclusively to college students enrolled in recognized academic institutions.",
     },
@@ -100,14 +100,14 @@ const Faqs = () => {
   ];
 
   return (
-    <div id="page6" className="bg-paper py-16 px-4">
+    <div id="page6" className="py-16 px-4">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ ease: "easeOut", duration: 0.6 }}
         className="max-w-4xl mx-auto"
       >
-        <h2 className="text-5xl sm:text-6xl font-handwritten font-bold text-sketch mb-10 text-center">
+        <h2 className="text-5xl sm:text-6xl font-bold text-text-primary mb-10 text-center">
           FAQs
         </h2>
 
