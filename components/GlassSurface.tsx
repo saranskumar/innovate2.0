@@ -6,8 +6,11 @@ interface GlassSurfaceProps {
     width?: number | string;
     height?: number | string;
     borderRadius?: number;
+    borderWidth?: number;
     blur?: number;
     opacity?: number;
+    brightness?: number;
+    saturation?: number;
     className?: string;
     style?: React.CSSProperties;
 }
@@ -17,8 +20,11 @@ const GlassSurface: React.FC<GlassSurfaceProps> = ({
     width = "100%",
     height = "auto",
     borderRadius = 16,
+    borderWidth = 1,
     blur = 10,
     opacity = 0.1,
+    brightness = 1,
+    saturation = 1,
     className = "",
     style = {},
 }) => {
@@ -26,10 +32,10 @@ const GlassSurface: React.FC<GlassSurfaceProps> = ({
         width: typeof width === "number" ? `${width}px` : width,
         height: typeof height === "number" ? `${height}px` : height,
         borderRadius: `${borderRadius}px`,
-        backdropFilter: `blur(${blur}px)`,
-        WebkitBackdropFilter: `blur(${blur}px)`,
+        backdropFilter: `blur(${blur}px) brightness(${brightness}) saturate(${saturation})`,
+        WebkitBackdropFilter: `blur(${blur}px) brightness(${brightness}) saturate(${saturation})`,
         backgroundColor: `rgba(255, 255, 255, ${opacity})`,
-        border: "1px solid rgba(255, 255, 255, 0.2)",
+        border: `${borderWidth}px solid rgba(255, 255, 255, 0.2)`,
         ...style,
     };
 
