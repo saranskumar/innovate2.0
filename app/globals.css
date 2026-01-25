@@ -18,7 +18,7 @@
   --brand-orange-500: #F4511E;
 
   /* Brand Gradient - Controlled Usage (Hero Only) */
-  --brand-gradient: linear-gradient(135deg, #E53935 0%, #F4511E 50%, #FF7043 100%);
+  --brand-gradient: linear-gradient(135deg, #C62828 0%, #E53935 50%, #F4511E 100%);
 
   /* Neutrals - Red-Tinted Whites (80% of Design) */
   --neutral-0: #FFFFFF;

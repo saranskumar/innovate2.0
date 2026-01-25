@@ -23,9 +23,9 @@
    * Rule of thumb: If text needs more than 2 lines, remove the gradient.
    */
     --brand-gradient: linear-gradient(135deg,
-            #E53935 0%,
-            #F4511E 50%,
-            #FF7043 100%);
+            #C62828 0%,
+            #E53935 50%,
+            #F4511E 100%);
 
     /* ============================================
    * Glass Surface System

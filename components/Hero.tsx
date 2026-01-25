@@ -2,9 +2,6 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-
-
-//logo imports
 import sct from "../assets/logo/sct_logo.png";
 import ieee from "../assets/logo/ieee_logo.png";
 import yp from "../assets/logo/yp_logo.png";
