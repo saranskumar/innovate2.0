@@ -16,7 +16,7 @@ const About = () => {
           transition={{ ease: "easeOut", duration: 0.8 }}
           className="flex-1 flex justify-center items-center"
         >
-          <div className="card p-6 max-w-md">
+          <div className="max-w-md">
             <Image
               src={innovate}
               alt="Innovate 2.0 Hackathon"
@@ -35,7 +35,7 @@ const About = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ ease: "easeOut", duration: 0.8 }}
         >
-          <div className="card p-8 max-w-lg">
+          <div className="max-w-lg">
             {/* "This Jan" heading with handwritten font */}
             <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-4">
               This

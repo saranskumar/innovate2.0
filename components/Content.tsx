@@ -13,7 +13,7 @@ const Content = () => {
         transition={{ ease: "easeInOut", duration: 1, delay: 0.1 }}
         className="max-w-5xl mx-auto mb-12"
       >
-        <div className="card p-8 sm:p-12 lg:p-16">
+        <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl sm:text-5xl font-bold text-text-primary mb-6">
             About the Event
           </h2>
@@ -44,7 +44,7 @@ const Content = () => {
         transition={{ ease: "easeInOut", duration: 1, delay: 0.2 }}
         className="max-w-5xl mx-auto mb-12"
       >
-        <div className="card p-8 sm:p-12 lg:p-16">
+        <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl sm:text-5xl font-bold text-text-primary mb-8">
             Why Participate?
           </h2>
@@ -91,7 +91,7 @@ const Content = () => {
         transition={{ ease: "easeInOut", duration: 1, delay: 0.1 }}
         className="max-w-5xl mx-auto mb-12"
       >
-        <div className="card p-8 sm:p-12 lg:p-16">
+        <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl sm:text-5xl font-bold text-text-primary mb-6">
             Collaborators
           </h2>
@@ -119,7 +119,7 @@ const Content = () => {
         transition={{ ease: "easeInOut", duration: 1, delay: 0.2 }}
         className="max-w-5xl mx-auto mb-12"
       >
-        <div className="card p-8 sm:p-12 lg:p-16">
+        <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl sm:text-5xl font-bold text-text-primary mb-6">
             About InApp
           </h2>
@@ -140,7 +140,7 @@ const Content = () => {
         transition={{ ease: "easeInOut", duration: 1, delay: 0.1 }}
         className="max-w-5xl mx-auto mb-12"
       >
-        <div className="card p-8 sm:p-12 lg:p-16">
+        <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-bold text-text-primary mb-8">
             Rules and Regulations
           </h2>

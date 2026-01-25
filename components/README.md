@@ -110,7 +110,8 @@ pnpm install
 
 ## Browser Support
 
-- **GradualBlur**: All modern browsers
+- **ClickSpark**: All modern browsers
+- **GlassSurface**: Browsers with `backdrop-filter` support
 - **ClickSpark**: All browsers with Canvas support
 - **GlassSurface**: 
   - Full features: Chrome, Edge (Chromium-based)

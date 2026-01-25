@@ -36,8 +36,8 @@ const Hero = () => {
             src={inapp}
             alt="inapp logo"
             height={91}
-            width={492}
-            className="mx-auto w-[180px] lg:w-[380px] opacity-90"
+            width={550}
+            className="mx-auto w-[220px] lg:w-[480px] opacity-90"
           />
         </motion.div>
 
@@ -51,9 +51,9 @@ const Hero = () => {
           <Image
             src={innovate}
             alt="Innovate 2.0"
-            width={600}
-            height={180}
-            className="w-[350px] lg:w-[600px] brightness-0"
+            width={800}
+            height={240}
+            className="w-[450px] lg:w-[750px] brightness-0"
           />
         </motion.div>
 

@@ -1,33 +1,11 @@
 // Example usage of the three interactive components
 // You can copy and use these examples in your pages
 
-import GradualBlur from './GradualBlur';
 import ClickSpark from './ClickSpark';
 import GlassSurface from './GlassSurface';
-import Image from "next/image";
 
-export function GradualBlurExample() {
-    return (
-        <section style={{ position: 'relative', height: 500, overflow: 'hidden' }}>
-            <div style={{ height: '100%', overflowY: 'auto', padding: '6rem 2rem' }}>
-                {/* Your content here - such as an image or text */}
-                {/* Your content here - such as an image or text */}
-                <Image src="/your-image.jpg" alt="Example" width={500} height={300} />
-            </div>
 
-            <GradualBlur
-                target="parent"
-                position="bottom"
-                height="7rem"
-                strength={2}
-                divCount={5}
-                curve="bezier"
-                exponential
-                opacity={1}
-            />
-        </section>
-    );
-}
+
 
 export function ClickSparkExample() {
     return (
@@ -86,12 +64,6 @@ export function CombinedExample() {
                         <h1>Interactive Glassmorphic Card</h1>
                         <p>Click to see sparks, scroll to see blur effects!</p>
                     </div>
-                    <GradualBlur
-                        position="bottom"
-                        height="4rem"
-                        strength={3}
-                        preset="subtle"
-                    />
                 </section>
             </GlassSurface>
         </ClickSpark>

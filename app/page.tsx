@@ -12,9 +12,9 @@ export default function Home() {
   return (
     <div>
       <Hero />
+       <Timer />
       <About />
       <Registeration />
-      <Timer />
       <Price />
       <Content />
       <Faqs />

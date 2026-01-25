@@ -87,7 +87,7 @@ const page = () => {
     },
   ];
 
-  const rotations = ["rotate-slight-1", "rotate-slight-2", "rotate-slight-3"];
+
 
   return (
     <div className="bg-white min-h-screen py-20 px-4">

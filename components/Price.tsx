@@ -1,8 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 import { motion, useInView } from "framer-motion";
-import innovate from "../assets/images/prize.png";
+
 
 const Price = () => {
   const [value, setValue] = useState(0);
@@ -39,7 +38,7 @@ const Price = () => {
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="card p-8 text-center md:text-left flex-1 max-w-lg"
+          className="text-center md:text-left flex-1 max-w-lg"
         >
           <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mb-4">
             Prize Pool of{" "}
@@ -55,20 +54,7 @@ const Price = () => {
         </motion.div>
 
         {/* Right Section */}
-        <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="flex-1 flex justify-center max-w-md"
-        >
-          <div className="card p-4">
-            <Image
-              src={innovate}
-              alt="Prize Pool"
-              className="w-full rounded-lg"
-            />
-          </div>
-        </motion.div>
+
       </div>
     </div>
   );
