@@ -4,13 +4,15 @@
 import GradualBlur from './GradualBlur';
 import ClickSpark from './ClickSpark';
 import GlassSurface from './GlassSurface';
+import Image from "next/image";
 
 export function GradualBlurExample() {
     return (
         <section style={{ position: 'relative', height: 500, overflow: 'hidden' }}>
             <div style={{ height: '100%', overflowY: 'auto', padding: '6rem 2rem' }}>
                 {/* Your content here - such as an image or text */}
-                <img src="/your-image.jpg" alt="Example" />
+                {/* Your content here - such as an image or text */}
+                <Image src="/your-image.jpg" alt="Example" width={500} height={300} />
             </div>
 
             <GradualBlur

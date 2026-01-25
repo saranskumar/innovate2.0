@@ -5,6 +5,7 @@ import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-scroll";
 import GlassSurface from "./GlassSurface";
+import Image from "next/image";
 import innovate from "../assets/logo/innovate_logo.png";
 
 export const Navbar = () => {
@@ -56,8 +57,8 @@ export const Navbar = () => {
               duration={500}
               className="cursor-pointer"
             >
-              <img
-                src={innovate.src}
+              <Image
+                src={innovate}
                 alt="Innovate 2.0"
                 className="h-12 md:h-14 w-auto brightness-0"
               />
@@ -137,8 +138,8 @@ export const Navbar = () => {
             <DialogPanel className="w-full h-full px-6 py-6">
               {/* Mobile Header */}
               <div className="flex items-center justify-between">
-                <img
-                  src={innovate.src}
+                <Image
+                  src={innovate}
                   alt="Innovate 2.0"
                   className="h-8 w-auto brightness-0"
                 />
