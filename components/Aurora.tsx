@@ -94,7 +94,7 @@ void main() {
   colors[3] = ColorStop(uColorStops[3], 1.0);
   
   vec3 rampColor;
-  COLOR_RAMP(colors, uv.x, rampColor);
+  COLOR_RAMP(colors, 1.0 - uv.y, rampColor);
   
   float height = snoise(vec2(uv.x * 2.0 + uTime * 0.1, uTime * 0.25)) * 0.5 * uAmplitude;
   height = exp(height);
@@ -104,7 +104,10 @@ void main() {
   float midPoint = 0.20;
   float auroraAlpha = smoothstep(midPoint - uBlend * 0.5, midPoint + uBlend * 0.5, intensity);
   
-  vec3 auroraColor = intensity * rampColor;
+  // Use rampColor directly without darkening it with intensity
+  // This ensures specific colors (reds) stay vibrant and fade to transparency
+  // rather than fading to black/gray shadows
+  vec3 auroraColor = rampColor;
   
   fragColor = vec4(auroraColor * auroraAlpha, auroraAlpha);
 }
@@ -123,7 +126,7 @@ export default function Aurora(props: AuroraProps) {
     const {
         colorStops = ['#B91C1C', '#DC2626', '#EF4444', '#FEE2E2'],
         amplitude = 0.45,
-        blend = 0.3
+        blend = 0.
     } = props;
 
     const propsRef = useRef<AuroraProps>(props);

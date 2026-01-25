@@ -72,15 +72,15 @@ const Hero = () => {
           for a Smarter Sustainable Tomorrow
         </motion.p>
 
-        {/* Logos Section - Paper note cards */}
+        {/* Logos Section - All 4 in a row on mobile */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ ease: "easeOut", duration: 0.6, delay: 0.4 }}
-          className="flex flex-wrap justify-center items-center gap-6 md:gap-10 lg:gap-16 mb-8 px-4"
+          className="flex flex-nowrap justify-center items-center gap-2 sm:gap-6 md:gap-10 lg:gap-16 mb-8 px-2"
         >
-          {/* YP Logo (Left) */}
-          <div className="w-[100px] h-[80px] sm:w-[130px] sm:h-[100px] md:w-[160px] md:h-[130px] flex items-center justify-center">
+          {/* YP Logo */}
+          <div className="w-[60px] h-[48px] sm:w-[100px] sm:h-[80px] md:w-[160px] md:h-[130px] flex items-center justify-center flex-shrink-0">
             <Image
               src={yp}
               alt="IEEE Young Professionals"
@@ -88,8 +88,8 @@ const Hero = () => {
             />
           </div>
 
-          {/* SB Logo (Middle) */}
-          <div className="w-[80px] h-[64px] sm:w-[100px] sm:h-[80px] md:w-[130px] md:h-[100px] flex items-center justify-center">
+          {/* SB Logo */}
+          <div className="w-[50px] h-[40px] sm:w-[80px] sm:h-[64px] md:w-[130px] md:h-[100px] flex items-center justify-center flex-shrink-0">
             <Image
               src={sb}
               alt="IEEE Student Branch"
@@ -97,8 +97,8 @@ const Hero = () => {
             />
           </div>
 
-          {/* SCT Logo (Middle) */}
-          <div className="w-[100px] h-[80px] sm:w-[130px] sm:h-[100px] md:w-[160px] md:h-[130px] flex items-center justify-center">
+          {/* SCT Logo */}
+          <div className="w-[60px] h-[48px] sm:w-[100px] sm:h-[80px] md:w-[160px] md:h-[130px] flex items-center justify-center flex-shrink-0">
             <Image
               src={sct}
               alt="SCT College of Engineering"
@@ -106,8 +106,8 @@ const Hero = () => {
             />
           </div>
 
-          {/* IEEE Logo (Right - Bigger) */}
-          <div className="w-[130px] h-[100px] sm:w-[160px] sm:h-[130px] md:w-[200px] md:h-[170px] flex items-center justify-center">
+          {/* IEEE Logo */}
+          <div className="w-[70px] h-[56px] sm:w-[130px] sm:h-[100px] md:w-[200px] md:h-[170px] flex items-center justify-center flex-shrink-0">
             <Image
               src={ieee}
               alt="IEEE Logo"
