@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import sct from "../assets/logo/sct_logo.png";
 import ieee from "../assets/logo/ieee_logo.png";
 import yp from "../assets/logo/yp_logo.png";
-import inapp from "../assets/logo/inapp_logo.png";
+import inapp from "../assets/logo/inapplogo.svg";
 import sb from "../assets/logo/SB_Black.png";
 import innovate from "../assets/logo/innovate_logo.png";
 
@@ -13,12 +13,12 @@ const Hero = () => {
   return (
     <motion.div
       id="page0"
-      className="relative min-h-screen flex flex-col justify-center items-center w-full overflow-hidden pt-36 pb-20 px-4"
+      className="relative min-h-[90vh] md:min-h-screen flex flex-col justify-center items-center w-full overflow-hidden pt-24 pb-10 md:pt-36 md:pb-20 px-4"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ ease: "easeOut", duration: 0.8 }}
       style={{
-        background: 'linear-gradient(180deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.2) 100%)'
+        background: 'transparent'
       }}
     >
 
@@ -77,10 +77,10 @@ const Hero = () => {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ ease: "easeOut", duration: 0.6, delay: 0.4 }}
-          className="flex flex-nowrap justify-center items-center gap-2 sm:gap-6 md:gap-10 lg:gap-16 mb-8 px-2"
+          className="flex flex-nowrap justify-center items-center gap-3 sm:gap-6 md:gap-10 lg:gap-16 mb-8 px-2"
         >
           {/* YP Logo */}
-          <div className="w-[60px] h-[48px] sm:w-[100px] sm:h-[80px] md:w-[160px] md:h-[130px] flex items-center justify-center flex-shrink-0">
+          <div className="w-[80px] h-[64px] sm:w-[100px] sm:h-[80px] md:w-[160px] md:h-[130px] flex items-center justify-center flex-shrink-0">
             <Image
               src={yp}
               alt="IEEE Young Professionals"
@@ -89,7 +89,7 @@ const Hero = () => {
           </div>
 
           {/* SB Logo */}
-          <div className="w-[50px] h-[40px] sm:w-[80px] sm:h-[64px] md:w-[130px] md:h-[100px] flex items-center justify-center flex-shrink-0">
+          <div className="w-[70px] h-[56px] sm:w-[80px] sm:h-[64px] md:w-[130px] md:h-[100px] flex items-center justify-center flex-shrink-0">
             <Image
               src={sb}
               alt="IEEE Student Branch"
@@ -98,7 +98,7 @@ const Hero = () => {
           </div>
 
           {/* SCT Logo */}
-          <div className="w-[60px] h-[48px] sm:w-[100px] sm:h-[80px] md:w-[160px] md:h-[130px] flex items-center justify-center flex-shrink-0">
+          <div className="w-[80px] h-[64px] sm:w-[100px] sm:h-[80px] md:w-[160px] md:h-[130px] flex items-center justify-center flex-shrink-0">
             <Image
               src={sct}
               alt="SCT College of Engineering"
@@ -106,8 +106,8 @@ const Hero = () => {
             />
           </div>
 
-          {/* IEEE Logo */}
-          <div className="w-[70px] h-[56px] sm:w-[130px] sm:h-[100px] md:w-[200px] md:h-[170px] flex items-center justify-center flex-shrink-0">
+          {/* IEEE Logo - Larger than others */}
+          <div className="w-[100px] h-[80px] sm:w-[130px] sm:h-[100px] md:w-[200px] md:h-[170px] flex items-center justify-center flex-shrink-0">
             <Image
               src={ieee}
               alt="IEEE Logo"
@@ -121,9 +121,21 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ ease: "easeOut", duration: 0.6, delay: 0.6 }}
-          className="text-red-400 text-3xl mt-8"
+          className="mt-12 flex flex-col items-center"
         >
-
+          <div className="flex items-center justify-center gap-4 text-red-900 bg-white/60 backdrop-blur-md px-6 py-3 rounded-2xl border border-red-100 shadow-sm max-w-full mx-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 md:w-10 md:h-10 text-red-600 flex-shrink-0">
+              <path fillRule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
+            </svg>
+            <div className="flex flex-col text-left">
+              <span className="text-[10px] sm:text-lg md:text-xl font-bold leading-tight whitespace-nowrap">
+                Sree Chitra Thirunal College of Engineering
+              </span>
+              <span className="text-[10px] sm:text-sm md:text-base font-medium text-red-800 opacity-90 whitespace-nowrap">
+                Pappanamcode, Thiruvananthapuram, Kerala
+              </span>
+            </div>
+          </div>
         </motion.div>
       </div>
     </motion.div>

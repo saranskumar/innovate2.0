@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import GlassSurface from "../GlassSurface";
 
 const Day2 = () => {
   const schedule = [
@@ -58,30 +59,36 @@ const Day2 = () => {
             <div className="absolute left-0 sm:left-5 top-6 w-3 h-3 rounded-full bg-primary border-2 border-white z-10"></div>
 
             {/* Schedule Note Card */}
-            <div
-              className="ml-0 sm:ml-20 card p-6 hover:shadow-lg transition-all duration-200 group cursor-default"
-            >
-              {/* Yellow Highlighted Time */}
-              <div className="mb-3">
-                <span className="inline-block text-lg sm:text-xl font-bold text-primary">
-                  <span className="font-semibold text-primary">{item.time}</span>
-                </span>
-              </div>
+            <div className="ml-0 sm:ml-20">
+              <GlassSurface
+                className="p-6 hover:shadow-lg transition-all duration-200 group cursor-default"
+                opacity={0.4}
+                blur={10}
+                borderWidth={1}
+                borderRadius={16}
+              >
+                {/* Yellow Highlighted Time */}
+                <div className="mb-3">
+                  <span className="inline-block text-lg sm:text-xl font-bold text-primary">
+                    <span className="font-semibold text-primary">{item.time}</span>
+                  </span>
+                </div>
 
-              {/* Event Title - Handwritten */}
-              <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-2 leading-tight">
-                {item.event}
-              </h3>
+                {/* Event Title - Handwritten */}
+                <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-2 leading-tight">
+                  {item.event}
+                </h3>
 
-              {/* Description - Clean Sans-Serif */}
-              {item.description && (
-                <p className="text-sm sm:text-base text-text-secondary leading-relaxed">
-                  {item.description}
-                </p>
-              )}
+                {/* Description - Clean Sans-Serif */}
+                {item.description && (
+                  <p className="text-sm sm:text-base text-text-secondary leading-relaxed">
+                    {item.description}
+                  </p>
+                )}
 
-              {/* Hand-drawn underline accent */}
-              <div className="mt-3 w-16 h-0.5 bg-primary/20 rounded"></div>
+                {/* Hand-drawn underline accent */}
+                <div className="mt-3 w-16 h-0.5 bg-primary/20 rounded"></div>
+              </GlassSurface>
             </div>
 
             {/* Dashed connector to next item */}

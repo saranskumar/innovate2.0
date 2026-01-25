@@ -7,13 +7,15 @@ import Registeration from "@/components/Registeration";
 import Content from "@/components/Content";
 import Faqs from "@/components/Faqs";
 import Price from "@/components/Price";
+import Rules from "@/components/Rules";
 
 export default function Home() {
   return (
     <div>
       <Hero />
-       <Timer />
+      <Timer />
       <About />
+      <Rules />
       <Registeration />
       <Price />
       <Content />

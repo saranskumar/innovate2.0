@@ -3,6 +3,7 @@ import Day1 from "@/components/util/Day1";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Day2 from "./util/Day2";
+import GlassSurface from "./GlassSurface";
 
 const Event = () => {
   const [activeTab, setActiveTab] = useState("day1");
@@ -29,27 +30,30 @@ const Event = () => {
         <div className="md:flex gap-6">
           {/* Sidebar Navigation */}
           <ul className="flex md:flex-col space-x-4 md:space-x-0 md:space-y-4 mb-6 md:mb-0">
+
             <li className="flex-1 md:flex-none">
-              <button
-                onClick={() => handleTabChange("day1")}
-                className={`w-full px-6 py-3 rounded-lg font-semibold transition-all ${activeTab === "day1"
-                  ? "button-sticky"
-                  : "card text-text-primary hover:shadow-md"
-                  }`}
-              >
-                DAY 1
-              </button>
+              <div onClick={() => handleTabChange("day1")} className="cursor-pointer">
+                <GlassSurface
+                  className={`w-full px-6 py-3 font-semibold transition-all text-center ${activeTab === "day1" ? "text-white" : "text-text-primary"}`}
+                  opacity={activeTab === "day1" ? 0.9 : 0.3}
+                  borderRadius={12}
+                  style={{ backgroundColor: activeTab === "day1" ? 'var(--brand-red-500)' : undefined }}
+                >
+                  DAY 1
+                </GlassSurface>
+              </div>
             </li>
             <li className="flex-1 md:flex-none">
-              <button
-                onClick={() => handleTabChange("day2")}
-                className={`w-full px-6 py-3 rounded-lg font-semibold transition-all ${activeTab === "day2"
-                  ? "button-sticky"
-                  : "card text-text-primary hover:shadow-md"
-                  }`}
-              >
-                DAY 2
-              </button>
+              <div onClick={() => handleTabChange("day2")} className="cursor-pointer">
+                <GlassSurface
+                  className={`w-full px-6 py-3 font-semibold transition-all text-center ${activeTab === "day2" ? "text-white" : "text-text-primary"}`}
+                  opacity={activeTab === "day2" ? 0.9 : 0.3}
+                  borderRadius={12}
+                  style={{ backgroundColor: activeTab === "day2" ? 'var(--brand-red-500)' : undefined }}
+                >
+                  DAY 2
+                </GlassSurface>
+              </div>
             </li>
           </ul>
 

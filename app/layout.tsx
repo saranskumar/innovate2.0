@@ -35,8 +35,8 @@ export default function RootLayout({
       >
         {/* Global Fixed Aurora Background - Professional Brick Red → White */}
         <div className="fixed inset-0 z-[-1] pointer-events-none bg-white">
-          {/* Aurora Canvas - Hidden on Mobile */}
-          <div className="hidden md:block w-full h-full">
+          {/* Aurora Canvas - Visible on Mobile too */}
+          <div className="w-full h-full">
             <Aurora
               colorStops={["#F87171", "#EF4444", "#FECACA", "#FFFFFF"]}
               blend={0.3}
@@ -44,9 +44,6 @@ export default function RootLayout({
               speed={0.3}
             />
           </div>
-
-          {/* Mobile Static Fallback - Strong Red to White Gradient */}
-          <div className="block md:hidden w-full h-full bg-gradient-to-b from-red-200 via-red-300 to-white" />
 
           {/* White Overlay Layer - Responsive opacity */}
           <div

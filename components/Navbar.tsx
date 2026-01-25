@@ -25,9 +25,11 @@ export const Navbar = () => {
   const navItems = [
     { name: "Home", to: "page0" },
     { name: "About", to: "page1" },
-    { name: "Venue", to: "page3" },
+    { name: "Rules", to: "rules" },
+    { name: "FAQ", to: "page6" },
     { name: "Schedule", to: "page4" },
-    { name: "Contact", to: "page6" },
+    { name: "Venue", to: "page3" },
+    { name: "Contact Us", to: "page3" },
   ];
 
   return (
@@ -37,7 +39,8 @@ export const Navbar = () => {
         height="auto"
         borderRadius={0}
         brightness={1.1}
-        opacity={0.35}
+        opacity={0}
+        borderWidth={0}
         blur={12}
         saturation={1.2}
         className={`transition-all duration-300 ${scrolled ? 'border-b border-white/20' : ''}`}

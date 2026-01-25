@@ -29,6 +29,7 @@ const GlassSurface: React.FC<GlassSurfaceProps> = ({
     width = '100%',
     height = '100%',
     borderRadius = 20,
+    borderWidth = 1,
     brightness = 1.0,
     opacity = 0.5,
     blur = 10,
@@ -49,7 +50,7 @@ const GlassSurface: React.FC<GlassSurfaceProps> = ({
                 background: `rgba(255, 255, 255, ${opacity})`,
                 backdropFilter: `blur(${blur}px) saturate(${saturation}) brightness(${brightness})`,
                 WebkitBackdropFilter: `blur(${blur}px) saturate(${saturation}) brightness(${brightness})`,
-                border: '1px solid rgba(255, 255, 255, 0.2)',
+                border: borderWidth > 0 ? `${borderWidth}px solid rgba(255, 255, 255, 0.2)` : 'none',
                 boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
                 ...style
             }}
