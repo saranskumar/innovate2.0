@@ -24,7 +24,7 @@ export const Fotter = () => {
                 </a>
               </p>
               <p className="text-base sm:text-lg">
-                Contact: <span className="font-medium">+91 85473 93808, +91 86061 64747</span>
+                Contact: <span className="font-medium">+91 00000 00000</span>
               </p>
             </div>
           </div>

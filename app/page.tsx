@@ -4,7 +4,6 @@ import Event from "@/components/Event";
 import { Timer } from "@/components/Timer";
 import Venue from "@/components/Venue";
 import Registeration from "@/components/Registeration";
-import EventDetails from "@/components/EventDetails";
 import Collaborators from "@/components/Collaborators";
 import AboutInApp from "@/components/AboutInApp";
 import Price from "@/components/Price";

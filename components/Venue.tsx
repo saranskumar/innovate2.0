@@ -88,8 +88,7 @@ const Venue = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-text-primary mb-1">Contact</h3>
-                  <p className="text-text-secondary">+91 85473 93808</p>
-                  <p className="text-text-secondary">+91 86061 64747</p>
+                  <p className="text-text-secondary">+91 00000 00000</p>
                 </div>
               </div>
 
