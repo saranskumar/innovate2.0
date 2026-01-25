@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import sct from "../assets/logo/sct_logo.png";
 import ieee from "../assets/logo/ieee_logo.png";
 import yp from "../assets/logo/yp_logo.png";
-import inapp from "../assets/logo/inapplogo.svg";
+import inapp from "../assets/logo/InApp_Logo.svg";
 import sb from "../assets/logo/SB_Black.png";
 import innovate from "../assets/logo/innovate_logo.png";
 
@@ -37,7 +37,7 @@ const Hero = () => {
             alt="inapp logo"
             height={91}
             width={550}
-            className="mx-auto w-[220px] lg:w-[480px] opacity-90"
+            className="mx-auto w-[180px] lg:w-[400px] opacity-90"
           />
         </motion.div>
 

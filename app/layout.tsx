@@ -18,7 +18,7 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Join Innovate 2.0 2025, a hackathon solving real-world challenges.",
   description:
-    "Join Innovate 2025 Hackathon on January 18-19, 2025, in Trivandrum. Solve real-world challenges. Register today!",
+    "Join Innovate 2026 Hackathon on February 20-22, 2026, in Trivandrum. Solve real-world challenges. Register today!",
 };
 
 import Aurora from "@/components/Aurora";
@@ -34,12 +34,12 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative min-h-screen`}
       >
         {/* Global Fixed Aurora Background - Professional Brick Red → White */}
-        <div className="fixed inset-0 z-[-1] pointer-events-none bg-white">
+        <div className="fixed top-0 left-0 right-0 h-[70vh] md:inset-0 z-[-1] pointer-events-none bg-white">
           {/* Aurora Canvas - Visible on Mobile too */}
           <div className="w-full h-full">
             <Aurora
-              colorStops={["#F87171", "#EF4444", "#FECACA", "#FFFFFF"]}
-              blend={0.3}
+              colorStops={["#a72f35", "#EF4444", "#F87171", "#FFFFFF"]}
+              blend={0.5}
               amplitude={0.45}
               speed={0.3}
             />
@@ -47,7 +47,7 @@ export default function RootLayout({
 
           {/* White Overlay Layer - Responsive opacity */}
           <div
-            className="absolute inset-0 md:opacity-25 opacity-15"
+            className="absolute inset-0 md:opacity-15 opacity-5"
             style={{
               background: 'rgba(255, 255, 255, 1)',
               backdropFilter: 'saturate(1.2)',

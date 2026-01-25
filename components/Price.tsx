@@ -11,7 +11,7 @@ const Price = () => {
   useEffect(() => {
     if (isInView) {
       let start = 0;
-      const end = 50;
+      const end = 60;
       const duration = 2000;
       const stepTime = Math.abs(Math.floor(duration / end));
 
@@ -49,7 +49,7 @@ const Price = () => {
           <p className="mt-4 text-lg sm:text-xl text-text-primary">
             Join us for the ultimate competition and grab a chance to win from a
             massive prize pool of{" "}
-            <span className="font-bold text-primary">₹50,000!</span>
+            <span className="font-bold text-primary">₹60,000!</span>
           </p>
         </motion.div>
 

@@ -124,7 +124,7 @@ interface AuroraProps {
 export default function Aurora(props: AuroraProps) {
     // Professional red → white gradient (corporate/light theme)
     const {
-        colorStops = ['#B91C1C', '#DC2626', '#EF4444', '#FEE2E2'],
+        colorStops = ['#B91C1C', '#840909ff', '#881010ff', '#FEE2E2'],
         amplitude = 0.45,
         blend = 0.
     } = props;
