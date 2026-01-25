@@ -17,6 +17,9 @@ const Hero = () => {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ ease: "easeOut", duration: 0.8 }}
+      style={{
+        background: 'linear-gradient(180deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.2) 100%)'
+      }}
     >
 
 
@@ -120,7 +123,7 @@ const Hero = () => {
           transition={{ ease: "easeOut", duration: 0.6, delay: 0.6 }}
           className="text-red-400 text-3xl mt-8"
         >
-          
+
         </motion.div>
       </div>
     </motion.div>

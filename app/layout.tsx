@@ -48,11 +48,11 @@ export default function RootLayout({
           {/* Mobile Static Fallback */}
           <div className="block md:hidden w-full h-full bg-gradient-to-b from-neutral-50 to-neutral-0" />
 
-          {/* White Overlay Layer (85% - Non-Negotiable) */}
+          {/* White Overlay Layer - Reduced opacity for visible aurora */}
           <div
             className="absolute inset-0"
             style={{
-              background: 'rgba(255, 255, 255, 0.65)',
+              background: 'rgba(255, 255, 255, 0.35)',
               backdropFilter: 'saturate(1.2)',
               WebkitBackdropFilter: 'saturate(1.2)'
             }}
