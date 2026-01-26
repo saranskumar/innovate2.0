@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Day2 from "./util/Day2";
 import Day3 from "./util/Day3";
-import GlassSurface from "./GlassSurface";
 
 const Event = () => {
   const [activeTab, setActiveTab] = useState("day1");
@@ -40,38 +39,38 @@ const Event = () => {
 
             <li className="flex-1 md:flex-none">
               <div onClick={() => handleTabChange("day1")} className="cursor-pointer">
-                <GlassSurface
-                  className={`w-full px-6 py-3 font-semibold transition-all text-center ${activeTab === "day1" ? "text-white" : "text-text-primary"}`}
-                  opacity={activeTab === "day1" ? 0.9 : 0.3}
-                  borderRadius={12}
-                  style={{ backgroundColor: activeTab === "day1" ? 'var(--brand-red-500)' : undefined }}
+                <div
+                  className={`w-full px-6 py-3 font-semibold transition-all text-center rounded-xl backdrop-blur-md border border-white/10 ${activeTab === "day1"
+                    ? "bg-primary/90 text-white shadow-lg"
+                    : "bg-white/5 text-text-primary hover:bg-white/10"
+                    }`}
                 >
-                  Day 1 
-                </GlassSurface>
+                  Day 1
+                </div>
               </div>
             </li>
             <li className="flex-1 md:flex-none">
               <div onClick={() => handleTabChange("day2")} className="cursor-pointer">
-                <GlassSurface
-                  className={`w-full px-6 py-3 font-semibold transition-all text-center ${activeTab === "day2" ? "text-white" : "text-text-primary"}`}
-                  opacity={activeTab === "day2" ? 0.9 : 0.3}
-                  borderRadius={12}
-                  style={{ backgroundColor: activeTab === "day2" ? 'var(--brand-red-500)' : undefined }}
+                <div
+                  className={`w-full px-6 py-3 font-semibold transition-all text-center rounded-xl backdrop-blur-md border border-white/10 ${activeTab === "day2"
+                    ? "bg-primary/90 text-white shadow-lg"
+                    : "bg-white/5 text-text-primary hover:bg-white/10"
+                    }`}
                 >
-                  Day 2 
-                </GlassSurface>
+                  Day 2
+                </div>
               </div>
             </li>
             <li className="flex-1 md:flex-none">
               <div onClick={() => handleTabChange("day3")} className="cursor-pointer">
-                <GlassSurface
-                  className={`w-full px-6 py-3 font-semibold transition-all text-center ${activeTab === "day3" ? "text-white" : "text-text-primary"}`}
-                  opacity={activeTab === "day3" ? 0.9 : 0.3}
-                  borderRadius={12}
-                  style={{ backgroundColor: activeTab === "day3" ? 'var(--brand-red-500)' : undefined }}
+                <div
+                  className={`w-full px-6 py-3 font-semibold transition-all text-center rounded-xl backdrop-blur-md border border-white/10 ${activeTab === "day3"
+                    ? "bg-primary/90 text-white shadow-lg"
+                    : "bg-white/5 text-text-primary hover:bg-white/10"
+                    }`}
                 >
-                  Day 3 
-                </GlassSurface>
+                  Day 3
+                </div>
               </div>
             </li>
           </ul>

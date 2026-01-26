@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import GlassSurface from "./GlassSurface";
 
 interface SpotlightCardProps extends React.HTMLAttributes<HTMLDivElement> {
     children: React.ReactNode;
@@ -49,16 +48,11 @@ const SpotlightCard: React.FC<SpotlightCardProps> = ({
                     background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, ${spotlightColor}, transparent 40%)`,
                 }}
             />
-            <GlassSurface
-                className="h-full w-full p-8"
-                height="100%"
-                opacity={0.3}
-                blur={10}
-                borderRadius={16}
-                borderWidth={1}
+            <div
+                className="h-full w-full p-8 rounded-2xl border border-white/20 bg-white/5 backdrop-blur-md relative z-10"
             >
                 {children}
-            </GlassSurface>
+            </div>
         </div>
     );
 };

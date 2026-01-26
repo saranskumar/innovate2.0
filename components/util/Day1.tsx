@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import GlassSurface from "../GlassSurface";
 
 const Day1 = () => {
   const schedule = [
@@ -60,12 +59,8 @@ const Day1 = () => {
 
             {/* Schedule Note Card */}
             <div className="ml-0 sm:ml-20">
-              <GlassSurface
-                className="p-6 hover:shadow-lg transition-all duration-200 group cursor-default"
-                opacity={0.4}
-                blur={10}
-                borderWidth={1}
-                borderRadius={16}
+              <div
+                className="p-6 hover:shadow-lg transition-all duration-200 group cursor-default rounded-2xl border border-white/20 bg-white/5 backdrop-blur-md relative"
               >
                 {/* Yellow Highlighted Time */}
                 <div className="mb-3">
@@ -88,7 +83,7 @@ const Day1 = () => {
 
                 {/* Hand-drawn underline accent */}
                 <div className="mt-3 w-16 h-0.5 bg-primary/20 rounded"></div>
-              </GlassSurface>
+              </div>
             </div>
 
             {/* Dashed connector to next item */}
