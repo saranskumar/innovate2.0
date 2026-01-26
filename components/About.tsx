@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { Target, Users, TrendingUp, Award } from "lucide-react";
+import { Target, Users, TrendingUp } from "lucide-react";
 
 import SpotlightCard from "./SpotlightCard";
 
