@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { ScribbleArrow } from "@/components/util/Scribbles";
+
 import GlassSurface from "./GlassSurface";
 
 const Registeration = () => {
@@ -54,8 +54,24 @@ const Registeration = () => {
               >
                 Get Your Ticket →
               </button>
-              <ScribbleArrow className="hidden" delay={0.5} />
+
             </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ ease: "easeOut", duration: 0.6, delay: 0.2 }}
+            className="mb-2"
+          >
+            <p className="text-sm sm:text-base text-text-secondary">
+              Please read the <span
+                className="font-bold text-primary cursor-pointer hover:underline"
+                onClick={() => window.open("/rules", "_blank")}
+              >
+                Rules & Regulations
+              </span> before registering.
+            </p>
           </motion.div>
 
           <motion.h2

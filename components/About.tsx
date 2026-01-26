@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Target, Users, TrendingUp, Award } from "lucide-react";
+
 import SpotlightCard from "./SpotlightCard";
 
 const features = [
@@ -19,11 +20,6 @@ const features = [
     icon: <TrendingUp size={40} />,
     title: "Showcase Your Talent",
     description: "Showcase your talent to industry experts."
-  },
-  {
-    icon: <Award size={40} />,
-    title: "Win & Learn",
-    description: "Win exciting prizes and gain mentorship opportunities."
   }
 ];
 
@@ -63,7 +59,7 @@ const About = () => {
           {features.map((feature, index) => (
             <SpotlightCard
               key={index}
-              className="min-h-[280px] border-red-100/20"
+              className="h-full border-red-100/20"
               spotlightColor="rgba(229, 57, 53, 0.2)"
             >
               <div className="flex flex-col items-center text-center h-full p-6">

@@ -6,38 +6,38 @@ const Day1 = () => {
   const schedule = [
     {
       id: 1,
-      time: "08:00 AM",
+      time: "12:00 PM",
       event: "Registration & Check-In",
-      description: "Participant registration and welcome check-in",
+      description: "Participant onboarding and verification",
       rotation: "rotate-slight-1",
     },
     {
       id: 2,
-      time: "08:30 AM",
+      time: "01:00 PM",
       event: "Inauguration Ceremony",
       description: "Official opening and welcome address",
-      rotation: "rotate-slight-2",
-    },
-    {
-      id: 3,
-      time: "09:00 AM",
-      event: "Problem Statement Reveal",
-      description: "Hackathon officially starts - challenges announced",
       rotation: "-rotate-slight-1",
     },
     {
+      id: 3,
+      time: "01:45 PM",
+      event: "Problem Statement Reveal",
+      description: "Challenges announced, hacking begins",
+      rotation: "rotate-slight-2",
+    },
+    {
       id: 4,
-      time: "02:00 PM",
+      time: "06:00 PM",
       event: "Evaluation 1",
-      description: "Progress check and initial feedback",
-      rotation: "rotate-slight-3",
+      description: "Initial progress check and mentor feedback",
+      rotation: "-rotate-slight-2",
     },
     {
       id: 5,
-      time: "09:00 PM",
-      event: "Evaluation 2",
-      description: "Midpoint progress review",
-      rotation: "-rotate-slight-2",
+      time: "10:00 PM",
+      event: "Checkpoint",
+      description: "Late-night progress review",
+      rotation: "rotate-slight-3",
     },
   ];
 
@@ -107,7 +107,7 @@ const Day1 = () => {
         className="mt-8 text-center"
       >
         <span className="inline-block px-4 py-2 text-sm font-medium text-text-secondary border-2 border-dashed border-primary/20 rounded-lg">
-          End of Day 1
+          End of Day 1 — Hacking Continues Overnight
         </span>
       </motion.div>
     </div>

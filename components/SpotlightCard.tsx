@@ -51,6 +51,7 @@ const SpotlightCard: React.FC<SpotlightCardProps> = ({
             />
             <GlassSurface
                 className="h-full w-full p-8"
+                height="100%"
                 opacity={0.3}
                 blur={10}
                 borderRadius={16}

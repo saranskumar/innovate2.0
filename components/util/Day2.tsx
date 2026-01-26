@@ -4,42 +4,37 @@ import GlassSurface from "../GlassSurface";
 
 const Day2 = () => {
   const schedule = [
+
     {
       id: 1,
-      time: "08:00 AM",
-      event: "Evaluation 3",
-      description: "Final progress evaluation before presentations",
+      time: "09:00 AM",
+      event: "Evaluation 2",
+      description: "Mid-hack review and guidance",
       rotation: "rotate-slight-1",
     },
     {
       id: 2,
-      time: "12:00 PM",
-      event: "Announcement of Finalists",
-      description: "Top teams selected for final presentations",
+      time: "02:00 PM",
+      event: "Mentor Hours",
+      description: "Open mentoring and technical assistance",
       rotation: "-rotate-slight-1",
     },
     {
       id: 3,
-      time: "03:00 PM",
-      event: "Final Presentations",
-      description: "Teams present solutions to judges",
+      time: "07:00 PM",
+      event: "Evaluation 3",
+      description: "Advanced progress evaluation",
       rotation: "rotate-slight-2",
     },
     {
       id: 4,
-      time: "05:00 PM",
-      event: "Closing Ceremony",
-      description: "Prize distribution and awards",
+      time: "11:59 PM",
+      event: "Final Night Sprint",
+      description: "Last push before submissions",
       rotation: "-rotate-slight-2",
     },
-    {
-      id: 5,
-      time: "06:00 PM",
-      event: "Event Wrap-Up",
-      description: "Thank you and networking",
-      rotation: "rotate-slight-3",
-    },
   ];
+
 
   return (
     <div className="relative py-4">
@@ -107,7 +102,7 @@ const Day2 = () => {
         className="mt-8 text-center"
       >
         <span className="inline-block px-4 py-2 text-sm font-medium text-text-secondary border-2 border-dashed border-primary/20 rounded-lg">
-          Thank you for participating! 🙌
+          End of Day 2 — Final Day Begins
         </span>
       </motion.div>
     </div>

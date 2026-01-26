@@ -4,8 +4,7 @@ import Event from "@/components/Event";
 import { Timer } from "@/components/Timer";
 import Venue from "@/components/Venue";
 import Registeration from "@/components/Registeration";
-import Collaborators from "@/components/Collaborators";
-import AboutInApp from "@/components/AboutInApp";
+import AboutDetails from "@/components/AboutDetails";
 import Price from "@/components/Price";
 import Faqs from "@/components/Faqs";
 import WhyParticipate from "@/components/WhyParticipate";
@@ -16,11 +15,10 @@ export default function Home() {
       <Hero />
       <Timer />
       <About />
+      <Price />
       <Registeration />
       <WhyParticipate />
-      <Price />
-      <Collaborators />
-      <AboutInApp />
+      <AboutDetails />
       <Faqs />
       <Event />
       <Venue />

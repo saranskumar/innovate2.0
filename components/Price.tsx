@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
+import ScrollFloat from "./ScrollFloat";
 
 
 const Price = () => {
@@ -46,11 +47,22 @@ const Price = () => {
               {value}K
             </span>
           </h1>
-          <p className="mt-4 text-lg sm:text-xl text-text-primary">
+          <div className="mt-4 text-lg sm:text-xl text-text-primary">
             Join us for the ultimate competition and grab a chance to win from a
             massive prize pool of{" "}
-            <span className="font-bold text-primary">₹60,000!</span>
-          </p>
+            {/* <span className="font-bold text-primary">₹60,000!</span> */}
+            <ScrollFloat
+              animationDuration={1}
+              ease='back.inOut(2)'
+              scrollStart='center bottom+=50%'
+              scrollEnd='bottom bottom-=40%'
+              stagger={0.03}
+              containerClassName="inline-block"
+              textClassName="font-bold text-primary"
+            >
+              ₹60,000!
+            </ScrollFloat>
+          </div>
         </motion.div>
 
         {/* Right Section */}

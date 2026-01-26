@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
@@ -10,113 +11,128 @@ import innovate from "../assets/logo/innovate_logo.png";
 
 export const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("page0");
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
+  // Use existing nav items logic
   const navItems = [
-    { name: "Home", to: "page0" },
-    { name: "About", to: "page1" },
-    { name: "Rules", to: "rules" },
-    { name: "FAQ", to: "page6" },
-    { name: "Schedule", to: "page4" },
-    { name: "Venue", to: "page3" },
-    { name: "Contact Us", to: "page3" },
+    { name: "Home", to: "page0", type: "scroll" },
+    { name: "About", to: "about", type: "scroll" },
+    { name: "Rules", to: "/rules", type: "route" },
+    { name: "FAQ", to: "page6", type: "scroll" },
+    { name: "Schedule", to: "page4", type: "scroll" },
+    { name: "Contact", to: "page3", type: "scroll" },
   ];
 
   return (
-    <header className="fixed w-full z-50 transition-all duration-300">
-      <GlassSurface
-        width="100%"
-        height="auto"
-        borderRadius={0}
-        brightness={1.1}
-        opacity={0}
-        borderWidth={0}
-        blur={12}
-        saturation={1.2}
-        className={`transition-all duration-300 ${scrolled ? 'border-b border-white/20' : ''}`}
-      >
-        <nav className="mx-auto flex w-full items-center justify-between px-6 pt-6 pb-4 lg:px-12">
-          {/* Logo - Left Side */}
-          <div className="flex">
-            <Link
-              to="page0"
-              spy={true}
-              smooth={true}
-              offset={0}
-              duration={500}
-              className="cursor-pointer"
-            >
-              <Image
-                src={innovate}
-                alt="Innovate 2.0"
-                className="h-12 md:h-14 w-auto brightness-0"
-              />
-            </Link>
-          </div>
+    <>
+      <nav className="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-5xl z-50 transition-all duration-300">
+        <GlassSurface
+          className="shadow-[0_8px_32px_rgba(0,0,0,0.1)] border border-white/20"
+          borderRadius={50}
+          style={{
+            background: "rgba(255, 255, 255, 0.1)", // Much more transparent
+            backdropFilter: "blur(12px)",
+            WebkitBackdropFilter: "blur(12px)",
+          }}
+        >
+          <div className="px-6 sm:px-8">
+            <div className="flex items-center justify-between h-20">
+              {/* Logo */}
+              <div className="flex-shrink-0">
+                {isHomePage ? (
+                  <Link
+                    to="page0"
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={500}
+                    className="cursor-pointer select-none flex items-center"
+                  >
+                    <Image
+                      src={innovate}
+                      alt="Innovate 2.0"
+                      className="h-8 md:h-10 w-auto brightness-0"
+                    />
+                  </Link>
+                ) : (
+                  <a href="/" className="cursor-pointer select-none flex items-center">
+                    <Image
+                      src={innovate}
+                      alt="Innovate 2.0"
+                      className="h-8 md:h-10 w-auto brightness-0"
+                    />
+                  </a>
+                )}
+              </div>
 
-          {/* Center Navigation Items */}
-          <div className="hidden lg:flex lg:items-center lg:gap-x-3 absolute left-1/2 transform -translate-x-1/2">
-            {navItems.map((item) => (
-              <Link
-                key={item.to}
-                activeClass="nav-active"
-                to={item.to}
-                spy={true}
-                smooth={true}
-                offset={-80}
-                duration={500}
-                onSetActive={() => setActiveSection(item.to)}
-                className="cursor-pointer"
-              >
+              {/* Desktop Menu */}
+              <div className="hidden md:block">
+                <div className="ml-auto flex items-center space-x-2">
+                  {isHomePage ? (
+                    <>
+                      {navItems.map((item) => {
+                        if (item.type === "route") {
+                          return (
+                            <a
+                              key={item.name}
+                              href={item.to}
+                              className="text-text-secondary hover:text-primary px-4 py-2 rounded-full text-sm font-medium transition-colors duration-300"
+                            >
+                              {item.name}
+                            </a>
+                          );
+                        } else {
+                          return (
+                            <Link
+                              key={item.to}
+                              to={item.to}
+                              spy={true}
+                              smooth={true}
+                              offset={-80}
+                              duration={500}
+                              activeClass="text-primary font-bold bg-white/50"
+                              className="cursor-pointer text-text-secondary hover:text-primary px-4 py-2 rounded-full text-sm font-medium transition-colors duration-300"
+                            >
+                              {item.name}
+                            </Link>
+                          );
+                        }
+                      })}
+                      <button
+                        onClick={() => window.open("/problems", "_self")}
+                        className="ml-4 bg-primary hover:bg-red-700 text-white font-bold py-2 px-6 rounded-full transition-all duration-300 transform hover:scale-105 shadow-md"
+                      >
+                        Register
+                      </button>
+                    </>
+                  ) : (
+                    <a
+                      href="/"
+                      className="flex items-center gap-2 text-primary hover:text-red-700 font-bold transition-colors"
+                    >
+                      <span>←</span> Back to Home
+                    </a>
+                  )}
+                </div>
+              </div>
+
+              {/* Mobile Menu Button */}
+              <div className="-mr-2 flex md:hidden">
                 <button
-                  className={`relative px-5 py-2.5 text-sm font-semibold rounded-full transition-all duration-300 ${activeSection === item.to
-                    ? "bg-red-600 text-white shadow-md"
-                    : "text-red-700 hover:bg-red-50 hover:text-red-600"
-                    }`}
+                  onClick={() => setMobileMenuOpen(true)}
+                  className="inline-flex items-center justify-center p-2 rounded-md text-text-secondary hover:text-primary focus:outline-none"
                 >
-                  {item.name}
+                  <Bars3Icon className="h-6 w-6" />
                 </button>
-              </Link>
-            ))}
+              </div>
+            </div>
           </div>
+        </GlassSurface>
+      </nav>
 
-          {/* Problem Statement Button - Right Side */}
-          <div className="hidden lg:flex">
-            <button
-              onClick={() => window.open("/problems")}
-              className="btn-primary px-6 py-2.5"
-            >
-              Problem Statements →
-            </button>
-          </div>
-
-
-
-          {/* Mobile Menu Button */}
-          <div className="flex lg:hidden">
-            <button
-              type="button"
-              onClick={() => setMobileMenuOpen(true)}
-              className="inline-flex items-center justify-center rounded-md p-2 text-red-600 hover:bg-red-50 transition-colors"
-            >
-              <span className="sr-only">Open menu</span>
-              <Bars3Icon className="h-6 w-6" />
-            </button>
-          </div>
-        </nav>
-      </GlassSurface>
-
-      {/* Mobile Menu Dialog */}
+      {/* Mobile Menu Dialog (keeping existing implementation but styled) */}
       <Dialog
         open={mobileMenuOpen}
         onClose={setMobileMenuOpen}
@@ -125,17 +141,14 @@ export const Navbar = () => {
         <div className="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm" />
         <div className="fixed inset-y-0 right-0 z-50 w-full max-w-sm">
           <GlassSurface
-            width="100%"
-            height="100%"
+            className="h-full border-l border-white/30"
             borderRadius={0}
-            brightness={1.1}
-            opacity={0.95}
-            blur={16}
-            saturation={1.1}
-            className="shadow-xl border-l border-white/30"
+            style={{
+              background: "rgba(255, 255, 255, 0.95)",
+              backdropFilter: "blur(16px)"
+            }}
           >
             <DialogPanel className="w-full h-full px-6 py-6">
-              {/* Mobile Header */}
               <div className="flex items-center justify-between">
                 <Image
                   src={innovate}
@@ -145,51 +158,38 @@ export const Navbar = () => {
                 <button
                   type="button"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="rounded-md p-2 text-red-600 hover:bg-red-50 transition-colors"
+                  className="rounded-md p-2 text-text-secondary hover:text-primary transition-colors"
                 >
-                  <span className="sr-only">Close menu</span>
                   <XMarkIcon className="h-6 w-6" />
                 </button>
               </div>
-
-              {/* Mobile Navigation */}
               <div className="mt-8 flow-root">
                 <div className="space-y-2">
                   {navItems.map((item) => (
-                    <Link
-                      key={item.to}
-                      to={item.to}
-                      spy={true}
-                      smooth={true}
-                      offset={-80}
-                      duration={500}
+                    <a
+                      key={item.name}
+                      href={item.type === 'route' ? item.to : `/#${item.to}`}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="cursor-pointer"
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-text-primary hover:bg-gray-50"
                     >
-                      <button className="block w-full text-left px-4 py-3 text-base font-medium text-red-700 hover:bg-red-50 rounded-lg transition-colors">
-                        {item.name}
-                      </button>
-                    </Link>
+                      {item.name}
+                    </a>
                   ))}
-
-                  {/* Mobile CTA */}
-                  <div className="pt-4">
-                    <button
-                      onClick={() => {
-                        window.open("/problems");
-                        setMobileMenuOpen(false);
-                      }}
-                      className="btn-primary block w-full text-center"
-                    >
-                      Problem Statements →
-                    </button>
-                  </div>
+                  <button
+                    onClick={() => {
+                      window.open("/problems", "_self");
+                      setMobileMenuOpen(false);
+                    }}
+                    className="mt-4 w-full bg-primary text-white font-bold py-3 rounded-xl shadow-md"
+                  >
+                    Register Now
+                  </button>
                 </div>
               </div>
             </DialogPanel>
           </GlassSurface>
         </div>
       </Dialog>
-    </header>
+    </>
   );
 };

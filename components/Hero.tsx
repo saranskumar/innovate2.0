@@ -37,7 +37,7 @@ const Hero = () => {
             alt="inapp logo"
             height={91}
             width={550}
-            className="mx-auto w-[180px] lg:w-[400px] opacity-90"
+            className="mx-auto w-[140px] lg:w-[300px] opacity-90"
           />
         </motion.div>
 
@@ -53,7 +53,7 @@ const Hero = () => {
             alt="Innovate 2.0"
             width={800}
             height={240}
-            className="w-[450px] lg:w-[750px] brightness-0"
+            className="w-[350px] lg:w-[600px] brightness-0"
           />
         </motion.div>
 
