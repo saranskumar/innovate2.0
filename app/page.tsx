@@ -15,10 +15,11 @@ export default function Home() {
       <Hero />
       <Timer />
       <About />
+       <AboutDetails />
       <Price />
       <Registeration />
       <WhyParticipate />
-      <AboutDetails />
+     
       <Faqs />
       <Event />
       <Venue />

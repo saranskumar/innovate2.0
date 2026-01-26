@@ -12,7 +12,7 @@ import innovate from "../assets/logo/innovate_logo.png";
 const Hero = () => {
   return (
     <motion.div
-      id="page0"
+      id="home"
       className="relative min-h-[90vh] md:min-h-screen flex flex-col justify-center items-center w-full overflow-hidden pt-24 pb-10 md:pt-36 md:pb-20 px-4"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}

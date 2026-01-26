@@ -21,7 +21,7 @@ const Event = () => {
         className="max-w-6xl mx-auto"
       >
         <h2
-          id="page4"
+          id="schedule"
           className="text-5xl sm:text-6xl font-bold text-text-primary mb-2 text-center"
         >
           Schedule

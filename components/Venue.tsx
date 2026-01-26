@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Venue = () => {
   return (
-    <section id="page3" className="py-24 relative overflow-hidden px-4">
+    <section id="contact" className="py-24 relative overflow-hidden px-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

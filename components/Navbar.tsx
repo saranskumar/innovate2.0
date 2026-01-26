@@ -14,12 +14,12 @@ export const Navbar = () => {
   const isHomePage = pathname === "/";
 
   const navItems = [
-    { name: "Home", to: "page0", type: "scroll" },
+    { name: "Home", to: "home", type: "scroll" },
     { name: "About", to: "about", type: "scroll" },
     { name: "Rules", to: "/rules", type: "route" },
-    { name: "FAQ", to: "page6", type: "scroll" },
-    { name: "Schedule", to: "page4", type: "scroll" },
-    { name: "Contact", to: "page3", type: "scroll" },
+    { name: "FAQ", to: "faq", type: "scroll" },
+    { name: "Schedule", to: "schedule", type: "scroll" },
+    { name: "Contact", to: "contact", type: "scroll" },
   ];
 
   return (
@@ -32,7 +32,7 @@ export const Navbar = () => {
               <div className="flex-shrink-0">
                 {isHomePage ? (
                   <Link
-                    to="page0"
+                    to="home"
                     smooth
                     duration={500}
                     className="cursor-pointer flex items-center"
