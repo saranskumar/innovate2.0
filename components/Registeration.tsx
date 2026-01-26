@@ -8,7 +8,7 @@ const Registeration = () => {
       <div className="max-w-4xl w-full">
         <div className="p-8 sm:p-12 md:p-16 flex flex-col items-center text-center rounded-3xl border border-white/20 bg-white/5 backdrop-blur-md shadow-xl">
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-text-primary mb-6">
-            <span className="font-bold text-primary">Innovate 2.0. Collaborate. Create.</span>
+            <span className="font-bold text-primary">Innovate 2.0 Collaborate. Create.</span>
           </h2>
 
           <motion.h2
