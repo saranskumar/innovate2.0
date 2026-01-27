@@ -6,12 +6,13 @@ import sct from "../assets/logo/sct_logo.png";
 import ieee from "../assets/logo/ieee_logo.png";
 import yp from "../assets/logo/yp_logo.png";
 import inapp from "../assets/logo/InApp_Logo.svg";
-import sb from "../assets/logo/SB_Black.png";
+import sb from "../assets/logo/SB_White.png";
 import innovate from "../assets/logo/innovate_logo.svg";
+import { Link } from "react-scroll";
 
 const Hero = () => {
   // Filter for #B33439 from white
-  const redFilter = "brightness(0) saturate(100%) invert(29%) sepia(34%) saturate(3475%) hue-rotate(329deg) brightness(92%) contrast(98%)";
+  const redFilter = "brightness(0) saturate(100%) invert(15%) sepia(95%) saturate(3442%) hue-rotate(346deg) brightness(86%) contrast(104%)";
 
   return (
     <motion.div
@@ -53,7 +54,7 @@ const Hero = () => {
         >
           <Image
             src={innovate}
-            alt="Innovate 2.0"
+            alt="Innovate Hackathon 2.0 - 2nd Edition"
             width={800}
             height={240}
             className="w-[350px] lg:w-[600px]"
@@ -68,9 +69,9 @@ const Hero = () => {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ ease: "easeOut", duration: 0.8, delay: 0.4 }}
-          className="text-base sm:text-lg md:text-xl text-red-700 max-w-3xl mx-auto mb-12 px-4 font-medium"
+          className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-12 px-4 font-medium"
         >
-          <span className="font-semibold text-primary">
+          <span className="font-semibold text-white">
             Empowering the Future: Engineering Solutions
           </span>{" "}
           for a Smarter Sustainable Tomorrow
@@ -120,6 +121,24 @@ const Hero = () => {
           </div>
         </motion.div>
 
+        {/* Register Now Button */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ ease: "easeOut", duration: 0.6, delay: 0.5 }}
+          className="mt-8"
+        >
+          <Link
+            to="registration"
+            smooth={true}
+            offset={-80}
+            duration={500}
+            className="inline-block bg-primary text-white font-bold py-4 px-10 rounded-full hover:bg-red-800 transition shadow-lg cursor-pointer transform hover:scale-105 active:scale-95 glare-button"
+          >
+            Register Now
+          </Link>
+        </motion.div>
+
         {/* Decorative hand-drawn arrow pointing down (optional) */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -127,15 +146,15 @@ const Hero = () => {
           transition={{ ease: "easeOut", duration: 0.6, delay: 0.6 }}
           className="mt-12 flex flex-col items-center"
         >
-          <div className="flex items-center justify-center gap-4 text-red-900 bg-white/60 backdrop-blur-md px-6 py-3 rounded-2xl border border-red-100 shadow-sm max-w-full mx-auto">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 md:w-10 md:h-10 text-red-600 flex-shrink-0">
+          <div className="flex items-center justify-center gap-4 text-gray-200 bg-neutral-900/60 backdrop-blur-md px-6 py-3 rounded-2xl border border-white/10 shadow-sm max-w-full mx-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 md:w-10 md:h-10 text-primary flex-shrink-0">
               <path fillRule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
             </svg>
             <div className="flex flex-col text-left">
-              <span className="text-[10px] sm:text-lg md:text-xl font-bold leading-tight whitespace-nowrap">
+              <span className="text-[10px] sm:text-lg md:text-xl font-bold leading-tight whitespace-nowrap text-white">
                 Sree Chitra Thirunal College of Engineering
               </span>
-              <span className="text-[10px] sm:text-sm md:text-base font-medium text-red-800 opacity-90 whitespace-nowrap">
+              <span className="text-[10px] sm:text-sm md:text-base font-medium text-gray-400 opacity-90 whitespace-nowrap">
                 Pappanamcode, Thiruvananthapuram, Kerala
               </span>
             </div>

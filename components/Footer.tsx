@@ -6,7 +6,7 @@ import innovate from "../assets/logo/innovate_logo.svg";
 
 const Footer = () => {
     // Filter for #B33439
-    const redFilter = "brightness(0) saturate(100%) invert(29%) sepia(34%) saturate(3475%) hue-rotate(329deg) brightness(92%) contrast(98%)";
+    const redFilter = "brightness(0) saturate(100%) invert(15%) sepia(95%) saturate(3442%) hue-rotate(346deg) brightness(86%) contrast(104%)";
 
     return (
         <footer className="bg-white/5 border-t border-white/10 pt-16 pb-8 backdrop-blur-sm">
@@ -98,6 +98,39 @@ const Footer = () => {
                                     </a>
                                 </div>
                             </div>
+                            {/* IEEE SCT SB */}
+                            <div>
+                                <p className="text-sm font-medium text-text-primary mb-2">IEEE SCT SB</p>
+                                <div className="flex gap-4">
+                                    <a
+                                        href="https://in.linkedin.com/company/ieeesctsb"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-text-secondary hover:text-primary transition-colors text-xl"
+                                        aria-label="IEEE SCT SB LinkedIn"
+                                    >
+                                        <FaLinkedin />
+                                    </a>
+                                    <a
+                                        href="https://ieeesctsb.org/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-text-secondary hover:text-primary transition-colors text-xl"
+                                        aria-label="IEEE SCT SB Website"
+                                    >
+                                        <TbWorld />
+                                    </a>
+                                    <a
+                                        href="https://www.instagram.com/ieeesctsb/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-text-secondary hover:text-primary transition-colors text-xl"
+                                        aria-label="IEEE SCT SB Instagram"
+                                    >
+                                        <FaInstagram />
+                                    </a>
+                                </div>
+                            </div>
 
                             {/* InApp */}
                             <div>
@@ -147,7 +180,7 @@ const Footer = () => {
 
                 <div className="border-t border-white/10 pt-8 text-center">
                     <p className="text-text-secondary text-sm">
-                        © 2026 Innovate 2.0. All rights reserved.
+                        © 2026 Innovate Hackathon 2nd Edition. All rights reserved.
                     </p>
                 </div>
             </div>

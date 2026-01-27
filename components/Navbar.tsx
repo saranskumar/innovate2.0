@@ -16,7 +16,7 @@ export const Navbar = () => {
   // Filter for #B33439 from white:
   // brightness(0) to black -> then invert to white -> then color
   // Or directly from white using a calculator result for #B33439
-  const redFilter = "brightness(0) saturate(100%) invert(29%) sepia(34%) saturate(3475%) hue-rotate(329deg) brightness(92%) contrast(98%)";
+  const redFilter = "brightness(0) saturate(100%) invert(15%) sepia(95%) saturate(3442%) hue-rotate(346deg) brightness(86%) contrast(104%)";
 
   const navItems = [
     { name: "Home", to: "home", type: "scroll" },
@@ -94,9 +94,9 @@ export const Navbar = () => {
                       smooth
                       offset={-80}
                       duration={500}
-                      className="ml-4 bg-primary text-white font-bold py-2.5 px-8 rounded-full hover:bg-red-800 transition"
+                      className="ml-4 bg-primary text-white font-bold py-2.5 px-8 rounded-full hover:bg-red-800 transition cursor-pointer glare-button"
                     >
-                      Registration
+                      Register Now
                     </Link>
                   </>
                 ) : (
@@ -127,12 +127,12 @@ export const Navbar = () => {
       >
         <div className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40" />
 
-        <div className="fixed inset-y-0 right-0 z-50 w-full max-w-sm bg-white shadow-xl">
+        <div className="fixed inset-y-0 right-0 z-50 w-full max-w-sm bg-neutral-100 shadow-xl">
           <DialogPanel className="h-full px-6 py-6">
             <div className="flex items-center justify-between">
               <Image
                 src={innovate}
-                alt="Innovate 2.0"
+                alt="Innovate Hackathon 2.0 - 2nd Edition"
                 className="h-8 w-auto"
                 style={{ filter: redFilter }}
               />
@@ -150,7 +150,7 @@ export const Navbar = () => {
                   key={item.name}
                   href={item.type === "route" ? item.to : `/#${item.to}`}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block rounded-lg px-3 py-2 font-semibold text-text-primary hover:bg-gray-50"
+                  className="block rounded-lg px-3 py-2 font-semibold text-text-primary hover:bg-white/5"
                 >
                   {item.name}
                 </a>
@@ -162,9 +162,9 @@ export const Navbar = () => {
                 offset={-80}
                 duration={500}
                 onClick={() => setMobileMenuOpen(false)}
-                className="block mt-4 bg-primary text-white text-center font-bold py-3 rounded-xl hover:bg-red-800 transition cursor-pointer"
+                className="block mt-4 bg-primary text-white text-center font-bold py-3 rounded-xl hover:bg-red-800 transition cursor-pointer glare-button"
               >
-                Registration
+                Register Now
               </Link>
             </div>
           </DialogPanel>

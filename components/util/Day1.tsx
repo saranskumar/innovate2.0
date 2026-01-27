@@ -63,13 +63,13 @@ const Day1 = () => {
                 </div>
 
                 {/* Event Title - Handwritten */}
-                <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-2 leading-tight">
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 leading-tight">
                   {item.event}
                 </h3>
 
                 {/* Description - Clean Sans-Serif */}
                 {item.description && (
-                  <p className="text-sm sm:text-base text-text-secondary leading-relaxed">
+                  <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
                     {item.description}
                   </p>
                 )}
@@ -94,7 +94,7 @@ const Day1 = () => {
         transition={{ ease: "easeOut", duration: 0.6, delay: 0.5 }}
         className="mt-8 text-center"
       >
-        <span className="inline-block px-4 py-2 text-sm font-medium text-text-secondary border-2 border-dashed border-primary/20 rounded-lg">
+        <span className="inline-block px-4 py-2 text-sm font-medium text-gray-400 border-2 border-dashed border-primary/20 rounded-lg">
           End of Day 1 — Hacking Continues Overnight
         </span>
       </motion.div>

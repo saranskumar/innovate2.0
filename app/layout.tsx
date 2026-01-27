@@ -16,9 +16,9 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Join Innovate 2.0 2025, a hackathon solving real-world challenges.",
+  title: "Join Innovate 2.0 2026, the 2nd Edition of Kerala's premier hackathon.",
   description:
-    "Join Innovate 2026 Hackathon on February 20-22, 2026, in Trivandrum. Solve real-world challenges. Register today!",
+    "Join the 2nd Edition of Innovate Hackathon on February 20-22, 2026, in Trivandrum. Solve real-world challenges. Register today!",
 };
 
 export default function RootLayout({
@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative min-h-screen bg-white`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative min-h-screen`}
       >
 
 

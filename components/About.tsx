@@ -9,7 +9,7 @@ const features = [
   {
     icon: <Target size={40} />,
     title: "Industry-Relevant Challenges",
-    description: "Work on industry-relevant problem statements."
+    description: "Work on industry-relevant real-world challenges."
   },
   {
     icon: <Users size={40} />,
@@ -50,7 +50,7 @@ const About = () => {
           className="max-w-4xl mx-auto mb-12"
         >
           <p className="text-lg sm:text-xl text-text-primary leading-relaxed text-center">
-            As part of InApp&apos;s Silver Jubilee celebrations, <span className="font-semibold text-primary">Innovate 2.0</span> is a two-day hackathon designed for students across Kerala. Compete in teams to build impactful solutions that address real-world challenges, paving the way for a smart, sustainable tomorrow.
+            <span className="font-semibold text-primary">Innovate 2.0</span> is a 48 hour hackathon designed for students across Kerala. Compete in teams to build impactful solutions that address real-world challenges, paving the way for a smart, sustainable tomorrow.
           </p>
         </motion.div>
 
@@ -59,11 +59,11 @@ const About = () => {
           {features.map((feature, index) => (
             <SpotlightCard
               key={index}
-              className="h-full border-red-100/20"
+              className="h-full border-white/10"
               spotlightColor="rgba(229, 57, 53, 0.2)"
             >
               <div className="flex flex-col items-center text-center h-full p-6">
-                <div className="mb-4 p-3 bg-red-100/50 rounded-full text-primary group-hover:bg-red-200/50 transition-colors duration-300">
+                <div className="mb-4 p-3 bg-white/5 rounded-full text-primary group-hover:bg-white/10 transition-colors duration-300">
                   {feature.icon}
                 </div>
                 <h3 className="text-lg font-bold text-text-primary mb-3">

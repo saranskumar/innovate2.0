@@ -27,25 +27,25 @@ const config: Config = {
         // Neutral System (Carries 80% of UI)
         // ============================================
         neutral: {
-          0: '#FFFFFF',    // Main page background
-          50: '#F9FAFB',   // Alternate sections, visual rhythm
-          100: '#F3F4F6',  // Cards, FAQ panels, schedule blocks
+          0: '#050505',    // Main page background
+          50: '#121212',   // Alternate sections, visual rhythm
+          100: '#1A1A1A',  // Cards, FAQ panels, schedule blocks
         },
 
         // ============================================
         // Text Hierarchy
         // ============================================
         text: {
-          primary: '#111827',   // Headings H1-H4
-          secondary: '#374151', // Body paragraphs
-          muted: '#6B7280',     // Dates, locations, helper text
+          primary: '#FFFFFF',   // Headings H1-H4
+          secondary: '#D1D5DB', // Body paragraphs
+          muted: '#9CA3AF',     // Dates, locations, helper text
         },
 
         // ============================================
         // Borders & Interactive States
         // ============================================
         border: {
-          default: '#E5E7EB',  // Cards, inputs, dividers
+          default: '#262626',  // Cards, inputs, dividers
           active: '#E53935',   // Focus states, active inputs
         },
 

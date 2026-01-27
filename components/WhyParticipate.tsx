@@ -61,11 +61,11 @@ const WhyParticipate = () => {
                     {reasons.map((reason, index) => (
                         <SpotlightCard
                             key={index}
-                            className="min-h-[280px] border-red-100/20"
+                            className="min-h-[280px] border-white/10"
                             spotlightColor="rgba(229, 57, 53, 0.2)"
                         >
                             <div className="flex flex-col items-center text-center h-full p-6">
-                                <div className="mb-4 p-3 bg-red-100/50 rounded-full text-primary group-hover:bg-red-200/50 transition-colors duration-300">
+                                <div className="mb-4 p-3 bg-white/5 rounded-full text-primary group-hover:bg-white/10 transition-colors duration-300">
                                     {reason.icon}
                                 </div>
                                 <h3 className="text-xl font-bold text-text-primary mb-3">

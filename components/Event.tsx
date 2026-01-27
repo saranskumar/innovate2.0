@@ -13,7 +13,7 @@ const Event = () => {
   };
 
   return (
-    <div className="py-16 px-4">
+    <div className="py-16 px-4 bg-black">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -22,13 +22,13 @@ const Event = () => {
       >
         <h2
           id="schedule"
-          className="text-5xl sm:text-6xl font-bold text-text-primary mb-2 text-center"
+          className="text-5xl sm:text-6xl font-bold text-white mb-2 text-center"
         >
           Schedule
         </h2>
 
         <div className="text-center mb-10">
-          <span className="text-xl text-text-secondary font-medium tracking-wide">
+          <span className="text-xl text-gray-400 font-medium tracking-wide">
             48-Hour Hackathon · Feb 20–22
           </span>
         </div>
@@ -42,7 +42,7 @@ const Event = () => {
                 <div
                   className={`w-full px-6 py-3 font-semibold transition-all text-center rounded-xl backdrop-blur-md border border-white/10 ${activeTab === "day1"
                     ? "bg-primary/90 text-white shadow-lg"
-                    : "bg-white/5 text-text-primary hover:bg-white/10"
+                    : "bg-white/5 text-gray-300 hover:bg-white/10 hover:text-white"
                     }`}
                 >
                   Day 1
@@ -54,7 +54,7 @@ const Event = () => {
                 <div
                   className={`w-full px-6 py-3 font-semibold transition-all text-center rounded-xl backdrop-blur-md border border-white/10 ${activeTab === "day2"
                     ? "bg-primary/90 text-white shadow-lg"
-                    : "bg-white/5 text-text-primary hover:bg-white/10"
+                    : "bg-white/5 text-gray-300 hover:bg-white/10 hover:text-white"
                     }`}
                 >
                   Day 2
@@ -66,7 +66,7 @@ const Event = () => {
                 <div
                   className={`w-full px-6 py-3 font-semibold transition-all text-center rounded-xl backdrop-blur-md border border-white/10 ${activeTab === "day3"
                     ? "bg-primary/90 text-white shadow-lg"
-                    : "bg-white/5 text-text-primary hover:bg-white/10"
+                    : "bg-white/5 text-gray-300 hover:bg-white/10 hover:text-white"
                     }`}
                 >
                   Day 3
@@ -76,7 +76,7 @@ const Event = () => {
           </ul>
 
           {/* Main content */}
-          <div className="flex-1 bg-transparent text-text-primary rounded-lg w-full">
+          <div className="flex-1 bg-transparent text-white rounded-lg w-full">
             {activeTab === "day1" && <Day1 />}
             {activeTab === "day2" && <Day2 />}
             {activeTab === "day3" && <Day3 />}

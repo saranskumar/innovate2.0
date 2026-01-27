@@ -23,7 +23,7 @@ const AboutDetails = () => {
                         Organized by InApp
                     </h3>
                     <p className="text-text-secondary leading-relaxed">
-                        As part of <span className="text-text-primary font-semibold">InApp&apos;s Silver Jubilee</span> celebrations, Innovate 2.0 brings together the brightest minds to build impactful solutions. We are dedicated to fostering innovation and technical excellence.
+                        Innovate 2.0 brings together the brightest minds to build impactful solutions. We are dedicated to fostering innovation and technical excellence.
                     </p>
                 </div>
             </GlareHover>
@@ -67,7 +67,7 @@ const AboutDetails = () => {
                         Hosted By
                     </h3>
                     <p className="text-text-secondary leading-relaxed">
-                        Hosted by <span className="text-text-primary font-semibold">Sree Chitra Thirunal College of Engineering (SCTCE)</span> and the <span className="text-text-primary font-semibold">IEEE SCT Student Branch</span>, fostering a legacy of excellence.
+                        Hosted by <span className="text-text-primary font-semibold">IEEE SCT SB</span> at SCTCE, a premier student community dedicated to fostering a legacy of technical excellence, leadership, and innovation through hands-on learning.
                     </p>
                 </div>
             </GlareHover>

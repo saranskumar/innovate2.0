@@ -63,7 +63,7 @@ export const Timer = () => {
         className="flex flex-nowrap justify-center gap-2 sm:gap-6 w-full max-w-4xl px-2"
       >
         {/* Days */}
-        <div className="flex-1 flex flex-col items-center bg-white/80 backdrop-blur-sm rounded-lg border border-red-100 p-3 sm:p-6 min-w-[70px]">
+        <div className="flex-1 flex flex-col items-center bg-neutral-900/60 backdrop-blur-sm rounded-lg border border-white/10 p-3 sm:p-6 min-w-[70px]">
           <span className="text-3xl sm:text-6xl md:text-7xl font-bold text-primary">
             {timeLeft.days || "0"}
           </span>
@@ -73,7 +73,7 @@ export const Timer = () => {
         </div>
 
         {/* Hours */}
-        <div className="flex-1 flex flex-col items-center bg-white/80 backdrop-blur-sm rounded-lg border border-red-100 p-3 sm:p-6 min-w-[70px]">
+        <div className="flex-1 flex flex-col items-center bg-neutral-900/60 backdrop-blur-sm rounded-lg border border-white/10 p-3 sm:p-6 min-w-[70px]">
           <span className="text-3xl sm:text-6xl md:text-7xl font-bold text-primary">
             {timeLeft.hours || "0"}
           </span>
@@ -83,7 +83,7 @@ export const Timer = () => {
         </div>
 
         {/* Minutes */}
-        <div className="flex-1 flex flex-col items-center bg-white/80 backdrop-blur-sm rounded-lg border border-red-100 p-3 sm:p-6 min-w-[70px]">
+        <div className="flex-1 flex flex-col items-center bg-neutral-900/60 backdrop-blur-sm rounded-lg border border-white/10 p-3 sm:p-6 min-w-[70px]">
           <span className="text-3xl sm:text-6xl md:text-7xl font-bold text-primary">
             {timeLeft.minutes || "0"}
           </span>
@@ -93,7 +93,7 @@ export const Timer = () => {
         </div>
 
         {/* Seconds */}
-        <div className="flex-1 flex flex-col items-center bg-white/80 backdrop-blur-sm rounded-lg border border-red-100 p-3 sm:p-6 min-w-[70px]">
+        <div className="flex-1 flex flex-col items-center bg-neutral-900/60 backdrop-blur-sm rounded-lg border border-white/10 p-3 sm:p-6 min-w-[70px]">
           <span className="text-3xl sm:text-6xl md:text-7xl font-bold text-primary">
             {timeLeft.seconds || "0"}
           </span>

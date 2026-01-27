@@ -27,21 +27,13 @@ const Registeration = () => {
             transition={{ ease: "easeOut", duration: 0.5 }}
             className="mb-6 flex flex-col sm:flex-row gap-4"
           >
-            <button
-              onClick={() => {
-                window.open("/problems");
-              }}
-              className="buttonMain font-semibold"
-            >
-              Problem Statements
-            </button>
 
             <div className="relative">
               <button
                 onClick={() => {
                   window.open("/tickets", "_self");
                 }}
-                className="buttonMain font-semibold bg-paper-dark border-sketch"
+                className="buttonMain font-semibold border border-white/10"
               >
                 Get Your Ticket →
               </button>

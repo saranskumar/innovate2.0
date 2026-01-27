@@ -31,7 +31,7 @@ const Rules = () => {
                                 Buying a ticket does not guarantee participation. All
                                 registrations will undergo scrutiny, and confirmations will be
                                 sent from the Innovate 2.0 official email handle on or before 10th
-                                January 2025.
+                                February 2026.
                             </li>
                             <li>
                                 If your registration is not selected, the amount paid during
