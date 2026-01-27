@@ -13,10 +13,8 @@ export const Navbar = () => {
   const pathname = usePathname();
   const isHomePage = pathname === "/";
 
-  // Filter for #B33439 from white:
-  // brightness(0) to black -> then invert to white -> then color
-  // Or directly from white using a calculator result for #B33439
-  const redFilter = "brightness(0) saturate(100%) invert(15%) sepia(95%) saturate(3442%) hue-rotate(346deg) brightness(86%) contrast(104%)";
+  // Filter for Dark Brick Red (#8a191d)
+  const redFilter = "brightness(0) saturate(100%) invert(13%) sepia(94%) saturate(4565%) hue-rotate(348deg) brightness(75%) contrast(98%)";
 
   const navItems = [
     { name: "Home", to: "home", type: "scroll" },

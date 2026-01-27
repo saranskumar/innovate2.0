@@ -14,14 +14,14 @@ const config: Config = {
         // ============================================
         brand: {
           red: {
-            500: '#E53935', // Primary actions, CTAs, active states
+            500: '#b50e1d', // Primary actions, CTAs, active states
             600: '#D32F2F', // Hover/active states
           },
           orange: {
             500: '#F4511E', // Supporting accent (gradients only)
           },
         },
-        primary: '#b12529', // Adding primary alias for valid bg-primary usage
+        primary: '#b50e1d', // Adding primary alias for valid bg-primary usage
 
         // ============================================
         // Neutral System (Carries 80% of UI)
