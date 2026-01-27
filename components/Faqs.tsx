@@ -18,7 +18,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ title, content }) => {
       onMouseLeave={() => setIsOpen(false)}
     >
       <div
-        className="overflow-hidden hover:scale-[1.01] hover:shadow-lg transition-all duration-300 rounded-xl border border-white/20 bg-white/5 backdrop-blur-md"
+        className="overflow-hidden hover:scale-[1.01] hover:shadow-lg transition-all duration-300 rounded-xl border border-white/10 bg-white/10 backdrop-blur-md"
       >
         <div
           className="cursor-pointer flex justify-between items-center p-5 font-medium text-text-primary hover:bg-white/10 transition-colors"

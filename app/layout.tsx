@@ -21,8 +21,6 @@ export const metadata: Metadata = {
     "Join Innovate 2026 Hackathon on February 20-22, 2026, in Trivandrum. Solve real-world challenges. Register today!",
 };
 
-import Aurora from "@/components/Aurora";
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -31,35 +29,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative min-h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative min-h-screen bg-white`}
       >
-        {/* Global Fixed Aurora Background - Professional Brick Red → White */}
-        <div className="fixed top-0 left-0 right-0 h-[70vh] md:inset-0 z-[-1] pointer-events-none bg-white">
-          {/* Aurora Canvas - Visible on Mobile too */}
-          <div className="w-full h-full">
-            <Aurora
-              colorStops={["#a72f35", "#EF4444", "#F87171", "#FFFFFF"]}
-              blend={0.5}
-              amplitude={0.45}
-              speed={0.3}
-            />
-          </div>
 
-          {/* White Overlay Layer - Responsive opacity */}
-          <div
-            className="absolute inset-0 md:opacity-15 opacity-5"
-            style={{
-              background: 'rgba(255, 255, 255, 1)',
-              backdropFilter: 'saturate(1.2)',
-              WebkitBackdropFilter: 'saturate(1.2)'
-            }}
-          />
-        </div>
 
         <Navbar />
         {children}
         <Footer />
       </body>
-    </html>
+    </html >
   );
 }

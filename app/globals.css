@@ -66,8 +66,8 @@ body {
 
 body {
   color: #B91C1C;
-  background: transparent;
-  /* Set to transparent to reveal fixed Aurora background */
+  background: #FFFFFF;
+  /* Clean professional background */
   font-family: 'Inter', 'Source Sans 3', 'DM Sans', 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;

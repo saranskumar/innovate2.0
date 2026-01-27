@@ -17,9 +17,7 @@ const Footer = () => {
                                 alt="Innovate 2.0"
                                 className="h-8 w-auto brightness-0 opacity-90"
                             />
-                            <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/70">
-                                Innovate 2.0
-                            </h2>
+                            
                         </div>
                         <p className="text-text-secondary text-sm leading-relaxed max-w-xs">
                             Join Kerala&apos;s brightest minds to build technology-driven

@@ -41,15 +41,15 @@ const Price = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-center md:text-left flex-1 max-w-lg"
         >
-          <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mb-4">
-            Prize Pool of{" "}
-            <span className="font-bold text-primary text-6xl sm:text-7xl inline-block">
+          <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mb-4 flex flex-col md:block items-center md:items-start gap-2">
+            <span>Prize Pool of</span>
+            <span className="font-bold text-primary text-6xl sm:text-7xl">
               {value}K
             </span>
           </h1>
           <div className="mt-4 text-lg sm:text-xl text-text-primary">
             Join us for the ultimate competition and grab a chance to win from a
-            massive prize pool of{" "}
+            massive prize of{" "}
             {/* <span className="font-bold text-primary">₹60,000!</span> */}
             <ScrollFloat
               animationDuration={1}
