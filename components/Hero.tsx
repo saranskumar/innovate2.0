@@ -7,9 +7,12 @@ import ieee from "../assets/logo/ieee_logo.png";
 import yp from "../assets/logo/yp_logo.png";
 import inapp from "../assets/logo/InApp_Logo.svg";
 import sb from "../assets/logo/SB_Black.png";
-import innovate from "../assets/logo/innovate_logo.png";
+import innovate from "../assets/logo/innovate_logo.svg";
 
 const Hero = () => {
+  // Filter for #B33439 from white
+  const redFilter = "brightness(0) saturate(100%) invert(29%) sepia(34%) saturate(3475%) hue-rotate(329deg) brightness(92%) contrast(98%)";
+
   return (
     <motion.div
       id="home"
@@ -53,7 +56,8 @@ const Hero = () => {
             alt="Innovate 2.0"
             width={800}
             height={240}
-            className="w-[350px] lg:w-[600px] brightness-0"
+            className="w-[350px] lg:w-[600px]"
+            style={{ filter: redFilter }}
           />
         </motion.div>
 

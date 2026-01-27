@@ -5,38 +5,31 @@ const Day1 = () => {
   const schedule = [
     {
       id: 1,
-      time: "12:00 PM",
-      event: "Registration & Check-In",
+      time: "09:00 AM",
+      event: "Registration & Check-in",
       description: "Participant onboarding and verification",
       rotation: "rotate-slight-1",
     },
     {
       id: 2,
-      time: "01:00 PM",
+      time: "10:30 AM",
       event: "Inauguration Ceremony",
       description: "Official opening and welcome address",
       rotation: "-rotate-slight-1",
     },
     {
       id: 3,
-      time: "01:45 PM",
-      event: "Problem Statement Reveal",
+      time: "11:00 AM",
+      event: "Problem Statement Reveal & Hackathon Begins",
       description: "Challenges announced, hacking begins",
       rotation: "rotate-slight-2",
     },
     {
       id: 4,
-      time: "06:00 PM",
+      time: "07:00 PM",
       event: "Evaluation 1",
       description: "Initial progress check and mentor feedback",
       rotation: "-rotate-slight-2",
-    },
-    {
-      id: 5,
-      time: "10:00 PM",
-      event: "Checkpoint",
-      description: "Late-night progress review",
-      rotation: "rotate-slight-3",
     },
   ];
 

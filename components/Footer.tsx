@@ -2,9 +2,12 @@ import React from "react";
 import { FaLinkedin, FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
 import { TbWorld } from "react-icons/tb";
 import Image from "next/image";
-import innovate from "../assets/logo/innovate_logo.png";
+import innovate from "../assets/logo/innovate_logo.svg";
 
 const Footer = () => {
+    // Filter for #B33439
+    const redFilter = "brightness(0) saturate(100%) invert(29%) sepia(34%) saturate(3475%) hue-rotate(329deg) brightness(92%) contrast(98%)";
+
     return (
         <footer className="bg-white/5 border-t border-white/10 pt-16 pb-8 backdrop-blur-sm">
             <div className="max-w-7xl mx-auto px-6">
@@ -15,9 +18,10 @@ const Footer = () => {
                             <Image
                                 src={innovate}
                                 alt="Innovate 2.0"
-                                className="h-8 w-auto brightness-0 opacity-90"
+                                className="h-8 w-auto opacity-90"
+                                style={{ filter: redFilter }}
                             />
-                            
+
                         </div>
                         <p className="text-text-secondary text-sm leading-relaxed max-w-xs">
                             Join Kerala&apos;s brightest minds to build technology-driven

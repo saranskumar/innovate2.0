@@ -3,34 +3,19 @@ import { motion } from "framer-motion";
 
 const Day2 = () => {
   const schedule = [
-
     {
       id: 1,
-      time: "09:00 AM",
+      time: "07:00 AM",
       event: "Evaluation 2",
       description: "Mid-hack review and guidance",
       rotation: "rotate-slight-1",
     },
     {
       id: 2,
-      time: "02:00 PM",
-      event: "Mentor Hours",
-      description: "Open mentoring and technical assistance",
-      rotation: "-rotate-slight-1",
-    },
-    {
-      id: 3,
       time: "07:00 PM",
       event: "Evaluation 3",
       description: "Advanced progress evaluation",
-      rotation: "rotate-slight-2",
-    },
-    {
-      id: 4,
-      time: "11:59 PM",
-      event: "Final Night Sprint",
-      description: "Last push before submissions",
-      rotation: "-rotate-slight-2",
+      rotation: "-rotate-slight-1",
     },
   ];
 

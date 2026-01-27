@@ -5,31 +5,24 @@ const Day3 = () => {
     const schedule = [
         {
             id: 1,
-            time: "08:00 AM",
-            event: "Submission Deadline",
-            description: "Final code and presentation submission",
+            time: "05:00 AM",
+            event: "Evaluation 4",
+            description: "Final evaluation round",
             rotation: "rotate-slight-1",
         },
         {
             id: 2,
-            time: "09:30 AM",
-            event: "Final Presentations",
+            time: "11:00 AM",
+            event: "Final Pitch Presentations (Top 10 Finalists)",
             description: "Shortlisted teams present to judges",
             rotation: "-rotate-slight-1",
         },
         {
             id: 3,
-            time: "01:00 PM",
-            event: "Announcement of Winners",
-            description: "Results and prize distribution",
+            time: "01:30 PM",
+            event: "Valedictory Function & Prize Distribution",
+            description: "Results and closing ceremony",
             rotation: "rotate-slight-2",
-        },
-        {
-            id: 4,
-            time: "02:00 PM",
-            event: "Closing Ceremony",
-            description: "Vote of thanks and closing remarks",
-            rotation: "-rotate-slight-2",
         },
     ];
 

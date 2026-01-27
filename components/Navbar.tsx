@@ -6,12 +6,17 @@ import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-scroll";
 import Image from "next/image";
-import innovate from "../assets/logo/innovate_logo.png";
+import innovate from "../assets/logo/innovate_logo.svg";
 
 export const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
   const isHomePage = pathname === "/";
+
+  // Filter for #B33439 from white:
+  // brightness(0) to black -> then invert to white -> then color
+  // Or directly from white using a calculator result for #B33439
+  const redFilter = "brightness(0) saturate(100%) invert(29%) sepia(34%) saturate(3475%) hue-rotate(329deg) brightness(92%) contrast(98%)";
 
   const navItems = [
     { name: "Home", to: "home", type: "scroll" },
@@ -40,7 +45,8 @@ export const Navbar = () => {
                     <Image
                       src={innovate}
                       alt="Innovate 2.0"
-                      className="h-8 md:h-10 w-auto brightness-0"
+                      className="h-8 md:h-10 w-auto"
+                      style={{ filter: redFilter }}
                     />
                   </Link>
                 ) : (
@@ -48,7 +54,8 @@ export const Navbar = () => {
                     <Image
                       src={innovate}
                       alt="Innovate 2.0"
-                      className="h-8 md:h-10 w-auto brightness-0"
+                      className="h-8 md:h-10 w-auto"
+                      style={{ filter: redFilter }}
                     />
                   </a>
                 )}
@@ -126,7 +133,8 @@ export const Navbar = () => {
               <Image
                 src={innovate}
                 alt="Innovate 2.0"
-                className="h-8 w-auto brightness-0"
+                className="h-8 w-auto"
+                style={{ filter: redFilter }}
               />
               <button
                 onClick={() => setMobileMenuOpen(false)}
