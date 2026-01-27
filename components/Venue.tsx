@@ -88,7 +88,10 @@ const Venue = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-text-primary mb-1">Contact</h3>
+
+                  <p className="text-text-secondary">+91 86061 64747</p>
                   <p className="text-text-secondary">+91 95676 94707</p>
+                  <p className="text-text-secondary">+91 73067 02435</p>
                 </div>
               </div>
 
@@ -102,10 +105,12 @@ const Venue = () => {
                   <h3 className="text-xl font-bold text-text-primary mb-1">Follow Us</h3>
                   <p className="text-text-secondary text-sm mb-1">Stay updated and inspired</p>
                   <div className="flex gap-3 font-semibold text-primary">
-                    <span>IEEE Kerala YP</span>
-                    <span>•</span>
-                    <span>InApp</span>
+                    
+                     <span>InApp</span>
                      <span>•</span>
+                     <span>IEEE Kerala YP</span>
+                    <span>•</span>
+
                       <span>IEEE SCT SB</span>
                   </div>
                 </div>

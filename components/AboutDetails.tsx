@@ -67,7 +67,7 @@ const AboutDetails = () => {
                         Hosted By
                     </h3>
                     <p className="text-text-secondary leading-relaxed">
-                        Hosted by <span className="text-text-primary font-semibold">IEEE SCT SB</span> at SCTCE, a premier student community dedicated to fostering a legacy of technical excellence, leadership, and innovation through hands-on learning.
+                        Hosted by <span className="text-text-primary font-semibold">IEEE SCT Student Branch </span> at SCTCE, a premier student community dedicated to fostering a legacy of technical excellence, leadership, and innovation through hands-on learning.
                     </p>
                 </div>
             </GlareHover>

@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backdropBlur: {
+        md: '12px',
+      },
       colors: {
         // ============================================
         // IEEE × inApp - Brand Core Colors
