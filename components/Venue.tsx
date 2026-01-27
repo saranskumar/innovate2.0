@@ -26,7 +26,7 @@ const Venue = () => {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="w-full h-[450px] rounded-2xl overflow-hidden shadow-lg border border-white/10 bg-neutral-900/40 backdrop-blur-md"
+            className="w-full h-full min-h-[450px] rounded-2xl overflow-hidden shadow-lg border border-white/10 bg-neutral-900/40 backdrop-blur-md"
           >
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1087.1118851564481!2d76.97857658187175!3d8.470231553187036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05baee56e6b99b%3A0x4ce024c88eb0ddcb!2sSree%20Chitra%20Thirunal%20College%20of%20Engineering%2C%20Thiruvananthapuram!5e0!3m2!1sen!2sin!4v1711636446051!5m2!1sen!2sin"
@@ -105,13 +105,13 @@ const Venue = () => {
                   <h3 className="text-xl font-bold text-text-primary mb-1">Follow Us</h3>
                   <p className="text-text-secondary text-sm mb-1">Stay updated and inspired</p>
                   <div className="flex gap-3 font-semibold text-primary">
-                    
-                     <span>InApp</span>
-                     <span>•</span>
-                     <span>IEEE Kerala YP</span>
+
+                    <span>InApp</span>
+                    <span>•</span>
+                    <span>IEEE Kerala YP</span>
                     <span>•</span>
 
-                      <span>IEEE SCT SB</span>
+                    <span>IEEE SCT SB</span>
                   </div>
                 </div>
               </div>

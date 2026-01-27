@@ -30,7 +30,7 @@ const Rules = () => {
                             <li>
                                 Buying a ticket does not guarantee participation. All
                                 registrations will undergo scrutiny, and confirmations will be
-                                sent from the Innovate 2.0 official email handle on or before 10th
+                                sent from the Innovate 2.0 official email handle on or before 13th
                                 February 2026.
                             </li>
                             <li>
@@ -56,7 +56,7 @@ const Rules = () => {
                                 at the time of registration.
                             </li>
                             <li>
-                                Each team must consist of 1 to 5 members.
+                                Each team must consist of 1 to 4 members.
                             </li>
                             <li>
                                 Teams are required to bring at least one laptop to participate
