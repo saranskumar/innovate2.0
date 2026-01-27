@@ -53,7 +53,7 @@ const Faqs = () => {
     },
     {
       title: "How many members can be in a team?",
-      content: "Teams can have 1 to 5 members.",
+      content: "Teams can have 1 to 4 members.",
     },
     {
       title: "What is the registration fee?",
@@ -83,7 +83,7 @@ const Faqs = () => {
     {
       title: "What are the prizes for the event?",
       content:
-        "A total of ₹50,000 in cash prizes will be awarded: ₹25,000 for 1st place, ₹15,000 for 2nd place, and ₹10,000 for 3rd place.",
+        "A total of ₹60,000 in cash prizes will be awarded.",
     },
     {
       title: "What if my registration is not selected?",

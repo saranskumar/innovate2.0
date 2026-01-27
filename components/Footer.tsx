@@ -53,6 +53,50 @@ const Footer = () => {
                     <div className="space-y-4">
                         <h3 className="text-lg font-semibold text-text-primary">Connect</h3>
                         <div className="space-y-6">
+
+                            {/* InApp */}
+                            <div>
+                                <p className="text-sm font-medium text-text-primary mb-2">InApp</p>
+                                <div className="flex gap-4">
+                                    <a
+                                        href="https://www.linkedin.com/company/inapp/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-text-secondary hover:text-primary transition-colors text-xl"
+                                        aria-label="InApp LinkedIn"
+                                    >
+                                        <FaLinkedin />
+                                    </a>
+                                    <a
+                                        href="https://x.com/inapp"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-text-secondary hover:text-primary transition-colors text-xl"
+                                        aria-label="InApp Twitter"
+                                    >
+                                        <FaTwitter />
+                                    </a>
+                                    <a
+                                        href="https://www.instagram.com/inapp.inc/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-text-secondary hover:text-primary transition-colors text-xl"
+                                        aria-label="InApp Instagram"
+                                    >
+                                        <FaInstagram />
+                                    </a>
+                                    <a
+                                        href="https://www.facebook.com/InApp"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-text-secondary hover:text-primary transition-colors text-xl"
+                                        aria-label="InApp Facebook"
+                                    >
+                                        <FaFacebook />
+                                    </a>
+                                </div>
+                            </div>
+                            
                             {/* IEEE Kerala YP */}
                             <div>
                                 <p className="text-sm font-medium text-text-primary mb-2">IEEE Kerala YP</p>
@@ -129,48 +173,7 @@ const Footer = () => {
                                 </div>
                             </div>
 
-                            {/* InApp */}
-                            <div>
-                                <p className="text-sm font-medium text-text-primary mb-2">InApp</p>
-                                <div className="flex gap-4">
-                                    <a
-                                        href="https://www.linkedin.com/company/inapp/"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-text-secondary hover:text-primary transition-colors text-xl"
-                                        aria-label="InApp LinkedIn"
-                                    >
-                                        <FaLinkedin />
-                                    </a>
-                                    <a
-                                        href="https://x.com/inapp"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-text-secondary hover:text-primary transition-colors text-xl"
-                                        aria-label="InApp Twitter"
-                                    >
-                                        <FaTwitter />
-                                    </a>
-                                    <a
-                                        href="https://www.instagram.com/inapp.inc/"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-text-secondary hover:text-primary transition-colors text-xl"
-                                        aria-label="InApp Instagram"
-                                    >
-                                        <FaInstagram />
-                                    </a>
-                                    <a
-                                        href="https://www.facebook.com/InApp"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-text-secondary hover:text-primary transition-colors text-xl"
-                                        aria-label="InApp Facebook"
-                                    >
-                                        <FaFacebook />
-                                    </a>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
