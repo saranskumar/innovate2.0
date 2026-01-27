@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function TicketsPage() {
     return (
-        <div className="min-h-screen flex flex-col justify-center items-center bg-white py-20 px-4">
+        <div className="min-h-screen flex flex-col justify-center items-center bg-neutral-0 py-20 px-4">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -34,7 +34,7 @@ export default function TicketsPage() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.3, duration: 0.8 }}
-                        className="card p-6 bg-background-subtle"
+                        className="card p-6 bg-white/5"
                     >
                         <h3 className="text-xl font-semibold text-text-primary mb-3 inline-block">
                             What to expect:

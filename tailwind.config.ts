@@ -27,7 +27,7 @@ const config: Config = {
         // Neutral System (Carries 80% of UI)
         // ============================================
         neutral: {
-          0: '#050505',    // Main page background
+          0: '#0d0d0d',    // Main page background
           50: '#121212',   // Alternate sections, visual rhythm
           100: '#1A1A1A',  // Cards, FAQ panels, schedule blocks
         },

@@ -5,7 +5,7 @@ import Link from "next/link"; // Import Link for better navigation
 
 const page = () => {
   return (
-    <div className="bg-white min-h-screen flex flex-col items-center justify-center px-4 relative overflow-hidden">
+    <div className="bg-neutral-0 min-h-screen flex flex-col items-center justify-center px-4 relative overflow-hidden">
 
 
       <div className="max-w-3xl mx-auto text-center z-10">

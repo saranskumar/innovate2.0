@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Particles from "@/components/Particles";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -33,6 +34,18 @@ export default function RootLayout({
       >
 
 
+        <div className="fixed inset-0 z-[-1] w-full h-full">
+          <Particles
+            particleColors={["#ffffff", "#b12529"]}
+            particleCount={200}
+            particleSpread={10}
+            speed={0.1}
+            particleBaseSize={100}
+            moveParticlesOnHover={true}
+            alphaParticles={false}
+            disableRotation={false}
+          />
+        </div>
         <Navbar />
         {children}
         <Footer />

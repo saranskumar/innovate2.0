@@ -13,7 +13,7 @@ const Event = () => {
   };
 
   return (
-    <div className="py-16 px-4 bg-black">
+    <div className="py-16 px-4 bg-neutral-0">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

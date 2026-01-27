@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const RulesPage = () => {
     return (
-        <div className="bg-white min-h-screen py-20 px-4">
+        <div className="bg-neutral-0 min-h-screen py-20 px-4">
             <div className="max-w-5xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 10 }}

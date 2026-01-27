@@ -21,7 +21,7 @@
   --brand-gradient: linear-gradient(135deg, #C62828 0%, #E53935 50%, #F4511E 100%);
 
   /* Neutrals - Dark Theme */
-  --neutral-0: #050505;
+  --neutral-0: #0d0d0d;
   --neutral-50: #121212;
   --neutral-100: #1A1A1A;
 
@@ -66,7 +66,7 @@ body {
 
 body {
   color: #FFFFFF;
-  background: #050505;
+  background: #0d0d0d;
   /* Clean professional background */
   font-family: 'Inter', 'Source Sans 3', 'DM Sans', 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
   line-height: 1.6;
