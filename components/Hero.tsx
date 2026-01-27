@@ -67,7 +67,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ ease: "easeOut", duration: 0.8, delay: 0.4 }}
-          className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-12 px-4 font-medium"
+          className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-6 px-4 font-medium"
         >
           <span className="font-semibold text-white">
             Empowering the Future: Engineering Solutions

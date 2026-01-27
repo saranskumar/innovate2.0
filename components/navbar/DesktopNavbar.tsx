@@ -8,7 +8,7 @@ import { navItems } from "./navLinks";
 
 export default function DesktopNavbar() {
     return (
-        <div className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-5xl rounded-[50px] border border-primary/20">
+        <div className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[98%] max-w-5xl rounded-[50px] border border-primary/50">
             <GlassSurface
                 height={80}
                 width="100%"
