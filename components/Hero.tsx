@@ -11,8 +11,6 @@ import innovate from "../assets/logo/innovate_logo.svg";
 import { Link } from "react-scroll";
 
 const Hero = () => {
-  // Filter for #B33439 from white
-  const redFilter = "brightness(0) saturate(100%) invert(15%) sepia(95%) saturate(3442%) hue-rotate(346deg) brightness(86%) contrast(104%)";
 
   return (
     <motion.div

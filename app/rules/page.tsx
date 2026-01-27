@@ -57,8 +57,7 @@ const RulesPage = () => {
                                     at the time of registration.
                                 </li>
                                 <li>
-                                    Each team must consist of a minimum of one and a maximum of five
-                                    members.
+                                    Each team must consist of 1 to 5 members.
                                 </li>
                                 <li>
                                     Teams are required to bring at least one laptop to participate

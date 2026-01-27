@@ -2,11 +2,9 @@ import React from "react";
 import { FaLinkedin, FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
 import { TbWorld } from "react-icons/tb";
 import Image from "next/image";
-import innovate from "../assets/logo/innovate_logo.svg";
+import innovate from "../assets/logo/innovatered.svg";
 
 const Footer = () => {
-    // Filter for Dark Brick Red (#8a191d) (Matched with Navbar)
-    const redFilter = "brightness(0) saturate(100%) invert(13%) sepia(94%) saturate(4565%) hue-rotate(348deg) brightness(75%) contrast(98%)";
 
     return (
         <footer className="bg-white/5 border-t border-white/10 pt-16 pb-8 backdrop-blur-sm">
@@ -19,7 +17,6 @@ const Footer = () => {
                                 src={innovate}
                                 alt="Innovate 2.0"
                                 className="h-8 w-auto opacity-90"
-                                style={{ filter: redFilter }}
                             />
 
                         </div>

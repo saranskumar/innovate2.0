@@ -6,15 +6,13 @@ import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-scroll";
 import Image from "next/image";
-import innovate from "../assets/logo/innovate_logo.svg";
+import innovate from "../assets/logo/innovatered.svg";
 
 export const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
   const isHomePage = pathname === "/";
 
-  // Filter for Dark Brick Red (#8a191d)
-  const redFilter = "brightness(0) saturate(100%) invert(13%) sepia(94%) saturate(4565%) hue-rotate(348deg) brightness(75%) contrast(98%)";
 
   const navItems = [
     { name: "Home", to: "home", type: "scroll" },
@@ -44,7 +42,6 @@ export const Navbar = () => {
                       src={innovate}
                       alt="Innovate 2.0"
                       className="h-8 md:h-10 w-auto"
-                      style={{ filter: redFilter }}
                     />
                   </Link>
                 ) : (
@@ -53,7 +50,6 @@ export const Navbar = () => {
                       src={innovate}
                       alt="Innovate 2.0"
                       className="h-8 md:h-10 w-auto"
-                      style={{ filter: redFilter }}
                     />
                   </a>
                 )}
@@ -132,7 +128,6 @@ export const Navbar = () => {
                 src={innovate}
                 alt="Innovate Hackathon 2.0 - 2nd Edition"
                 className="h-8 w-auto"
-                style={{ filter: redFilter }}
               />
               <button
                 onClick={() => setMobileMenuOpen(false)}

@@ -53,7 +53,7 @@ const Faqs = () => {
     },
     {
       title: "How many members can be in a team?",
-      content: "Teams can have a minimum of 1 and a maximum of 5 members.",
+      content: "Teams can have 1 to 5 members.",
     },
     {
       title: "What is the registration fee?",
