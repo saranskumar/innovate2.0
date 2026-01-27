@@ -42,6 +42,7 @@ const Hero = () => {
             height={91}
             width={550}
             className="mx-auto w-[140px] lg:w-[300px] opacity-90"
+            style={{ filter: "brightness(0) invert(1)" }}
           />
         </motion.div>
 
@@ -57,8 +58,7 @@ const Hero = () => {
             alt="Innovate Hackathon 2.0 - 2nd Edition"
             width={800}
             height={240}
-            className="w-[350px] lg:w-[600px]"
-            style={{ filter: redFilter }}
+            className="w-[350px] lg:w-[600px] opacity-95 mix-blend-overlay"
           />
         </motion.div>
 
