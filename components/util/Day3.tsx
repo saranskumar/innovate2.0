@@ -13,7 +13,7 @@ const Day3 = () => {
         {
             id: 2,
             time: "11:00 AM",
-            event: "Final Pitch Presentations (Top 10 Finalists)",
+            event: "Final Presentations ",
             description: "Shortlisted teams present to judges",
             rotation: "-rotate-slight-1",
         },

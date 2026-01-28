@@ -50,7 +50,7 @@ const About = () => {
           className="max-w-4xl mx-auto mb-12"
         >
           <p className="text-lg sm:text-xl text-text-primary leading-relaxed text-center">
-            <span className="font-semibold text-primary">Innovate 2.0</span> is a 48 hour hackathon designed for students across Kerala. Compete in teams to build impactful solutions that address real-world challenges, paving the way for a smart, sustainable tomorrow.
+            <span className="font-semibold text-primary">Innovate 2.0</span> is a 48-hour hackathon designed for students across Kerala. Compete in teams to build impactful solutions that address real-world challenges, paving the way for a smart, sustainable tomorrow.
           </p>
         </motion.div>
 

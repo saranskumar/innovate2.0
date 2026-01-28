@@ -180,7 +180,7 @@ const Footer = () => {
 
                 <div className="border-t border-white/10 pt-8 text-center">
                     <p className="text-text-secondary text-sm">
-                        © 2026 Innovate 2.0. All rights reserved.
+                        © 2026 InApp. All rights reserved.
                     </p>
                 </div>
             </div>

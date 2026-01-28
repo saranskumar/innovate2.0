@@ -29,8 +29,8 @@ const RulesPage = () => {
                                     amount will be refunded at the venue upon attendance.
                                 </li>
                                 <li>
-                                    Buying a ticket does not guarantee participation. All
-                                    registrations will undergo scrutiny, and confirmations will be
+                                    Purchasing a ticket does not guarantee participation. All
+                                    registrations will undergo review, and confirmations will be
                                     sent from the Innovate 2.0 official email handle on or before 13th
                                     February 2026.
                                 </li>
