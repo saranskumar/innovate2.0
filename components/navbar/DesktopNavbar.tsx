@@ -64,15 +64,7 @@ export default function DesktopNavbar() {
                             )
                         )}
 
-                        <Link
-                            to="registration"
-                            smooth
-                            offset={-80}
-                            duration={500}
-                            className="ml-4 bg-primary text-white font-bold py-2.5 px-8 rounded-full hover:bg-red-800 transition cursor-pointer glare-button"
-                        >
-                            Register Now
-                        </Link>
+
                     </div>
                 </div>
             </GlassSurface>

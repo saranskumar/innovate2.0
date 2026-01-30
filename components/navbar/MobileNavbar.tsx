@@ -82,16 +82,7 @@ export default function MobileNavbar() {
                                 </a>
                             ))}
 
-                            <Link
-                                to="registration"
-                                smooth
-                                offset={-80}
-                                duration={500}
-                                onClick={() => setMobileMenuOpen(false)}
-                                className="block mt-4 bg-primary text-white text-center font-bold py-3 rounded-xl hover:bg-red-800 transition cursor-pointer glare-button"
-                            >
-                                Register Now
-                            </Link>
+
                         </div>
                     </DialogPanel>
                 </div>
