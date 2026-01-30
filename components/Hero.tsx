@@ -56,7 +56,7 @@ const Hero = () => {
             alt="Innovate Hackathon 2.0 - 2nd Edition"
             width={800}
             height={240}
-            className="w-[280px] sm:w-[400px] lg:w-[650px] opacity-95 mix-blend-overlay"
+            className="w-[320px] sm:w-[500px] lg:w-[750px] max-w-full opacity-95 mix-blend-overlay"
           />
         </motion.div>
 
@@ -80,10 +80,10 @@ const Hero = () => {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ ease: "easeOut", duration: 0.6, delay: 0.4 }}
-          className="flex flex-nowrap justify-center items-center gap-3 sm:gap-6 md:gap-10 lg:gap-16 mb-8 px-2"
+          className="flex flex-nowrap justify-center items-center gap-2 sm:gap-8 md:gap-10 lg:gap-16 mb-8 px-2"
         >
           {/* YP Logo */}
-          <div className="w-[72px] h-[60px] sm:w-[120px] sm:h-[100px] md:w-[180px] md:h-[150px] flex items-center justify-center flex-shrink-0">
+          <div className="w-[48px] h-[40px] sm:w-[100px] sm:h-[84px] md:w-[160px] md:h-[134px] flex items-center justify-center flex-shrink-0">
             <Image
               src={yp}
               alt="IEEE Young Professionals"
@@ -92,7 +92,7 @@ const Hero = () => {
           </div>
 
           {/* SB Logo */}
-          <div className="w-[60px] h-[48px] sm:w-[100px] sm:h-[80px] md:w-[150px] md:h-[120px] flex items-center justify-center flex-shrink-0">
+          <div className="w-[40px] h-[32px] sm:w-[80px] sm:h-[64px] md:w-[130px] md:h-[104px] flex items-center justify-center flex-shrink-0">
             <Image
               src={sb}
               alt="IEEE Student Branch"
@@ -101,7 +101,7 @@ const Hero = () => {
           </div>
 
           {/* SCT Logo */}
-          <div className="w-[72px] h-[60px] sm:w-[120px] sm:h-[100px] md:w-[180px] md:h-[150px] flex items-center justify-center flex-shrink-0">
+          <div className="w-[48px] h-[40px] sm:w-[100px] sm:h-[84px] md:w-[160px] md:h-[134px] flex items-center justify-center flex-shrink-0">
             <Image
               src={sct}
               alt="SCT College of Engineering"
@@ -110,7 +110,7 @@ const Hero = () => {
           </div>
 
           {/* IEEE Logo - Larger than others */}
-          <div className="w-[88px] h-[76px] sm:w-[146px] sm:h-[126px] md:w-[220px] md:h-[190px] flex items-center justify-center flex-shrink-0">
+          <div className="w-[58px] h-[50px] sm:w-[120px] sm:h-[105px] md:w-[190px] md:h-[165px] flex items-center justify-center flex-shrink-0">
             <Image
               src={ieee}
               alt="IEEE Logo"
