@@ -124,17 +124,20 @@ const Hero = () => {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ ease: "easeOut", duration: 0.6, delay: 0.5 }}
-          className="mt-4 md:mt-8"
+          className="mt-4 md:mt-8 flex flex-col items-center gap-2"
         >
           <Link
             to="registration"
             smooth={true}
             offset={-80}
             duration={500}
-            className="inline-block bg-primary text-white font-bold py-3 px-8 text-sm sm:text-base sm:py-4 sm:px-10 rounded-full hover:bg-red-800 transition shadow-lg cursor-pointer transform hover:scale-105 active:scale-95 glare-button"
+            className="inline-block bg-primary text-white font-bold py-3 px-8 text-sm sm:text-base sm:py-4 sm:px-10 rounded-full hover:bg-red-700 transition shadow-lg cursor-pointer transform hover:scale-105 active:scale-95 glare-button"
           >
-            Registration Closed !
+            Registration Reopened!
           </Link>
+          <span className="text-yellow-400 text-xs sm:text-sm font-semibold tracking-wide uppercase animate-pulse">
+            ⚠️ Limited Slots Only
+          </span>
         </motion.div>
 
         {/* Decorative hand-drawn arrow pointing down (optional) */}

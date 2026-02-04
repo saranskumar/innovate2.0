@@ -1,8 +1,9 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 const Registration = () => {
+  const [isChecked, setIsChecked] = useState(false);
 
   return (
     <section
@@ -33,7 +34,18 @@ const Registration = () => {
 
           <div className="flex flex-col items-center gap-6 mb-8">
             {/* Checkbox */}
-            {/* Checkbox removed as registration is closed */}
+            <div className="flex items-center justify-center gap-3">
+              <input
+                type="checkbox"
+                id="rules-checkbox"
+                checked={isChecked}
+                onChange={(e) => setIsChecked(e.target.checked)}
+                className="w-5 h-5 accent-primary cursor-pointer rounded border-gray-300 focus:ring-primary"
+              />
+              <label htmlFor="rules-checkbox" className="text-text-secondary text-sm sm:text-base cursor-pointer select-none">
+                I have read and accept the <a href="/rules" className="text-primary underline hover:text-red-400 transition">Rules and Regulations</a>
+              </label>
+            </div>
 
             {/* CTA */}
             <motion.div
@@ -42,10 +54,15 @@ const Registration = () => {
               transition={{ duration: 0.4, ease: "easeOut", delay: 0.1 }}
             >
               <button
-                disabled={true}
-                className="px-8 py-4 text-lg font-semibold border rounded-full transition-all duration-300 bg-primary text-white border-transparent cursor-not-allowed"
+                disabled={!isChecked}
+                onClick={() => window.open('https://innovate-hackathon.devfolio.co/', '_blank')}
+                className={`px-8 py-4 text-lg font-semibold border rounded-full transition-all duration-300 border-transparent
+                  ${isChecked
+                    ? "bg-primary text-white hover:bg-red-700 hover:shadow-lg hover:scale-105 active:scale-95 cursor-pointer"
+                    : "bg-gray-600 text-gray-300 cursor-not-allowed opacity-50"
+                  }`}
               >
-                Registration Closed
+                Register Now
               </button>
             </motion.div>
 
@@ -53,8 +70,8 @@ const Registration = () => {
 
           {/* Meta info */}
           <p className="text-sm sm:text-base text-text-secondary">
-            Registration is currently{" "}
-            <span className="font-semibold text-primary">closed</span>.
+            Registration Reopened:{" "}
+            <span className="font-semibold text-yellow-500">Limited Slots Only!</span>
           </p>
         </div>
       </motion.div>
