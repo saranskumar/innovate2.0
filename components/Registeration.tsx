@@ -43,7 +43,7 @@ const Registration = () => {
                 className="w-5 h-5 accent-primary cursor-pointer rounded border-gray-300 focus:ring-primary"
               />
               <label htmlFor="rules-checkbox" className="text-text-secondary text-sm sm:text-base cursor-pointer select-none">
-                I have read and accept the <a href="/rules" className="text-primary underline hover:text-red-400 transition">Rules and Regulations</a>
+                I have read and accept the <a href="/rules" target="_blank" className="text-primary underline hover:text-red-400 transition">Rules and Regulations</a>
               </label>
             </div>
 
@@ -55,7 +55,7 @@ const Registration = () => {
             >
               <button
                 disabled={!isChecked}
-                onClick={() => window.open('https://innovate-hackathon.devfolio.co/', '_blank')}
+                onClick={() => window.open('https://www.yepdesk.com/innovate2026', '_blank')}
                 className={`px-8 py-4 text-lg font-semibold border rounded-full transition-all duration-300 border-transparent
                   ${isChecked
                     ? "bg-primary text-white hover:bg-red-700 hover:shadow-lg hover:scale-105 active:scale-95 cursor-pointer"

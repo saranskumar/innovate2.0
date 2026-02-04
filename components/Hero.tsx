@@ -39,7 +39,7 @@ const Hero = () => {
             alt="inapp logo"
             height={91}
             width={550}
-            className="mx-auto w-[120px] sm:w-[160px] lg:w-[350px] opacity-90"
+            className="mx-auto w-[100px] sm:w-[140px] lg:w-[300px] opacity-90"
             style={{ filter: "brightness(0) invert(1)" }}
           />
         </motion.div>
@@ -56,7 +56,7 @@ const Hero = () => {
             alt="Innovate Hackathon 2.0 - 2nd Edition"
             width={800}
             height={240}
-            className="w-[320px] sm:w-[500px] lg:w-[750px] max-w-full opacity-95 mix-blend-overlay"
+            className="w-[280px] sm:w-[450px] lg:w-[650px] max-w-full opacity-95 mix-blend-overlay"
           />
         </motion.div>
 
@@ -83,7 +83,7 @@ const Hero = () => {
           className="flex flex-nowrap justify-center items-center gap-2 sm:gap-8 md:gap-10 lg:gap-16 mb-8 px-2"
         >
           {/* YP Logo */}
-          <div className="w-[48px] h-[40px] sm:w-[100px] sm:h-[84px] md:w-[160px] md:h-[134px] flex items-center justify-center flex-shrink-0">
+          <div className="w-[40px] h-[34px] sm:w-[85px] sm:h-[72px] md:w-[135px] md:h-[114px] flex items-center justify-center flex-shrink-0">
             <Image
               src={yp}
               alt="IEEE Young Professionals"
@@ -92,7 +92,7 @@ const Hero = () => {
           </div>
 
           {/* SB Logo */}
-          <div className="w-[40px] h-[32px] sm:w-[80px] sm:h-[64px] md:w-[130px] md:h-[104px] flex items-center justify-center flex-shrink-0">
+          <div className="w-[35px] h-[28px] sm:w-[70px] sm:h-[56px] md:w-[110px] md:h-[88px] flex items-center justify-center flex-shrink-0">
             <Image
               src={sb}
               alt="IEEE Student Branch"
@@ -101,7 +101,7 @@ const Hero = () => {
           </div>
 
           {/* SCT Logo */}
-          <div className="w-[48px] h-[40px] sm:w-[100px] sm:h-[84px] md:w-[160px] md:h-[134px] flex items-center justify-center flex-shrink-0">
+          <div className="w-[40px] h-[34px] sm:w-[85px] sm:h-[72px] md:w-[135px] md:h-[114px] flex items-center justify-center flex-shrink-0">
             <Image
               src={sct}
               alt="SCT College of Engineering"
@@ -110,7 +110,7 @@ const Hero = () => {
           </div>
 
           {/* IEEE Logo - Larger than others */}
-          <div className="w-[58px] h-[50px] sm:w-[120px] sm:h-[105px] md:w-[190px] md:h-[165px] flex items-center justify-center flex-shrink-0">
+          <div className="w-[50px] h-[42px] sm:w-[100px] sm:h-[88px] md:w-[160px] md:h-[140px] flex items-center justify-center flex-shrink-0">
             <Image
               src={ieee}
               alt="IEEE Logo"
