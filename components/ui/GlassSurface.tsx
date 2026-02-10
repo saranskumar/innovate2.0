@@ -97,7 +97,7 @@ const GlassSurface: React.FC<GlassSurfaceProps> = ({
 
     const isDarkMode = useDarkMode();
 
-    const generateDisplacementMap = () => {
+    const generateDisplacementMap = React.useCallback(() => {
         const rect = containerRef.current?.getBoundingClientRect();
         const actualWidth = rect?.width || 400;
         const actualHeight = rect?.height || 200;
@@ -123,11 +123,20 @@ const GlassSurface: React.FC<GlassSurfaceProps> = ({
     `;
 
         return `data:image/svg+xml,${encodeURIComponent(svgContent)}`;
-    };
+    }, [
+        borderWidth,
+        redGradId,
+        blueGradId,
+        borderRadius,
+        mixBlendMode,
+        brightness,
+        opacity,
+        blur
+    ]);
 
-    const updateDisplacementMap = () => {
+    const updateDisplacementMap = React.useCallback(() => {
         feImageRef.current?.setAttribute('href', generateDisplacementMap());
-    };
+    }, [generateDisplacementMap]);
 
     useEffect(() => {
         updateDisplacementMap();
@@ -159,11 +168,13 @@ const GlassSurface: React.FC<GlassSurfaceProps> = ({
         blueOffset,
         xChannel,
         yChannel,
-        mixBlendMode
+        mixBlendMode,
+        updateDisplacementMap
     ]);
 
     useEffect(() => {
         setSvgSupported(supportsSVGFilters());
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     useEffect(() => {
@@ -178,7 +189,7 @@ const GlassSurface: React.FC<GlassSurfaceProps> = ({
         return () => {
             resizeObserver.disconnect();
         };
-    }, []);
+    }, [updateDisplacementMap]);
 
     useEffect(() => {
         if (!containerRef.current) return;
@@ -192,11 +203,11 @@ const GlassSurface: React.FC<GlassSurfaceProps> = ({
         return () => {
             resizeObserver.disconnect();
         };
-    }, []);
+    }, [updateDisplacementMap]);
 
     useEffect(() => {
         setTimeout(updateDisplacementMap, 0);
-    }, [width, height]);
+    }, [width, height, updateDisplacementMap]);
 
     const supportsSVGFilters = () => {
         if (typeof window === 'undefined' || typeof document === 'undefined') {
