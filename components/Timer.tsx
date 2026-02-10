@@ -12,7 +12,7 @@ interface TimeLeft {
 
 export const Timer = () => {
   const calculateTimeLeft = (): TimeLeft => {
-    const eventDate: Date = new Date("2026-02-20T09:00:00");
+    const eventDate: Date = new Date("2026-02-21T09:00:00");
     const now: Date = new Date();
     const difference: number = eventDate.getTime() - now.getTime();
 

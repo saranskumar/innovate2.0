@@ -133,11 +133,9 @@ const Hero = () => {
             duration={500}
             className="inline-block bg-primary text-white font-bold py-3 px-8 text-sm sm:text-base sm:py-4 sm:px-10 rounded-full hover:bg-red-700 transition shadow-lg cursor-pointer transform hover:scale-105 active:scale-95 glare-button"
           >
-            Registration Reopened!
+            Registration Closed!
           </Link>
-          <span className="text-yellow-400 text-xs sm:text-sm font-semibold tracking-wide uppercase animate-pulse">
-            ⚠️ Limited Slots Only
-          </span>
+          
         </motion.div>
 
         {/* Decorative hand-drawn arrow pointing down (optional) */}

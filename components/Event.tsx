@@ -29,7 +29,7 @@ const Event = () => {
 
         <div className="text-center mb-10">
           <span className="text-xl text-gray-400 font-medium tracking-wide">
-            48-Hour Hackathon · Feb 20–22
+            48-Hour Hackathon · Feb 21–23
           </span>
         </div>
 
