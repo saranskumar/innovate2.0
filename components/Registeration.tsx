@@ -65,7 +65,7 @@ const Registration = () => {
           >
             <button
               id="register-btn"
-              disabled
+              
               onClick={() => window.open("https://www.yepdesk.com/innovate2026", "_blank")}
               className="px-8 py-4 text-lg font-semibold border rounded-full transition-all duration-300 border-transparent bg-primary text-white opacity-50 cursor-not-allowed"
             >
