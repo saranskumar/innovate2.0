@@ -81,25 +81,7 @@ export default function MobileNavbar() {
                                     {item.name}
                                 </a>
                             ))}
-                            <a
-                                href="https://www.yepdesk.com/innovate2026"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                onClick={() => setMobileMenuOpen(false)}
-                                className="block mt-4 rounded-lg px-3 py-2 font-bold text-center text-white bg-primary hover:bg-primary/90 transition shadow-md"
-                            >
-                                Register Now
-                            </a>
-                            <Link
-                                to="registration"
-                                smooth
-                                duration={500}
-                                offset={-80}
-                                onClick={() => setMobileMenuOpen(false)}
-                                className="block mt-4 rounded-lg px-3 py-2 font-bold text-center text-white bg-primary hover:bg-primary/90 transition shadow-md cursor-pointer"
-                            >
-                                Register Now
-                            </Link>
+
                         </div>
                     </DialogPanel>
                 </div>

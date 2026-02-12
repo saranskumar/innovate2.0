@@ -33,29 +33,20 @@ const Registration = () => {
           </p>
 
 
-          {/* Checkbox for Rules */}
-          <div className="flex items-center justify-center gap-3 mb-6">
+          {/* Checkbox for Rules - HIDDEN/REMOVED for closed registration */}
+          {/* <div className="flex items-center justify-center gap-3 mb-6">
             <input
               type="checkbox"
               id="rules-agreement"
               className="w-5 h-5 accent-primary cursor-pointer"
               onChange={(e) => {
-                const button = document.getElementById("register-btn") as HTMLButtonElement;
-                if (e.target.checked) {
-                  button.disabled = false;
-                  button.classList.remove("opacity-50", "cursor-not-allowed");
-                  button.classList.add("cursor-pointer", "hover:bg-primary/80");
-                } else {
-                  button.disabled = true;
-                  button.classList.add("opacity-50", "cursor-not-allowed");
-                  button.classList.remove("cursor-pointer", "hover:bg-primary/80");
-                }
+               // logic removed
               }}
             />
             <label htmlFor="rules-agreement" className="text-text-secondary text-sm sm:text-base">
               I agree to the <a href="/rules" className="text-primary underline hover:text-primary/80">Rules and Regulations</a>
             </label>
-          </div>
+          </div> */}
 
           {/* CTA */}
           <motion.div
@@ -65,14 +56,13 @@ const Registration = () => {
           >
             <button
               id="register-btn"
-              
-              onClick={() => window.open("https://www.yepdesk.com/innovate2026", "_blank")}
-              className="px-8 py-4 text-lg font-semibold border rounded-full transition-all duration-300 border-transparent bg-primary text-white opacity-50 cursor-not-allowed"
+              disabled
+              className="px-8 py-4 text-lg font-semibold border rounded-full transition-all duration-300 border-transparent bg-red-600 text-white opacity-50 cursor-not-allowed"
             >
-              Register Now
+              Registration Closed
             </button>
-            <p className="mt-4 text-yellow-400 font-bold text-sm animate-pulse">
-              ⚠ Limited Slots Only!
+            <p className="mt-4 text-red-500 font-bold text-sm">
+              Registration has officially closed.
             </p>
           </motion.div>
 

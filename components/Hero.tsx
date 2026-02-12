@@ -126,18 +126,14 @@ const Hero = () => {
           transition={{ ease: "easeOut", duration: 0.6, delay: 0.5 }}
           className="mt-4 md:mt-8 flex flex-col items-center gap-2"
         >
-          <Link
-            to="registration"
-            smooth={true}
-            offset={-80}
-            duration={500}
-            className="inline-block bg-primary text-white font-bold py-3 px-8 text-sm sm:text-base sm:py-4 sm:px-10 rounded-full hover:bg-red-700 transition shadow-lg cursor-pointer transform hover:scale-105 active:scale-95 glare-button"
+          <div
+            className="inline-block bg-red-600 text-white font-bold py-3 px-8 text-sm sm:text-base sm:py-4 sm:px-10 rounded-full cursor-not-allowed shadow-lg opacity-70"
           >
-             Register Now
-          </Link>
-          <p className="mt-4 text-yellow-400 font-bold text-sm animate-pulse">
-              ⚠ Limited Slots Only!
-            </p>
+            Registration Closed
+          </div>
+          <p className="mt-4 text-red-500 font-bold text-sm">
+            Registration has ended.
+          </p>
         </motion.div>
 
         {/* Decorative hand-drawn arrow pointing down (optional) */}
