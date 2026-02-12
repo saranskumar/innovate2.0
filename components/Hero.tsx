@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import sct from "../assets/logo/sct_logo.png";
@@ -8,7 +7,7 @@ import yp from "../assets/logo/yp_logo.png";
 import inapp from "../assets/logo/InApp_Logo.svg";
 import sb from "../assets/logo/SB_White.png";
 import innovate from "../assets/logo/innovate_logo.svg";
-import { Link } from "react-scroll";
+
 
 const Hero = () => {
 
