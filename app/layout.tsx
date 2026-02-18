@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { Navbar } from "@/components/navbar/Navbar";
-import Footer from "@/components/Footer";
-import Particles from "@/components/Particles";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -32,27 +29,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative min-h-screen`}
       >
-
-
-        <div className="fixed inset-0 z-[-1] w-full h-full">
-          <Particles
-            particleCount={530}
-            particleSpread={11}
-            speed={0.16}
-            particleColors={["#f5d6d6", "#f3baba", "#fb6f6f"]}
-            moveParticlesOnHover={true}
-            particleHoverFactor={1}
-            alphaParticles={true}
-            particleBaseSize={80}
-            sizeRandomness={0.9}
-            cameraDistance={16}
-            disableRotation={true}
-          />
-        </div>
-        <Navbar />
         {children}
-        <Footer />
       </body>
-    </html >
+    </html>
   );
 }

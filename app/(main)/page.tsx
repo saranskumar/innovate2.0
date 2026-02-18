@@ -10,19 +10,19 @@ import Faqs from "@/components/Faqs";
 import WhyParticipate from "@/components/WhyParticipate";
 
 export default function Home() {
-  return (
-    <div>
-      <Hero />
-      <Timer />
-      <About />
-       <AboutDetails />
-      <Price />
-      <Registeration />
-      <WhyParticipate />
-     
-      <Faqs />
-      <Event />
-      <Venue />
-    </div>
-  );
+    return (
+        <div>
+            <Hero />
+            <Timer />
+            <About />
+            <AboutDetails />
+            <Price />
+            <Registeration />
+            <WhyParticipate />
+
+            <Faqs />
+            <Event />
+            <Venue />
+        </div>
+    );
 }
