@@ -2,6 +2,8 @@
 
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import counterTitle from "@/assets/Counter Title.svg";
 
 interface TimeLeft {
     hours: number;
@@ -18,7 +20,7 @@ const TOTAL_DURATION_MS = HACKATHON_END.getTime() - HACKATHON_START.getTime();
 export default function CountdownPage() {
     const [currentTime, setCurrentTime] = useState<Date | null>(null);
     const [timeLeft, setTimeLeft] = useState<TimeLeft | null>(null);
-    const [timeToStart, setTimeToStart] = useState<string>(""); 
+    const [timeToStart, setTimeToStart] = useState<string>("");
     // For the "Starts in..." subtitle
     const [phase, setPhase] = useState<"before" | "live" | "ended">("before");
     const [progress, setProgress] = useState(0);
@@ -136,12 +138,12 @@ export default function CountdownPage() {
                     className="text-center"
                 >
 
-                    <h1 className="text-5xl sm:text-7xl md:text-8xl font-black tracking-tight text-white">
-                        INNOVATE{" "}
-                        <span className="text-[#E53935]">
-                            2.0
-                        </span>
-                    </h1>
+                    <Image
+                        src={counterTitle}
+                        alt="INNOVATE 2.0"
+                        className="w-auto max-w-[320px] sm:max-w-[520px] md:max-w-[700px] mx-auto"
+                        priority
+                    />
                 </motion.div>
 
                 {/* Phase label */}
@@ -160,10 +162,10 @@ export default function CountdownPage() {
                         )}
                         <span
                             className={`text-lg sm:text-2xl font-bold uppercase tracking-widest ${phase === "live"
+                                ? "text-[#E53935]"
+                                : phase === "ended"
                                     ? "text-[#E53935]"
-                                    : phase === "ended"
-                                        ? "text-[#E53935]"
-                                        : "text-neutral-400"
+                                    : "text-neutral-400"
                                 }`}
                         >
                             {phase === "before" && "Hackathon Duration"}
@@ -244,9 +246,6 @@ export default function CountdownPage() {
                     >
                         <p className="text-5xl sm:text-7xl font-black text-[#E53935]">
                             🏁 Time&apos;s Up!
-                        </p>
-                        <p className="mt-4 text-xl text-neutral-400">
-                            Submit your projects now.
                         </p>
                     </motion.div>
                 )}
