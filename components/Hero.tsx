@@ -1,6 +1,8 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import Link from "next/link";
 import sct from "../assets/logo/sct_logo.png";
 import ieee from "../assets/logo/ieee_logo.png";
 import yp from "../assets/logo/yp_logo.png";
@@ -8,8 +10,17 @@ import inapp from "../assets/logo/InApp_Logo.svg";
 import sb from "../assets/logo/SB_White.png";
 import innovate from "../assets/logo/innovate_logo.svg";
 
+const HACKATHON_START = new Date("2026-02-21T11:00:00+05:30");
 
 const Hero = () => {
+  const [showProblems, setShowProblems] = useState(false);
+
+  useEffect(() => {
+    const check = () => setShowProblems(new Date() >= HACKATHON_START);
+    check();
+    const timer = setInterval(check, 10000);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <motion.div
@@ -118,21 +129,32 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        {/* Register Now Button */}
+        {/* CTA Button */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ ease: "easeOut", duration: 0.6, delay: 0.5 }}
           className="mt-4 md:mt-8 flex flex-col items-center gap-2"
         >
-          <div
-            className="inline-block bg-red-600 text-white font-bold py-3 px-8 text-sm sm:text-base sm:py-4 sm:px-10 rounded-full cursor-not-allowed shadow-lg opacity-70"
-          >
-            Registration Closed
-          </div>
-          <p className="mt-4 text-red-500 font-bold text-sm">
-            Registration has ended.
-          </p>
+          {showProblems ? (
+            <Link
+              href="/problem"
+              className="inline-block bg-[#b50e1d] hover:bg-[#8B1D20] text-white font-bold py-3 px-8 text-sm sm:text-base sm:py-4 sm:px-10 rounded-full shadow-lg transition-colors duration-200"
+            >
+              View Problem Statements →
+            </Link>
+          ) : (
+            <>
+              <div
+                className="inline-block bg-red-600 text-white font-bold py-3 px-8 text-sm sm:text-base sm:py-4 sm:px-10 rounded-full cursor-not-allowed shadow-lg opacity-70"
+              >
+                Registration Closed
+              </div>
+              <p className="mt-4 text-red-500 font-bold text-sm">
+                Registration has ended.
+              </p>
+            </>
+          )}
         </motion.div>
 
         {/* Decorative hand-drawn arrow pointing down (optional) */}
